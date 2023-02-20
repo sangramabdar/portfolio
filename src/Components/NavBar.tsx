@@ -15,7 +15,7 @@ function SideNavBar({ open, onClick }: SideNavBarProps) {
   return (
     <div
       className={
-        "w-[200px] flex fixed right-0 top-0 md:hidden transition-all duration-200 flex-col justify-start pt-20 items-center h-screen " +
+        "w-[200px] flex fixed right-0 top-0 md:hidden transition-all duration-200 flex-col justify-start pt-20 items-center h-screen bg-gray-900 " +
         classes
       }
     >
@@ -43,8 +43,8 @@ function NavBar() {
   };
 
   return (
-    <nav className="fixed w-screen flex justify-between p-3 text-white items-center bg-violet-700">
-      <section>logo</section>
+    <nav className="fixed w-screen flex justify-between p-3 text-white items-center">
+      <section>Sangram</section>
       <section className="md:hidden z-10" onClick={handleOnClick}>
         {open ? <RxCross2 /> : <GiHamburgerMenu />}
       </section>
