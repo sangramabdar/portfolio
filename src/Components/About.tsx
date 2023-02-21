@@ -16,7 +16,11 @@ function Information() {
         </h1>
         <h1 className="mt-2">
           I am really passionate about
-          <span className="font-bold"> Front end development</span>
+          <span className="font-bold"> Front end development.</span>
+        </h1>
+        <h1 className="mt-2">
+          I have good working knowledge of diiferent technologies like ReactJS,
+          JavaScript, TypeScript, Redux, HTMl, CSS.
         </h1>
       </section>
       <section className="mt-5">

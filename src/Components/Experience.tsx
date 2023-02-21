@@ -51,7 +51,7 @@ function TechnologyContainer() {
         return (
           <div
             key={skill.id}
-            className="w-[200px] p-2 text-center rounded-md shadow-lg flex flex-col justify-between items-center transition-all duration-200 hover:scale-110"
+            className="w-[200px] p-2 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-110 shadow-md shadow-gray-600"
           >
             <div className="h-[100px] w-[100px] flex justify-center items-center">
               {skill.element}
@@ -73,7 +73,9 @@ function Experience() {
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-gray-300">
         Experience
       </h1>
-      <p className="mt-2">// these are the technologies I have worked with</p>
+      <p className="mt-2 text-gray-400">
+        // these are the technologies I have worked with
+      </p>
       <TechnologyContainer />
     </Section>
   );

@@ -47,10 +47,10 @@ function Project({
   image,
 }: React.PropsWithChildren<ProjectProps>) {
   return (
-    <div className="flex flex-col h-[250px] w-[250px] justify-evenly object-cover shadow-lg rounded-md transition-all duration-200 hover:scale-110">
+    <div className="flex flex-col h-[250px] w-[250px] justify-evenly object-cover shadow-md shadow-gray-600 rounded-md transition-all duration-200 hover:scale-110">
       <h1 className="pl-2">{name}</h1>
       <img className="mt-2 h-full rounded-md" src={image} alt="" />
-      <section className="mt-3 flex justify-evenly">
+      <section className="mt-3 flex justify-evenly mb-2">
         <a href={githubLink}>Github</a>
         <a href={deployedLink}>Demo</a>
       </section>
@@ -67,7 +67,7 @@ function Work() {
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-gray-300 mt-10">
         Work
       </h1>
-      <p className="mt-2">// these are the technologies I have worked with</p>
+      <p className="mt-2 text-gray-400">// check out some of my recent work</p>
       <div className="grid m-auto grid-cols-1 sm:grid-cols-2  grid-rows-2 gap-5 mt-3">
         {projects.map((project: ProjectProps) => {
           return (

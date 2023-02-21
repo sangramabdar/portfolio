@@ -10,12 +10,12 @@ interface SideNavBarProps {
 }
 
 function SideNavBar({ open, onClick }: SideNavBarProps) {
-  const classes = open ? "translate-x-[0]" : "translate-x-[600px]";
+  const classes = open ? "translate-x-[0]" : "translate-x-[800px]";
 
   return (
     <div
       className={
-        "w-full flex fixed right-0 top-0 md:hidden transition-all duration-500 flex-col justify-start pt-20 items-center h-screen bg-gray-900 " +
+        "w-full flex fixed right-0 top-0 md:hidden transition-all duration-400 flex-col justify-start pt-20 items-center h-screen bg-gray-900 " +
         classes
       }
     >
@@ -44,8 +44,8 @@ function NavBar() {
 
   return (
     <nav className="fixed w-screen flex justify-between p-3 text-white items-center">
-      <section>Sangram</section>
-      <section className="md:hidden z-10" onClick={handleOnClick}>
+      <section></section>
+      <section className="md:hidden mr-2 z-10" onClick={handleOnClick}>
         {open ? <RxCross2 /> : <GiHamburgerMenu />}
       </section>
       <section className="hidden md:flex justify-evenly w-[350px] p-2 ">
