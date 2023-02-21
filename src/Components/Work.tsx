@@ -61,10 +61,10 @@ function Project({
 function Work() {
   return (
     <Section
-      className="m-auto  md:h-screen flex flex-col items-center justify-center"
+      className="m-auto  md:h-screen flex flex-col items-center justify-center pt-10"
       name="work"
     >
-      <h1 className="font-bold text-2xl border-solid border-b-4 border-b-gray-300 mt-10">
+      <h1 className="font-bold text-2xl border-solid border-b-4 border-b-gray-300 mt-0">
         Work
       </h1>
       <p className="mt-2 text-gray-400">// check out some of my recent work</p>

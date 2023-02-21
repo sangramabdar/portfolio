@@ -7,7 +7,7 @@ const Section = Element;
 
 function Information() {
   return (
-    <div className="mt-3 text-xl">
+    <div className="p-10 m-auto sm:w-full mt-3 text-xl">
       <section>
         <h1>
           Hi Everyone, I am <span className="font-bold">Sangram Abdar </span>

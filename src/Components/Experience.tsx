@@ -51,7 +51,7 @@ function TechnologyContainer() {
         return (
           <div
             key={skill.id}
-            className="w-[200px] p-2 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-110 shadow-md shadow-gray-600"
+            className="w-[150px] sm:w-[200px] p-2 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-110 shadow-md shadow-gray-600"
           >
             <div className="h-[100px] w-[100px] flex justify-center items-center">
               {skill.element}
@@ -67,7 +67,7 @@ function TechnologyContainer() {
 function Experience() {
   return (
     <Section
-      className="m-auto h-screen  w-[80%] flex flex-col justify-center items-center"
+      className="m-auto h-screen w-[80%] flex flex-col justify-center items-center"
       name="experience"
     >
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-gray-300">
