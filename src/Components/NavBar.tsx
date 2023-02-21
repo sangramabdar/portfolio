@@ -10,12 +10,12 @@ interface SideNavBarProps {
 }
 
 function SideNavBar({ open, onClick }: SideNavBarProps) {
-  const classes = open ? "translate-x-0" : "translate-x-[200px]";
+  const classes = open ? "translate-x-[0]" : "translate-x-[600px]";
 
   return (
     <div
       className={
-        "w-[200px] flex fixed right-0 top-0 md:hidden transition-all duration-200 flex-col justify-start pt-20 items-center h-screen bg-gray-900 " +
+        "w-full flex fixed right-0 top-0 md:hidden transition-all duration-500 flex-col justify-start pt-20 items-center h-screen bg-gray-900 " +
         classes
       }
     >

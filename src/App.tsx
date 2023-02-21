@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="bg-gradient-to-b from-black via-black to bg-gray-800 text-white">
       <NavBar />
-      <main className="pt-10 flex flex-col justify-center items-center">
+      <main className="pt-10 flex flex-col justify-around items-center">
         <Home />
         <Experience />
         <Work />

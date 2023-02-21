@@ -67,15 +67,13 @@ function TechnologyContainer() {
 function Experience() {
   return (
     <Section
-      className="h-screen justify-center flex items-start flex-col"
+      className="m-auto h-screen  w-[80%] flex flex-col justify-center items-center"
       name="experience"
     >
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-gray-300">
         Experience
       </h1>
-      <p className="opacity-[0.5] mt-2">
-        // these are the technologies I have worked with
-      </p>
+      <p className="mt-2">// these are the technologies I have worked with</p>
       <TechnologyContainer />
     </Section>
   );

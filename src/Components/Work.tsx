@@ -61,16 +61,14 @@ function Project({
 function Work() {
   return (
     <Section
-      className="h-screen flex justify-center items-start flex-col"
+      className="m-auto  md:h-screen flex flex-col items-center justify-center"
       name="work"
     >
-      <h1 className="font-bold text-2xl border-solid border-b-4 border-b-gray-300">
+      <h1 className="font-bold text-2xl border-solid border-b-4 border-b-gray-300 mt-10">
         Work
       </h1>
-      <p className="opacity-[0.5] mt-2">
-        // these are the technologies I have worked with
-      </p>
-      <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-5 mt-3">
+      <p className="mt-2">// these are the technologies I have worked with</p>
+      <div className="grid m-auto grid-cols-1 sm:grid-cols-2  grid-rows-2 gap-5 mt-3">
         {projects.map((project: ProjectProps) => {
           return (
             <Project
