@@ -20,7 +20,7 @@ function Information() {
         </h1>
         <h1 className="mt-2">
           I have good working knowledge of diiferent technologies like ReactJS,
-          JavaScript, TypeScript, Redux, HTMl, CSS.
+          JavaScript, TypeScript, Redux, HTML, CSS.
         </h1>
       </section>
       <section className="mt-5">
