@@ -10,9 +10,15 @@ import { SiJavascript } from "react-icons/si";
 
 const Section = Element;
 
-const skills = [
+type Skill = {
+  name: string;
+  element: React.ReactNode;
+  id: number;
+};
+
+const skills: Skill[] = [
   {
-    name: "ReactJS",
+    name: "React",
     element: <FaReact size={"100px"} color="aqua" />,
     id: 7,
   },
@@ -44,21 +50,26 @@ const skills = [
   },
 ];
 
-function TechnologyContainer() {
+interface TechnologyProps {
+  skill: Skill;
+}
+
+function Technology({ skill }: React.PropsWithChildren<TechnologyProps>) {
+  return (
+    <div className="w-[150px] sm:w-[200px] p-2 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-110 shadow-md shadow-gray-600">
+      <div className="h-[100px] w-[100px] flex justify-center items-center">
+        {skill.element}
+      </div>
+      <p>{skill.name}</p>
+    </div>
+  );
+}
+
+function Technologies() {
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-4 mt-3">
-      {skills.map((skill: any) => {
-        return (
-          <div
-            key={skill.id}
-            className="w-[150px] sm:w-[200px] p-2 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-110 shadow-md shadow-gray-600"
-          >
-            <div className="h-[100px] w-[100px] flex justify-center items-center">
-              {skill.element}
-            </div>
-            <p>{skill.name}</p>
-          </div>
-        );
+      {skills.map((skill: Skill) => {
+        return <Technology skill={skill} />;
       })}
     </div>
   );
@@ -76,7 +87,7 @@ function Experience() {
       <p className="mt-2 text-gray-400">
         // these are the technologies I have worked with
       </p>
-      <TechnologyContainer />
+      <Technologies />
     </Section>
   );
 }
