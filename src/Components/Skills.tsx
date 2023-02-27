@@ -7,8 +7,8 @@ import { DiJavascript1 } from "react-icons/di";
 import { SiTypescript } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
-import { FaAngular } from "react-icons/fa";
-import { SiFirebase } from "react-icons/si";
+import { FaAngular, FaNodeJs } from "react-icons/fa";
+import { SiFirebase, SiMongodb, SiTailwindcss } from "react-icons/si";
 
 const Section = Element;
 
@@ -20,19 +20,19 @@ type Skill = {
 const skills: Skill[] = [
   {
     name: "React",
-    element: <FaReact size={"100px"} color="aqua" />,
+    element: <FaReact size={"100px"} color="rgb(97,218,251)" />,
   },
   {
     name: "Redux",
     element: <SiRedux size={"80px"} color="rgb(118,74,188)" />,
   },
   {
-    name: "JavaScript",
-    element: <SiJavascript color="rgb(247,223,30)" size={"80px"} />,
-  },
-  {
     name: "TypeScript",
     element: <SiTypescript size={"80px"} color="rgb(49,120,198)" />,
+  },
+  {
+    name: "JavaScript",
+    element: <SiJavascript color="rgb(247,223,30)" size={"80px"} />,
   },
   {
     name: "HTML",
@@ -43,16 +43,17 @@ const skills: Skill[] = [
     element: <FaCss3Alt size={"100px"} color="rgb(0,145,213)" />,
   },
   {
-    name: "Angular",
-    element: <FaAngular size={"80px"} color="rgb(221,0,49)" />,
+    name: "TailwindCSS",
+    element: <SiTailwindcss size={"100px"} color="rgb(56,189,248)" />,
+  },
+
+  {
+    name: "Node.js",
+    element: <FaNodeJs size={"100px"} color="rgb(84,162,69)" />,
   },
   {
-    name: "FireBase",
-    element: <SiFirebase size={"80px"} color="rgb(249,141,19)" />,
-  },
-  {
-    name: "React Native",
-    element: <FaReact size={"100px"} color="aqua" />,
+    name: "MongoDB",
+    element: <SiMongodb size={"100px"} color="rgb(0,237,100)" />,
   },
 ];
 
