@@ -7,46 +7,53 @@ import { DiJavascript1 } from "react-icons/di";
 import { SiTypescript } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
+import { FaAngular } from "react-icons/fa";
+import { SiFirebase } from "react-icons/si";
 
 const Section = Element;
 
 type Skill = {
   name: string;
   element: React.ReactNode;
-  id: number;
 };
 
 const skills: Skill[] = [
   {
     name: "React",
     element: <FaReact size={"100px"} color="aqua" />,
-    id: 7,
   },
 
   {
     name: "JavaScript",
     element: <SiJavascript color="rgb(247,223,30)" size={"80px"} />,
-    id: 1,
   },
   {
     name: "TypeScript",
     element: <SiTypescript size={"80px"} color="rgb(49,120,198)" />,
-    id: 2,
   },
   {
     name: "HTML",
     element: <AiFillHtml5 size={"100px"} color="orange" />,
-    id: 3,
   },
   {
     name: "CSS",
     element: <FaCss3Alt size={"100px"} color="rgb(0,145,213)" />,
-    id: 4,
   },
   {
     name: "Redux",
     element: <SiRedux size={"80px"} color="rgb(118,74,188)" />,
-    id: 5,
+  },
+  {
+    name: "Angular",
+    element: <FaAngular size={"80px"} color="rgb(221,0,49)" />,
+  },
+  {
+    name: "FireBase",
+    element: <SiFirebase size={"80px"} color="rgb(249,141,19)" />,
+  },
+  {
+    name: "React Native",
+    element: <FaReact size={"100px"} color="aqua" />,
   },
 ];
 
@@ -56,7 +63,7 @@ interface TechnologyProps {
 
 function Technology({ skill }: React.PropsWithChildren<TechnologyProps>) {
   return (
-    <div className="w-[150px] sm:w-[200px] p-2 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-110 shadow-md shadow-gray-600">
+    <div className="w-[150px] sm:w-[200px] p-1 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-105 shadow-md shadow-gray-600">
       <div className="h-[100px] w-[100px] flex justify-center items-center">
         {skill.element}
       </div>
@@ -68,8 +75,8 @@ function Technology({ skill }: React.PropsWithChildren<TechnologyProps>) {
 function Technologies() {
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-4 mt-3">
-      {skills.map((skill: Skill) => {
-        return <Technology skill={skill} />;
+      {skills.map((skill: Skill, index: number) => {
+        return <Technology skill={skill} key={index} />;
       })}
     </div>
   );
@@ -78,10 +85,10 @@ function Technologies() {
 function Experience() {
   return (
     <Section
-      className="m-auto h-screen w-[80%] flex flex-col justify-center items-center"
+      className="m-auto h-screen w-[80%] flex flex-col justify-center items-center mt-20 pt-[200px] md:mt-0 md:pt-0"
       name="experience"
     >
-      <h1 className="font-bold text-2xl border-solid border-b-4 border-b-gray-300">
+      <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">
         Experience
       </h1>
       <p className="mt-2 text-gray-400">

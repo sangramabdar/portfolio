@@ -7,7 +7,7 @@ function Home() {
   return (
     <Section
       name="home"
-      className="h-screen w-[80%] flex flex-col justify-center items-center"
+      className="h-screen m-auto w-[80%] flex flex-col justify-center items-center"
     >
       <div className="max-w-[400px] md:max-w-[500px]">
         <p>Hi, my name is</p>
@@ -15,11 +15,27 @@ function Home() {
           Sangram Abdar
         </h1>
         <h2 className="text-gray-600  text-4xl font-medium md:text-5xl">
-          I'm a Front End Developer
+          I'm a UI developer
         </h2>
         <p className="pt-4 text-xl">
-          I love to work on web applications using technologies like ReactJS,
-          Tailwind, Redux, JavaScript, TypeScript.
+          I like to work on technologies like
+          <div className="flex flex-wrap">
+            <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
+              React
+            </span>
+            <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
+              Redux
+            </span>
+            <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
+              TypeScript
+            </span>
+            <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
+              TailwindCSS
+            </span>
+            <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
+              Angular
+            </span>
+          </div>
         </p>
       </div>
     </Section>
