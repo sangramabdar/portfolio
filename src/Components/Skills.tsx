@@ -74,7 +74,7 @@ function Skill({ skill }: React.PropsWithChildren<TechnologyProps>) {
 function Skills() {
   return (
     <Section
-      className="m-auto h-screen w-[80%] flex flex-col justify-center items-center mt-16 pt-[250px] md:mt-0 md:pt-0"
+      className="m-auto md:h-screen  w-[80%] flex flex-col justify-center items-center pt-[70px] md:mt-0 md:pt-0"
       name="experience"
     >
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">
