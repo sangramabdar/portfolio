@@ -10,12 +10,12 @@ interface SideNavBarProps {
 }
 
 function SideNavBar({ open, onClick }: SideNavBarProps) {
-  const classes = open ? "translate-x-[0]" : "translate-x-[800px]";
+  const classes = open ? "translate-x-[0px]" : "translate-x-[200px]";
 
   return (
     <div
       className={
-        "w-full flex fixed right-0 top-0 md:hidden transition-all duration-400 flex-col justify-start pt-20 items-center h-screen bg-gray-900 " +
+        "w-[200px] flex fixed right-0 top-0 md:hidden transition-all duration-900  flex-col justify-start pt-20 items-center h-screen bg-gray-900 " +
         classes
       }
     >
@@ -23,7 +23,7 @@ function SideNavBar({ open, onClick }: SideNavBarProps) {
         Home
       </Link>
       <Link onClick={onClick} className="m-2" to="experience" smooth={true}>
-        Experience
+        Skills
       </Link>
       <Link onClick={onClick} className="m-2" to="work" smooth={true}>
         Work
@@ -43,17 +43,17 @@ function NavBar() {
   };
 
   return (
-    <nav className="fixed w-screen flex justify-between p-3 text-white items-center">
+    <nav className="fixed w-screen flex justify-between bg-gray-900 p-3 z-20 text-white items-center">
       <section></section>
       <section className="md:hidden mr-2 z-10" onClick={handleOnClick}>
-        {open ? <RxCross2 /> : <GiHamburgerMenu />}
+        {open ? <RxCross2 size={"25px"} /> : <GiHamburgerMenu size={"25px"} />}
       </section>
       <section className="hidden md:flex justify-evenly w-[350px] p-2 ">
         <Link to="home" smooth={true}>
           Home
         </Link>
         <Link to="experience" smooth={true}>
-          Experience
+          Skills
         </Link>
         <Link to="work" smooth={true}>
           Work

@@ -7,7 +7,7 @@ const Section = Element;
 
 function Information() {
   return (
-    <div className="p-10 m-auto sm:w-full mt-3 text-xl">
+    <div className=" p-10 m-auto sm:w-full mt-3 text-xl">
       <section>
         <h1>
           Hi Everyone, I am <span className="font-bold">Sangram Abdar </span>
@@ -16,11 +16,11 @@ function Information() {
         </h1>
         <h1 className="mt-2">
           I am really passionate about
-          <span className="font-bold"> Front end development.</span>
+          <span className="font-bold"> UI development.</span>
         </h1>
         <h1 className="mt-2">
-          I have good working knowledge of diiferent technologies like ReactJS,
-          JavaScript, TypeScript, Redux, HTML, CSS.
+          I have good working knowledge of diiferent technologies like React,
+          TypeScript, JavaScript, Redux, HTML, CSS.
         </h1>
       </section>
       <section className="mt-5">
@@ -43,7 +43,7 @@ function Information() {
 function About() {
   return (
     <Section
-      className="mx-auto pt-20 md:h-screen  w-[80%] flex justify-center items-center flex-col mt-5 md:mt-10 md:pt-10"
+      className="mx-auto pt-10 md:h-screen  w-[80%] flex justify-center items-center flex-col mt-24 md:mt-5 md:pt-5"
       name="about"
     >
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">

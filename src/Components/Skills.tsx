@@ -22,7 +22,10 @@ const skills: Skill[] = [
     name: "React",
     element: <FaReact size={"100px"} color="aqua" />,
   },
-
+  {
+    name: "Redux",
+    element: <SiRedux size={"80px"} color="rgb(118,74,188)" />,
+  },
   {
     name: "JavaScript",
     element: <SiJavascript color="rgb(247,223,30)" size={"80px"} />,
@@ -38,10 +41,6 @@ const skills: Skill[] = [
   {
     name: "CSS",
     element: <FaCss3Alt size={"100px"} color="rgb(0,145,213)" />,
-  },
-  {
-    name: "Redux",
-    element: <SiRedux size={"80px"} color="rgb(118,74,188)" />,
   },
   {
     name: "Angular",
@@ -61,7 +60,7 @@ interface TechnologyProps {
   skill: Skill;
 }
 
-function Technology({ skill }: React.PropsWithChildren<TechnologyProps>) {
+function Skill({ skill }: React.PropsWithChildren<TechnologyProps>) {
   return (
     <div className="w-[150px] sm:w-[200px] p-1 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-105 shadow-md shadow-gray-600">
       <div className="h-[100px] w-[100px] flex justify-center items-center">
@@ -72,31 +71,26 @@ function Technology({ skill }: React.PropsWithChildren<TechnologyProps>) {
   );
 }
 
-function Technologies() {
-  return (
-    <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-4 mt-3">
-      {skills.map((skill: Skill, index: number) => {
-        return <Technology skill={skill} key={index} />;
-      })}
-    </div>
-  );
-}
-
-function Experience() {
+function Skills() {
   return (
     <Section
-      className="m-auto h-screen w-[80%] flex flex-col justify-center items-center mt-20 pt-[200px] md:mt-0 md:pt-0"
+      className="m-auto h-screen w-[80%] flex flex-col justify-center items-center mt-16 pt-[250px] md:mt-0 md:pt-0"
       name="experience"
     >
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">
-        Experience
+        Skills
       </h1>
       <p className="mt-2 text-gray-400">
         // these are the technologies I have worked with
       </p>
-      <Technologies />
+
+      <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-4 mt-3">
+        {skills.map((skill: Skill, index: number) => {
+          return <Skill skill={skill} key={index} />;
+        })}
+      </div>
     </Section>
   );
 }
 
-export default Experience;
+export default Skills;

@@ -47,7 +47,7 @@ function Project({
   image,
 }: React.PropsWithChildren<ProjectProps>) {
   return (
-    <div className="flex flex-col h-[250px] w-[250px] justify-evenly object-cover shadow-md shadow-gray-600 rounded-md transition-all duration-200 hover:scale-105">
+    <div className="flex flex-col h-[200px] w-[200px] justify-evenly object-cover shadow-md shadow-gray-600 rounded-md transition-all duration-200 hover:scale-105">
       <h1 className="pl-2">{name}</h1>
       <img className="mt-2 h-full rounded-md" src={image} alt="" />
       <section className="mt-3 flex justify-evenly mb-2">
@@ -61,7 +61,7 @@ function Project({
 function Work() {
   return (
     <Section
-      className="m-auto  md:h-screen flex flex-col items-center justify-center mt-[500px] pt-8 md:mt-0 md:pt-10"
+      className="m-auto  md:h-screen flex flex-col items-center justify-center mt-[500px] pt-12 md:mt-0 md:pt-20"
       name="work"
     >
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600 mt-0">
