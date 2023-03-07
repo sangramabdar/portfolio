@@ -43,7 +43,7 @@ function Information() {
 function About() {
   return (
     <Section
-      className="mx-auto md:h-screen  w-[80%] flex justify-center items-center flex-col mt-[100px] pt-14 md:mt-5 md:pt-5"
+      className="mx-auto md:h-screen  w-[80%] flex justify-center items-center flex-col mt-[100px] pt-14 md:mt-5 md:pt-2"
       name="about"
     >
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">
