@@ -9,7 +9,7 @@ interface SideNavBarProps {
   onClick: any;
 }
 
-function SideNavBar({ open, onClick }: SideNavBarProps) {
+function SideDrawer({ open, onClick }: SideNavBarProps) {
   const classes = open ? "translate-x-[0px]" : "translate-x-[200px]";
 
   return (
@@ -62,7 +62,7 @@ function NavBar() {
           About
         </Link>
       </section>
-      <SideNavBar open={open} onClick={handleOnClick} />
+      <SideDrawer open={open} onClick={handleOnClick} />
     </nav>
   );
 }

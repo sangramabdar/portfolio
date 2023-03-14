@@ -47,14 +47,14 @@ const skills: Skill[] = [
     element: <SiTailwindcss size={"100px"} color="rgb(56,189,248)" />,
   },
 
-  {
-    name: "Node.js",
-    element: <FaNodeJs size={"100px"} color="rgb(84,162,69)" />,
-  },
-  {
-    name: "MongoDB",
-    element: <SiMongodb size={"100px"} color="rgb(0,237,100)" />,
-  },
+  // {
+  //   name: "Node.js",
+  //   element: <FaNodeJs size={"100px"} color="rgb(84,162,69)" />,
+  // },
+  // {
+  //   name: "MongoDB",
+  //   element: <SiMongodb size={"100px"} color="rgb(0,237,100)" />,
+  // },
   {
     name: "FireBase",
     element: <SiFirebase size={"100px"} color="rgb(253,198,54)" />,
@@ -83,7 +83,7 @@ function Skill({ skill }: React.PropsWithChildren<TechnologyProps>) {
 function Skills() {
   return (
     <Section
-      className="m-auto md:h-screen  w-[80%] flex flex-col justify-center items-center pt-[50px] md:mt-0 md:pt-36"
+      className="m-auto md:h-screen w-[80%] flex flex-col justify-center items-center pt-[50px] md:mt-0 md:pt-0"
       name="experience"
     >
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">
