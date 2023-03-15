@@ -19,16 +19,36 @@ function SideDrawer({ open, onClick }: SideNavBarProps) {
         classes
       }
     >
-      <Link onClick={onClick} className="m-2" to="home" smooth={true}>
+      <Link
+        onClick={onClick}
+        className="font-bold text-1xl border-solid border-b-4 border-b-violet-600 m-2"
+        to="home"
+        smooth={true}
+      >
         Home
       </Link>
-      <Link onClick={onClick} className="m-2" to="experience" smooth={true}>
+      <Link
+        onClick={onClick}
+        className="font-bold text-1xl border-solid border-b-4 border-b-violet-600 m-2"
+        to="experience"
+        smooth={true}
+      >
         Skills
       </Link>
-      <Link onClick={onClick} className="m-2" to="work" smooth={true}>
+      <Link
+        onClick={onClick}
+        className="font-bold text-1xl border-solid border-b-4 border-b-violet-600 m-2"
+        to="work"
+        smooth={true}
+      >
         Work
       </Link>
-      <Link onClick={onClick} className="m-2" to="about" smooth={true}>
+      <Link
+        onClick={onClick}
+        className="font-bold text-1xl border-solid border-b-4 border-b-violet-600 m-2"
+        to="about"
+        smooth={true}
+      >
         About
       </Link>
     </div>
@@ -48,17 +68,33 @@ function NavBar() {
       <section className="md:hidden mr-2 z-10" onClick={handleOnClick}>
         {open ? <RxCross2 size={"25px"} /> : <GiHamburgerMenu size={"25px"} />}
       </section>
-      <section className="hidden md:flex justify-evenly w-[350px] p-2 ">
-        <Link to="home" smooth={true}>
+      <section className="hidden md:flex justify-evenly w-[350px] p-2">
+        <Link
+          className="font-bold text-1xl border-solid border-b-4 border-b-violet-600"
+          to="home"
+          smooth={true}
+        >
           Home
         </Link>
-        <Link to="experience" smooth={true}>
+        <Link
+          className="font-bold text-1xl border-solid border-b-4 border-b-violet-600"
+          to="experience"
+          smooth={true}
+        >
           Skills
         </Link>
-        <Link to="work" smooth={true}>
+        <Link
+          className="font-bold text-1xl border-solid border-b-4 border-b-violet-600"
+          to="work"
+          smooth={true}
+        >
           Work
         </Link>
-        <Link to="about" smooth={true}>
+        <Link
+          className="font-bold text-1xl border-solid border-b-4 border-b-violet-600"
+          to="about"
+          smooth={true}
+        >
           About
         </Link>
       </section>

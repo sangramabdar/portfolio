@@ -28,11 +28,11 @@ function Information() {
         <ul>
           <li className="flex pl-3 pt-3 items-center">
             <HiOutlineHandThumbUp />
-            <span className="ml-2">Football</span>
+            <span className="ml-2">Playing football</span>
           </li>
           <li className="flex pl-3 pt-3 items-center">
             <HiOutlineHandThumbUp />
-            <span className="ml-2">Video Games</span>
+            <span className="ml-2">Playing video games</span>
           </li>
         </ul>
       </section>

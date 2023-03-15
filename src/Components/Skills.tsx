@@ -43,7 +43,7 @@ const skills: Skill[] = [
     element: <FaCss3Alt size={"100px"} color="rgb(0,145,213)" />,
   },
   {
-    name: "TailwindCSS",
+    name: "Tailwind CSS",
     element: <SiTailwindcss size={"100px"} color="rgb(56,189,248)" />,
   },
 
@@ -56,7 +56,7 @@ const skills: Skill[] = [
   //   element: <SiMongodb size={"100px"} color="rgb(0,237,100)" />,
   // },
   {
-    name: "FireBase",
+    name: "Firebase",
     element: <SiFirebase size={"100px"} color="rgb(253,198,54)" />,
   },
   {
