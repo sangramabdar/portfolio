@@ -1,8 +1,9 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
+import { NavBarContext } from "../context/NavBarContext";
 
 interface SideNavBarProps {
   open: boolean;
@@ -56,10 +57,11 @@ function SideDrawer({ open, onClick }: SideNavBarProps) {
 }
 
 function NavBar() {
-  const [open, setOpen] = useState(false);
+  const { toggleSideDrawer, open } = useContext(NavBarContext);
 
-  const handleOnClick = () => {
-    setOpen(!open);
+  const handleOnClick = (e: React.SyntheticEvent) => {
+    e.stopPropagation();
+    toggleSideDrawer();
   };
 
   return (
