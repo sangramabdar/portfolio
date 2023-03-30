@@ -22,7 +22,7 @@ function App() {
       <NavBar />
       <main
         onClick={handleOnClick}
-        className="pt-10 flex flex-col justify-center items-center bg-red-200"
+        className="pt-10 flex flex-col justify-center items-center"
       >
         <Home />
         <Skills />
