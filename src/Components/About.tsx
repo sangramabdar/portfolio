@@ -7,7 +7,7 @@ const Section = Element;
 
 function Information() {
   return (
-    <div className=" p-10 m-auto sm:w-full mt-3 text-xl">
+    <div className="p-10 m-auto sm:w-full mt-3 text-xl">
       <section>
         <h1>
           Hi Everyone, I am <span className="font-bold">Sangram Abdar </span>
@@ -43,7 +43,7 @@ function Information() {
 function About() {
   return (
     <Section
-      className="mx-auto md:h-screen  w-[80%] flex justify-center items-center flex-col mt-[100px] pt-14 md:mt-5 md:pt-2"
+      className="mx-auto md:h-screen  w-[80%] flex justify-center items-center flex-col mt-[100px] md:mt-0 pt-14 md:pt-[110px]"
       name="about"
     >
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">
