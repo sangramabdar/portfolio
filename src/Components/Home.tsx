@@ -7,15 +7,15 @@ function Home() {
   return (
     <Section
       name="home"
-      className="h-screen sm:m-auto w-[80%] flex flex-col justify-center items-center"
+      className="m-auto h-screen w-[80%] flex flex-col justify-center items-center"
     >
-      <div className="sm:md-auto max-w-[400px] md:max-w-[500px] text-xl">
+      <div className=" max-w-[400px] md:max-w-[500px] text-xl">
         <p>Hi, my name is</p>
         <h1 className="text-gray-200 text-4xl font-medium md:text-6xl">
           Sangram Abdar
         </h1>
-        <h2 className="text-gray-600  text-4xl font-medium md:text-6xl">
-          I'm a UI developer
+        <h2 className="text-gray-600 text-4xl font-medium md:text-6xl">
+          I'm a Software Developer
         </h2>
         <p className="pt-4 text-xl">
           I like to work on technologies like

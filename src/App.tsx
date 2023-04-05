@@ -20,10 +20,7 @@ function App() {
   return (
     <div className="bg-gradient-to-b bg-gray-900 text-white">
       <NavBar />
-      <main
-        onClick={handleOnClick}
-        className="pt-10 flex flex-col justify-center items-center"
-      >
+      <main onClick={handleOnClick} className="m-auto">
         <Home />
         <Skills />
         <Work />
