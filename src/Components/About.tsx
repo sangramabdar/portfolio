@@ -14,12 +14,12 @@ function Information() {
           from
           <span className="font-bold"> Pune, India</span>.
         </h1>
-        <h1 className="mt-2">
+        {/* <h1 className="mt-2">
           I am really passionate about
           <span className="font-bold"> UI development.</span>
-        </h1>
+        </h1> */}
         <h1 className="mt-2">
-          I have good working knowledge of diiferent technologies like React,
+          I have good practical knowledge of diiferent technologies like React,
           TypeScript, JavaScript, Redux, HTML, CSS.
         </h1>
       </section>
@@ -43,7 +43,7 @@ function Information() {
 function About() {
   return (
     <Section
-      className="m-auto h-screen w-[80%] flex flex-col justify-center items-center pt-[220px] md:pt-[70px] md:justify-start md:mt-[200px]"
+      className="m-auto md:h-screen flex flex-col justify-start items-center w-[80%] pt-[20px] md:mt-[100px] md:pt-[70px]"
       name="about"
     >
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">

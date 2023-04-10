@@ -61,7 +61,7 @@ function Project({
 function Work() {
   return (
     <Section
-      className="m-auto flex flex-col items-center justify-center mt-[100px] p-14 md:mt-[160px] md:pt-[70px]"
+      className="m-auto flex flex-col items-center justify-center mt-[100px] p-[20px] md:mt-[150px] md:pt-[70px]"
       name="work"
     >
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600 mt-0">

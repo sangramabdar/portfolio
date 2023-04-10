@@ -7,7 +7,7 @@ function Home() {
   return (
     <Section
       name="home"
-      className="mx-auto h-screen w-[80%] flex flex-col justify-start pt-[60%] md:pt-0 md:justify-center items-center"
+      className="mx-auto h-screen w-[80%] flex flex-col justify-center md:pt-0 md:justify-center items-center"
     >
       <div className="max-w-[400px] md:max-w-[500px] text-xl">
         <p>Hi, my name is</p>
