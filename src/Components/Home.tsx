@@ -7,7 +7,7 @@ function Home() {
   return (
     <Section
       name="home"
-      className="mx-auto h-screen w-[80%] flex flex-col justify-center md:pt-0 md:justify-center items-center"
+      className="mx-auto h-screen w-[80%] flex flex-col justify-center md:pt-0 md:justify-center items-center text-center"
     >
       <div className="max-w-[400px] md:max-w-[500px] text-xl">
         <p>Hi, my name is</p>
@@ -17,9 +17,9 @@ function Home() {
         <h2 className="text-gray-600 text-4xl font-medium md:text-6xl">
           I'm a Software Developer
         </h2>
-        <p className="pt-4 text-xl">
-          I like to work on technologies like
-          <div className="flex flex-wrap">
+        <div className="pt-4 text-xl">
+          <p> I like to work on technologies like</p>
+          <div className="flex flex-wrap justify-center items-center">
             <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
               React
             </span>
@@ -42,7 +42,7 @@ function Home() {
               CSS
             </span>
           </div>
-        </p>
+        </div>
       </div>
     </Section>
   );
