@@ -64,7 +64,7 @@ function Work() {
       className="m-auto flex flex-col items-center justify-center mt-[100px] p-[20px] md:mt-[150px] md:pt-[70px]"
       name="work"
     >
-      <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600 mt-0">
+      <h1 className="font-bold  text-2xl border-solid border-b-4 border-b-violet-600 mt-0">
         Work
       </h1>
       <p className="mt-2 text-gray-400">// check out some of my recent work</p>

@@ -3,11 +3,28 @@ import { useState, useContext } from "react";
 import { Link } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
-import { NavBarContext } from "../context/NavBarContext";
+import { useNavBarContext } from "../context/NavBarContext";
 
 interface SideNavBarProps {
   open: boolean;
   onClick: any;
+}
+
+function SideNavBarItem({
+  children,
+  onClick,
+  to,
+}: React.PropsWithChildren<{ onClick: any; to: string }>) {
+  return (
+    <Link
+      onClick={onClick}
+      className="font-bold text-1xl border-solid border-b-4 border-b-violet-600 m-2"
+      to={to}
+      smooth={true}
+    >
+      {children}
+    </Link>
+  );
 }
 
 function SideDrawer({ open, onClick }: SideNavBarProps) {
@@ -20,44 +37,39 @@ function SideDrawer({ open, onClick }: SideNavBarProps) {
         classes
       }
     >
-      <Link
-        onClick={onClick}
-        className="font-bold text-1xl border-solid border-b-4 border-b-violet-600 m-2"
-        to="home"
-        smooth={true}
-      >
+      <SideNavBarItem to="home" onClick={onClick}>
         Home
-      </Link>
-      <Link
-        onClick={onClick}
-        className="font-bold text-1xl border-solid border-b-4 border-b-violet-600 m-2"
-        to="experience"
-        smooth={true}
-      >
+      </SideNavBarItem>
+      <SideNavBarItem to="about" onClick={onClick}>
+        About Me
+      </SideNavBarItem>
+      <SideNavBarItem to="skills" onClick={onClick}>
         Skills
-      </Link>
-      <Link
-        onClick={onClick}
-        className="font-bold text-1xl border-solid border-b-4 border-b-violet-600 m-2"
-        to="work"
-        smooth={true}
-      >
+      </SideNavBarItem>
+      <SideNavBarItem to="work" onClick={onClick}>
         Work
-      </Link>
-      <Link
-        onClick={onClick}
-        className="font-bold text-1xl border-solid border-b-4 border-b-violet-600 m-2"
-        to="about"
-        smooth={true}
-      >
-        About
-      </Link>
+      </SideNavBarItem>
+      <SideNavBarItem to="contact" onClick={onClick}>
+        Contact
+      </SideNavBarItem>
     </div>
   );
 }
 
+function NavBarItem({ to, children }: React.PropsWithChildren<{ to: string }>) {
+  return (
+    <Link
+      className="font-bold text-1xl border-solid border-b-4 border-b-violet-600"
+      to={to}
+      smooth={true}
+    >
+      {children}
+    </Link>
+  );
+}
+
 function NavBar() {
-  const { toggleSideDrawer, open } = useContext(NavBarContext);
+  const { toggleSideDrawer, open } = useNavBarContext();
 
   const handleOnClick = (e: React.SyntheticEvent) => {
     e.stopPropagation();
@@ -71,34 +83,11 @@ function NavBar() {
         {open ? <RxCross2 size={"25px"} /> : <GiHamburgerMenu size={"25px"} />}
       </section>
       <section className="hidden md:flex justify-evenly w-[350px] p-2">
-        <Link
-          className="font-bold text-1xl border-solid border-b-4 border-b-violet-600"
-          to="home"
-          smooth={true}
-        >
-          Home
-        </Link>
-        <Link
-          className="font-bold text-1xl border-solid border-b-4 border-b-violet-600"
-          to="experience"
-          smooth={true}
-        >
-          Skills
-        </Link>
-        <Link
-          className="font-bold text-1xl border-solid border-b-4 border-b-violet-600"
-          to="work"
-          smooth={true}
-        >
-          Work
-        </Link>
-        <Link
-          className="font-bold text-1xl border-solid border-b-4 border-b-violet-600"
-          to="about"
-          smooth={true}
-        >
-          About
-        </Link>
+        <NavBarItem to="home">Home</NavBarItem>
+        <NavBarItem to="about">About Me</NavBarItem>
+        <NavBarItem to="skills">Skills</NavBarItem>
+        <NavBarItem to="work">Work</NavBarItem>
+        <NavBarItem to="contact">Contact</NavBarItem>
       </section>
       <SideDrawer open={open} onClick={handleOnClick} />
     </nav>

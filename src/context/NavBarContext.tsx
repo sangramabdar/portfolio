@@ -1,4 +1,4 @@
-import React, { useState, Dispatch } from "react";
+import React, { useState, Dispatch, useContext } from "react";
 
 const NavBarContext = React.createContext({
   open: false,
@@ -19,4 +19,6 @@ const NavBarProvider = ({ children }: React.PropsWithChildren<any>) => {
   );
 };
 
-export { NavBarContext, NavBarProvider };
+const useNavBarContext = () => useContext(NavBarContext);
+
+export { NavBarProvider, useNavBarContext };

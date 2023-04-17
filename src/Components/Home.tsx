@@ -1,9 +1,49 @@
-import React from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Element from "react-scroll/modules/components/Element";
 
 const Section = Element;
 
+const words = ["Software Developer.", "Programmer.", "JavaScript enthusiast."];
+
+let currentIndex = 0;
+let pointer = 0;
+let task = "add";
+
+const fn = (ref: any) => {
+  if (task == "add") {
+    if (pointer < words[currentIndex].length) {
+      ref.current.innerHTML = words[currentIndex].substring(0, pointer);
+      pointer++;
+    } else {
+      task = "remove";
+    }
+  } else {
+    if (pointer >= 0) {
+      ref.current.innerHTML = words[currentIndex].substring(0, pointer);
+      pointer--;
+    } else {
+      task = "add";
+      pointer = 0;
+      currentIndex += 1;
+
+      if (currentIndex === words.length) {
+        currentIndex = 0;
+      }
+    }
+  }
+};
+
 function Home() {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => fn(ref), 150);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <Section
       name="home"
@@ -14,35 +54,18 @@ function Home() {
         <h1 className="text-gray-200 text-4xl font-medium md:text-6xl">
           Sangram Abdar
         </h1>
-        <h2 className="text-gray-600 text-4xl font-medium md:text-6xl">
-          I'm a Software Developer
+        <h2 className="text-gray-600 text-2xl font-medium md:text-4xl mt-4">
+          I'm a{" "}
+          <span
+            className="font-bold border-b-violet-600 border-b-2 mr-2"
+            ref={ref}
+          ></span>
         </h2>
-        <div className="pt-4 text-xl">
-          <p> I like to work on technologies like</p>
-          <div className="flex flex-wrap justify-center items-center">
-            <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
-              React
-            </span>
-            <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
-              Redux
-            </span>
-            <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
-              TypeScript
-            </span>
-            <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
-              JavaScript
-            </span>
-            <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
-              Tailwind CSS
-            </span>
-            <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
-              HTML
-            </span>
-            <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
-              CSS
-            </span>
-          </div>
-        </div>
+
+        <p className="mt-3">
+          A Self-driven, quick starter, passionate programmer with a curious
+          mind who enjoys solving a complex and challenging real-world problems.
+        </p>
       </div>
     </Section>
   );

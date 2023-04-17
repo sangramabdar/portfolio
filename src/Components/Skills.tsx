@@ -84,7 +84,7 @@ function Skills() {
   return (
     <Section
       className="mx-auto w-[80%] flex flex-col justify-center items-center pt-[20px] md:mt-[150px] md:pt-[70px]"
-      name="experience"
+      name="skills"
     >
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">
         Skills

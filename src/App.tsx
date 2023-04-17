@@ -1,15 +1,14 @@
-import { useContext, useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
 import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
 import Work from "./Components/Work";
 import About from "./Components/About";
 import Skills from "./Components/Skills";
-import React from "react";
-import { NavBarContext } from "./context/NavBarContext";
+import { useNavBarContext } from "./context/NavBarContext";
+import Contact from "./Components/Contact";
+import "./App.css";
 
 function App() {
-  const { toggleSideDrawer, open } = useContext(NavBarContext);
+  const { toggleSideDrawer, open } = useNavBarContext();
 
   const handleOnClick = () => {
     if (open) {
@@ -22,9 +21,10 @@ function App() {
       <NavBar />
       <main onClick={handleOnClick}>
         <Home />
+        <About />
         <Skills />
         <Work />
-        <About />
+        <Contact />
       </main>
     </div>
   );
