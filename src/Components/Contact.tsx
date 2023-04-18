@@ -56,7 +56,7 @@ function Email() {
       <div className="ml-10">
         <h1>Email</h1>
         <div className="mt-2">
-          <span className="text-sm">abdarsangram1997@gmail.com</span>
+          <span className="text-sm">abdarsangram2697@gmail.com</span>
         </div>
       </div>
     </div>
