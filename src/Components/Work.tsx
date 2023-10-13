@@ -47,18 +47,18 @@ function Project({
   image,
 }: React.PropsWithChildren<ProjectProps>) {
   return (
-    <div className="flex flex-col px-4 py-2 space-y-4 w-full h-full justify-evenly object-cover shadow-md shadow-gray-600 rounded-md transition-all duration-200 hover:scale-105">
-      <h1>{name}</h1>
+    <div className="flex flex-col px-4 py-2 space-y-4 w-full h-full justify-evenly object-cover shadow-lg shadow-primary-2 rounded-md transition-all duration-200 hover:scale-105">
+      <h1 className="text-tertiary">{name}</h1>
       <img
         className="w-full h-full object-cover rounded-md"
         src={image}
         alt=""
       />
       <div className="flex justify-evenly">
-        <a className="text-gray-300 hover:text-white" href={githubLink}>
+        <a className="text-secondary-2 hover:text-white" href={githubLink}>
           Github
         </a>
-        <a className="text-gray-300 hover:text-white" href={deployedLink}>
+        <a className="text-secondary-2 hover:text-white" href={deployedLink}>
           Demo
         </a>
       </div>
@@ -72,10 +72,12 @@ function Work() {
       className="max-w-7xl mx-auto flex flex-col items-center justify-center px-4 sm:px-8 mt-40"
       name="work"
     >
-      <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">
+      <h1 className="font-bold text-2xl border-solid border-b-4 text-tertiary border-b-secondary-1">
         Work
       </h1>
-      <p className="mt-4 text-gray-400">// check out some of my recent work</p>
+      <p className="mt-4 text-secondary-2">
+        // check out some of my recent work
+      </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-6 mt-10">
         {projects.map((project: ProjectProps) => {
           return (

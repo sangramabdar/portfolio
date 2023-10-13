@@ -6,7 +6,7 @@ const Section = Element;
 
 function Information() {
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 text-secondary-2">
       <h1>
         Hi, I'm Sangram. I am a postgraduate in computer applications and I
         enjoy problem-solving and coding. I always strive to bring 100% to the
@@ -15,36 +15,36 @@ function Information() {
 
       <p>I have worked on technologies like</p>
       <div className="flex flex-wrap">
-        <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
+        <span className="text-center font-bold border-b-secondary-1 border-b-2 mr-2">
           React
         </span>
-        <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
+        <span className="text-center font-bold border-b-secondary-1 border-b-2 mr-2">
           Redux
         </span>
-        <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
+        <span className="text-center font-bold border-b-secondary-1 border-b-2 mr-2">
           TypeScript
         </span>
-        <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
+        <span className="text-center font-bold border-b-secondary-1 border-b-2 mr-2">
           JavaScript
         </span>
-        <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
+        <span className="text-center font-bold border-b-secondary-1 border-b-2 mr-2">
           Tailwind CSS
         </span>
-        <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
+        <span className="text-center font-bold border-b-secondary-1 border-b-2 mr-2">
           HTML
         </span>
-        <span className="text-center font-bold border-b-violet-600 border-b-2 mr-2">
+        <span className="text-center font-bold border-b-secondary-1 border-b-2 mr-2">
           CSS
         </span>
       </div>
 
       <h1>Apart from coding, some other activities that I love to do!</h1>
-      <ul>
-        <li className="flex pl-3 pt-3 items-center">
+      <ul className="space-y-2">
+        <li className="flex items-center">
           <HiOutlineHandThumbUp />
           <span className="ml-2">Playing football</span>
         </li>
-        <li className="flex pl-3 pt-3 items-center">
+        <li className="flex  items-center">
           <HiOutlineHandThumbUp />
           <span className="ml-2">Playing video games</span>
         </li>
@@ -59,7 +59,7 @@ function About() {
       className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-start items-center mt-40"
       name="about"
     >
-      <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">
+      <h1 className="font-bold text-2xl border-solid border-b-4 text-tertiary border-b-secondary-1">
         About Me
       </h1>
 

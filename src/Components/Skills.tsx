@@ -111,11 +111,11 @@ interface TechnologyProps {
 
 function Skill({ skill }: React.PropsWithChildren<TechnologyProps>) {
   return (
-    <div className="sm:w-40 p-2 space-y-2 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-105 shadow-md shadow-gray-600">
+    <div className="sm:w-40 p-2 space-y-2 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-105 shadow-lg shadow-primary-2">
       <div className="flex w-full h-full justify-center items-center">
         {skill.element}
       </div>
-      <p>{skill.name}</p>
+      <p className="text-tertiary">{skill.name}</p>
     </div>
   );
 }
@@ -126,10 +126,10 @@ function Skills() {
       className=" max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-center mt-40 items-center"
       name="skills"
     >
-      <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">
+      <h1 className="text-tertiary font-bold text-2xl border-solid border-b-4 border-b-secondary-1">
         Skills
       </h1>
-      <p className="mt-4 text-gray-400">
+      <p className="mt-4 text-secondary-2">
         // these are the technologies I have worked with
       </p>
 
