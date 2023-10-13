@@ -8,9 +8,9 @@ const Section = Element;
 function Address() {
   return (
     <div className="flex gap-8 items-center">
-      <SlLocationPin className="min-w-[32px] min-h-[32px] object-cover" />
+      <SlLocationPin className="min-w-[32px] min-h-[32px] object-cover animate-pulse" />
       <div className="flex flex-col spcae-y-2">
-        <span>My Address</span>
+        <span className="text-gray-500">My Address</span>
         <span>Pune</span>
       </div>
     </div>
@@ -20,9 +20,9 @@ function Address() {
 function PhoneNmber() {
   return (
     <div className="flex gap-8 items-center">
-      <SlPhone className="min-w-[32px] min-h-[32px] object-cover" />
+      <SlPhone className="min-w-[32px] min-h-[32px] object-cover animate-bounce" />
       <div className="flex flex-col space-y-2">
-        <span>Phone Number</span>
+        <span className="text-gray-500">Phone Number</span>
         <span>+918600173694</span>
       </div>
     </div>
@@ -31,15 +31,15 @@ function PhoneNmber() {
 function SocailProfiles() {
   return (
     <div className="flex gap-8 items-center">
-      <SlShare className="min-w-[32px] min-h-[32px] object-cover" />
+      <SlShare className="min-w-[32px] min-h-[32px] object-cover animate-pulse" />
       <div className="flex flex-col space-y-2">
-        <span>Social Profiles</span>
+        <span className="text-gray-500">Social Profiles</span>
         <div className="flex space-x-3 mt-2">
           <a href="https://www.linkedin.com/in/sangram-abdar-522150117/">
-            <SiLinkedin className="w-full h-full object-cover" />
+            <SiLinkedin className="w-full h-full object-cover transition-all duration-100 hover:scale-110" />
           </a>
           <a href="https://github.com/sangramabdar">
-            <SiGithub className="w-full h-full object-cover" />
+            <SiGithub className="w-full h-full object-cover transition-all duration-100 hover:scale-110" />
           </a>
         </div>
       </div>
@@ -49,10 +49,10 @@ function SocailProfiles() {
 
 function Email() {
   return (
-    <div className="flex gap-8 items-center max-w-xl">
-      <AiOutlineMail className="min-w-[32px] min-h-[32px] object-cover" />
+    <div className="flex gap-8 items-center">
+      <AiOutlineMail className="min-w-[32px] min-h-[32px] object-cover animate-bounce" />
       <div className="flex flex-col space-y-2">
-        <span>Email</span>
+        <span className="text-gray-500">Email</span>
         <a href="mailto:abdarsangram2697@gmail.com">
           abdarsangram2697@gmail.com
         </a>
@@ -70,7 +70,7 @@ function Contact() {
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">
         Contact
       </h1>
-      <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 mt-10">
+      <div className="grid overflow-hidden grid-cols-1 gap-12 sm:grid-cols-2 mt-10">
         <Address />
         <SocailProfiles />
         <Email />

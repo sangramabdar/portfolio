@@ -12,7 +12,7 @@ function SideNavBarItem({
   return (
     <Link
       onClick={onClick}
-      className="font-bold w-fit text-2xl border-solid border-b-4 border-b-violet-600"
+      className="font-bold w-fit text-xl border-solid border-b-4 border-b-violet-600"
       to={to}
       smooth={true}
       offset={-50}
@@ -34,7 +34,7 @@ function SideDrawer() {
   return (
     <div
       className={
-        "fixed bg-gray-900 opacity-90 h-screen w-full flex right-0 top-0 transition-all duration-900 flex-col justify-start pt-20 space-y-8 px-4 md:hidden " +
+        "fixed bg-gray-900/20 backdrop-blur-lg h-screen w-full flex right-0 top-0 transition-all duration-900 flex-col justify-start pt-20 space-y-8 px-4 md:hidden " +
         classes
       }
     >
@@ -79,7 +79,7 @@ function NavBar() {
   };
 
   return (
-    <nav className="fixed flex justify-between p-4 px-4 md:px-8 z-20 text-white items-center">
+    <nav className="bg-gray-900 top-0 right-0 left-0 fixed flex justify-between p-4 px-4 md:px-8 z-20 text-white items-center">
       <div className="md:hidden z-10" onClick={handleOnClick}>
         {open ? <RxCross2 size={"25px"} /> : <GiHamburgerMenu size={"25px"} />}
       </div>

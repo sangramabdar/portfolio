@@ -51,7 +51,7 @@ function Home() {
   return (
     <Section
       name="home"
-      className="max-w-4xl mx-auto px-4 h-screen sm:px-8 flex flex-col justify-center  md:justify-center items-center text-center"
+      className="max-w-4xl mx-auto px-4 h-screen sm:px-8 flex flex-col justify-center items-center text-center"
     >
       <div className="space-y-2 max-w-xl mx-auto">
         <span className="mx-auto">Hi, My name is</span>
