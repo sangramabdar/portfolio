@@ -47,7 +47,7 @@ function Project({
   image,
 }: React.PropsWithChildren<ProjectProps>) {
   return (
-    <div className="flex flex-col h-[200px] w-[200px] justify-evenly object-cover shadow-md shadow-gray-600 rounded-md transition-all duration-200 hover:scale-105">
+    <div className="flex flex-col  w-full h-full justify-evenly object-cover shadow-md shadow-gray-600 rounded-md transition-all duration-200 hover:scale-105">
       <h1 className="pl-2">{name}</h1>
       <img className="mt-2 h-full rounded-md" src={image} alt="" />
       <section className="mt-3 flex justify-evenly mb-2">
@@ -61,14 +61,14 @@ function Project({
 function Work() {
   return (
     <Section
-      className="m-auto flex flex-col items-center justify-center mt-[100px] p-[20px] md:mt-[150px] md:pt-[70px]"
+      className="max-w-7xl mx-auto flex flex-col items-center justify-center px-4 sm:px-8 mt-40"
       name="work"
     >
-      <h1 className="font-bold  text-2xl border-solid border-b-4 border-b-violet-600 mt-0">
+      <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">
         Work
       </h1>
-      <p className="mt-2 text-gray-400">// check out some of my recent work</p>
-      <div className="grid m-auto grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-5 mt-3">
+      <p className="mt-4 text-gray-400">// check out some of my recent work</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-5 mt-10">
         {projects.map((project: ProjectProps) => {
           return (
             <Project
