@@ -20,48 +20,48 @@ type Skill = {
 const skills: Skill[] = [
   {
     name: "React",
-    element: <FaReact size={"100px"} color="rgb(97,218,251)" />,
+    element: <FaReact color="rgb(97,218,251)" />,
   },
   {
     name: "Redux",
-    element: <SiRedux size={"80px"} color="rgb(118,74,188)" />,
+    element: <SiRedux color="rgb(118,74,188)" />,
   },
   {
     name: "TypeScript",
-    element: <SiTypescript size={"80px"} color="rgb(49,120,198)" />,
+    element: <SiTypescript color="rgb(49,120,198)" />,
   },
   {
     name: "JavaScript",
-    element: <SiJavascript color="rgb(247,223,30)" size={"80px"} />,
+    element: <SiJavascript color="rgb(247,223,30)" />,
   },
   {
     name: "HTML",
-    element: <AiFillHtml5 size={"100px"} color="orange" />,
+    element: <AiFillHtml5 color="orange" />,
   },
   {
     name: "CSS",
-    element: <FaCss3Alt size={"100px"} color="rgb(0,145,213)" />,
+    element: <FaCss3Alt color="rgb(0,145,213)" />,
   },
   {
     name: "Tailwind CSS",
-    element: <SiTailwindcss size={"100px"} color="rgb(56,189,248)" />,
+    element: <SiTailwindcss color="rgb(56,189,248)" />,
   },
 
   {
     name: "Node.js",
-    element: <FaNodeJs size={"100px"} color="rgb(84,162,69)" />,
+    element: <FaNodeJs color="rgb(84,162,69)" />,
   },
   {
     name: "MongoDB",
-    element: <SiMongodb size={"100px"} color="rgb(0,237,100)" />,
+    element: <SiMongodb color="rgb(0,237,100)" />,
   },
   {
     name: "Firebase",
-    element: <SiFirebase size={"100px"} color="rgb(253,198,54)" />,
+    element: <SiFirebase color="rgb(253,198,54)" />,
   },
   {
     name: "React Native",
-    element: <FaReact size={"100px"} color="rgb(97,218,251)" />,
+    element: <FaReact color="rgb(97,218,251)" />,
   },
 ];
 
@@ -71,8 +71,8 @@ interface TechnologyProps {
 
 function Skill({ skill }: React.PropsWithChildren<TechnologyProps>) {
   return (
-    <div className="w-[150px] sm:w-[200px] p-1 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-105 shadow-md shadow-gray-600">
-      <div className="h-[100px] w-[100px] flex justify-center items-center">
+    <div className="w-full p-2 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-105 shadow-md shadow-gray-600">
+      <div className="flex object-cover justify-center items-center">
         {skill.element}
       </div>
       <p>{skill.name}</p>
@@ -83,7 +83,7 @@ function Skill({ skill }: React.PropsWithChildren<TechnologyProps>) {
 function Skills() {
   return (
     <Section
-      className="mx-auto w-[80%] flex flex-col justify-center items-center pt-[20px] md:mt-[150px] md:pt-[70px]"
+      className=" max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-center items-center"
       name="skills"
     >
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">
@@ -93,7 +93,7 @@ function Skills() {
         // these are the technologies I have worked with
       </p>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-4 mt-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-2 gap-4 mt-3">
         {skills.map((skill: Skill, index: number) => {
           return <Skill skill={skill} key={index} />;
         })}

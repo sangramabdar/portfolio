@@ -3,7 +3,11 @@ import Element from "react-scroll/modules/components/Element";
 
 const Section = Element;
 
-const words = ["Software Developer.", "Programmer.", "JavaScript enthusiast."];
+const words = [
+  "Software Developer.",
+  "React Expert.",
+  "JavaScript enthusiast.",
+];
 
 let currentIndex = 0;
 let pointer = 0;
@@ -47,14 +51,14 @@ function Home() {
   return (
     <Section
       name="home"
-      className="mx-auto h-screen w-[80%] flex flex-col justify-center md:pt-0 md:justify-center items-center text-center"
+      className="max-w-4xl mx-auto px-4 h-screen sm:px-8 flex flex-col justify-center  md:justify-center items-center text-center"
     >
-      <div className="max-w-[400px] md:max-w-[500px] text-xl">
-        <p>Hi, my name is</p>
+      <div className="space-y-2 max-w-xl mx-auto">
+        <span className="mx-auto">Hi, My name is</span>
         <h1 className="text-gray-200 text-4xl font-medium md:text-6xl">
           Sangram Abdar
         </h1>
-        <h2 className="text-gray-600 text-2xl font-medium md:text-4xl mt-4">
+        <h2 className="text-gray-600 text-2xl pt-4 font-bold md:text-4xl mt-4">
           I'm a{" "}
           <span
             className="font-bold border-b-violet-600 border-b-2 mr-2"
@@ -62,7 +66,7 @@ function Home() {
           ></span>
         </h2>
 
-        <p className="mt-3">
+        <p className="pt-4">
           A Self-driven, passionate programmer with a curious mind who enjoys
           solving complex and challenging real-world problems.
         </p>
