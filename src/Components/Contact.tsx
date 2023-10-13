@@ -8,10 +8,10 @@ const Section = Element;
 function Address() {
   return (
     <div className="flex gap-8 items-center">
-      <SlLocationPin className="min-w-[32px] min-h-[32px] object-cover animate-pulse" />
+      <SlLocationPin className="min-w-[32px] min-h-[32px] object-cover animate-bounce" />
       <div className="flex flex-col spcae-y-2">
-        <span className="text-gray-500">My Address</span>
-        <span>Pune</span>
+        <span className="text-secondary-2/30">My Address</span>
+        <span className="text-secondary-2">Pune</span>
       </div>
     </div>
   );
@@ -22,8 +22,8 @@ function PhoneNmber() {
     <div className="flex gap-8 items-center">
       <SlPhone className="min-w-[32px] min-h-[32px] object-cover animate-bounce" />
       <div className="flex flex-col space-y-2">
-        <span className="text-gray-500">Phone Number</span>
-        <span>+918600173694</span>
+        <span className="text-secondary-2/30">Phone Number</span>
+        <span className="text-secondary-2">+918600173694</span>
       </div>
     </div>
   );
@@ -31,9 +31,9 @@ function PhoneNmber() {
 function SocailProfiles() {
   return (
     <div className="flex gap-8 items-center">
-      <SlShare className="min-w-[32px] min-h-[32px] object-cover animate-pulse" />
+      <SlShare className="min-w-[32px] min-h-[32px] object-cover animate-bounce" />
       <div className="flex flex-col space-y-2">
-        <span className="text-gray-500">Social Profiles</span>
+        <span className="text-secondary-2/30">Social Profiles</span>
         <div className="flex space-x-3 mt-2">
           <a href="https://www.linkedin.com/in/sangram-abdar-522150117/">
             <SiLinkedin className="w-full h-full object-cover transition-all duration-100 hover:scale-110" />
@@ -52,8 +52,11 @@ function Email() {
     <div className="flex gap-8 items-center">
       <AiOutlineMail className="min-w-[32px] min-h-[32px] object-cover animate-bounce" />
       <div className="flex flex-col space-y-2">
-        <span className="text-gray-500">Email</span>
-        <a href="mailto:abdarsangram2697@gmail.com">
+        <span className="text-secondary-2/30">Email</span>
+        <a
+          className="text-secondary-2"
+          href="mailto:abdarsangram2697@gmail.com"
+        >
           abdarsangram2697@gmail.com
         </a>
       </div>
@@ -67,7 +70,7 @@ function Contact() {
       className="max-w-7xl mx-auto flex flex-col justify-start items-center px-4 sm:px-8 mt-40 pb-40"
       name="contact"
     >
-      <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">
+      <h1 className="font-bold text-2xl border-solid border-b-4 text-tertiary border-b-secondary-1">
         Contact
       </h1>
       <div className="grid overflow-hidden grid-cols-1 gap-12 sm:grid-cols-2 mt-10">

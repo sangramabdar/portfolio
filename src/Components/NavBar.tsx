@@ -12,7 +12,7 @@ function SideNavBarItem({
   return (
     <Link
       onClick={onClick}
-      className="font-bold w-fit text-xl border-solid border-b-4 border-b-violet-600"
+      className="text-tertiary font-bold w-fit text-xl border-solid border-b-4 border-b-secondary-1 "
       to={to}
       smooth={true}
       offset={-50}
@@ -60,7 +60,7 @@ function SideDrawer() {
 function NavBarItem({ to, children }: React.PropsWithChildren<{ to: string }>) {
   return (
     <Link
-      className="font-bold text-1xl border-solid border-b-4 border-b-violet-600"
+      className="font-bold text-1xl border-solid border-b-4 text-tertiary border-b-secondary-1 cursor-pointer"
       to={to}
       smooth={true}
       offset={-100}
@@ -79,7 +79,7 @@ function NavBar() {
   };
 
   return (
-    <nav className="bg-gray-900 top-0 right-0 left-0 fixed flex justify-between p-4 px-4 md:px-8 z-20 text-white items-center">
+    <nav className="bg-gray-900 top-0 right-0 left-0 fixed flex justify-between p-4 px-4 md:px-8 z-20 text-white items-center bg-primary-1">
       <div className="md:hidden z-10" onClick={handleOnClick}>
         {open ? <RxCross2 size={"25px"} /> : <GiHamburgerMenu size={"25px"} />}
       </div>

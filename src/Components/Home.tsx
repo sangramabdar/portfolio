@@ -54,19 +54,19 @@ function Home() {
       className="max-w-4xl mx-auto px-4 h-screen sm:px-8 flex flex-col justify-center items-center text-center"
     >
       <div className="space-y-2 max-w-xl mx-auto">
-        <span className="mx-auto">Hi, My name is</span>
-        <h1 className="text-gray-200 text-4xl font-medium md:text-6xl">
+        <span className="mx-auto text-tertiary/60">Hi, My name is</span>
+        <h1 className=" text-4xl font-medium md:text-6xl text-tertiary">
           Sangram Abdar
         </h1>
-        <h2 className="text-gray-600 text-2xl pt-4 font-bold md:text-4xl mt-4">
+        <h2 className="text-2xl pt-4 font-bold md:text-4xl mt-4 text-secondary-2 opacity-40">
           I'm a{" "}
           <span
-            className="font-bold border-b-violet-600 border-b-2 mr-2"
+            className="font-bold  border-b-2 mr-2 border-b-secondary-1"
             ref={ref}
           ></span>
         </h2>
 
-        <p className="pt-4">
+        <p className="pt-8 text-lg text-tertiary/60">
           A Self-driven, passionate programmer with a curious mind who enjoys
           solving complex and challenging real-world problems.
         </p>
