@@ -56,13 +56,14 @@ function Information() {
 function About() {
   return (
     <Section
-      className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-start items-center"
+      className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-start items-center mt-40"
       name="about"
     >
-      <h1 className="max-w-xl mx-auto w-fit font-bold text-center text-2xl border-solid border-b-4 border-b-violet-600">
+      <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">
         About Me
       </h1>
-      <div className="flex flex-col justify-center items-center md:flex-row mt-4">
+
+      <div className="flex flex-col justify-center items-center md:flex-row mt-10 gap-4">
         <Information />
         <Logo className="object-conver w-full" />
       </div>

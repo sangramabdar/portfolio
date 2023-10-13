@@ -15,6 +15,7 @@ function SideNavBarItem({
       className="font-bold w-fit text-2xl border-solid border-b-4 border-b-violet-600"
       to={to}
       smooth={true}
+      offset={-50}
     >
       {children}
     </Link>
@@ -62,6 +63,7 @@ function NavBarItem({ to, children }: React.PropsWithChildren<{ to: string }>) {
       className="font-bold text-1xl border-solid border-b-4 border-b-violet-600"
       to={to}
       smooth={true}
+      offset={-100}
     >
       {children}
     </Link>

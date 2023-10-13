@@ -1,4 +1,3 @@
-import React from "react";
 import Element from "react-scroll/modules/components/Element";
 import { SlLocationPin, SlPhone, SlShare } from "react-icons/sl";
 import { AiOutlineMail } from "react-icons/ai";
@@ -8,40 +7,39 @@ const Section = Element;
 
 function Address() {
   return (
-    <div className="flex items-center w-[250px] h-[100px] md:ml-10">
-      <SlLocationPin className="mr-10" />
-      <div>
-        <h1>My Address</h1>
+    <div className="flex gap-8 items-center">
+      <SlLocationPin className="min-w-[32px] min-h-[32px] object-cover" />
+      <div className="flex flex-col spcae-y-2">
+        <span>My Address</span>
         <span>Pune</span>
       </div>
     </div>
   );
 }
+
 function PhoneNmber() {
   return (
-    <div className="flex items-center  w-[250px] h-[100px] md:ml-10">
-      <SlPhone className="mr-10" />
-      <div>
-        <h1>Phone Number</h1>
-        <div className="mt-2">
-          <span>+918600173694</span>
-        </div>
+    <div className="flex gap-8 items-center">
+      <SlPhone className="min-w-[32px] min-h-[32px] object-cover" />
+      <div className="flex flex-col space-y-2">
+        <span>Phone Number</span>
+        <span>+918600173694</span>
       </div>
     </div>
   );
 }
 function SocailProfiles() {
   return (
-    <div className="flex  items-center  w-[250px] h-[100px] md:ml-10">
-      <SlShare className="mr-10" />
-      <div>
-        <h1>Social Profiles</h1>
+    <div className="flex gap-8 items-center">
+      <SlShare className="min-w-[32px] min-h-[32px] object-cover" />
+      <div className="flex flex-col space-y-2">
+        <span>Social Profiles</span>
         <div className="flex space-x-3 mt-2">
           <a href="https://www.linkedin.com/in/sangram-abdar-522150117/">
-            <SiLinkedin />
+            <SiLinkedin className="w-full h-full object-cover" />
           </a>
           <a href="https://github.com/sangramabdar">
-            <SiGithub />
+            <SiGithub className="w-full h-full object-cover" />
           </a>
         </div>
       </div>
@@ -51,13 +49,13 @@ function SocailProfiles() {
 
 function Email() {
   return (
-    <div className="flex items-center  w-[250px] h-[100px] md:ml-10">
-      <AiOutlineMail />
-      <div className="ml-10">
-        <h1>Email</h1>
-        <div className="mt-2">
-          <span className="text-sm">abdarsangram2697@gmail.com</span>
-        </div>
+    <div className="flex gap-8 items-center max-w-xl">
+      <AiOutlineMail className="min-w-[32px] min-h-[32px] object-cover" />
+      <div className="flex flex-col space-y-2">
+        <span>Email</span>
+        <a href="mailto:abdarsangram2697@gmail.com">
+          abdarsangram2697@gmail.com
+        </a>
       </div>
     </div>
   );
@@ -66,13 +64,13 @@ function Email() {
 function Contact() {
   return (
     <Section
-      className="m-auto flex flex-col justify-start items-center w-[80%] pt-[20px] md:mt-[100px] md:pt-[70px]"
+      className="max-w-7xl mx-auto flex flex-col justify-start items-center px-4 sm:px-8 mt-40 pb-40"
       name="contact"
     >
       <h1 className="font-bold text-2xl border-solid border-b-4 border-b-violet-600">
         Contact
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 mt-10">
         <Address />
         <SocailProfiles />
         <Email />

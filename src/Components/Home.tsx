@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Element from "react-scroll/modules/components/Element";
 
 const Section = Element;
