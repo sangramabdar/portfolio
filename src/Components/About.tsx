@@ -8,13 +8,13 @@ function Information() {
   return (
     <div className="space-y-4 text-secondary-2">
       <h1>
-        Hi, I'm Sangram. I am a postgraduate in computer applications and I
+        I completed my post graduation in MCA (computer applications) and I
         enjoy problem-solving and coding. I always strive to bring 100% to the
         work I do.
       </h1>
 
-      <p>I have worked on technologies like</p>
       <div className="flex flex-wrap">
+        <p className="block w-full">I have worked on technologies like</p>
         <span className="text-center font-bold border-b-secondary-1 border-b-2 mr-2">
           React
         </span>

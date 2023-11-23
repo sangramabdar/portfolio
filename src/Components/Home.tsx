@@ -54,21 +54,19 @@ function Home() {
       className="max-w-4xl mx-auto px-4 h-screen sm:px-8 flex flex-col justify-center items-center text-center"
     >
       <div className="space-y-2 max-w-xl mx-auto">
-        <span className="mx-auto text-tertiary/60">Hi, My name is</span>
+        <span className="mx-auto text-tertiary/60">Hi, I'm </span>
         <h1 className=" text-4xl font-medium md:text-6xl text-tertiary">
           Sangram Abdar
         </h1>
-        <h2 className="text-2xl pt-4 font-bold md:text-4xl mt-4 text-secondary-2 opacity-40">
-          I'm a{" "}
-          <span
-            className="font-bold  border-b-2 mr-2 border-b-secondary-1"
-            ref={ref}
-          ></span>
-        </h2>
+        <div className="text-2xl pt-4 font-bold md:text-4xl mt-4 text-secondary-2 opacity-40">
+          <span className="m-2">A</span>
+          <span className="font-bold bg-secondary-1/30" ref={ref}></span>
+          <span className="animate-ping duration-100">|</span>
+        </div>
 
         <p className="pt-8 text-lg text-tertiary/60">
-          A Self-driven, passionate programmer with a curious mind who enjoys
-          solving complex and challenging real-world problems.
+          "A self-driven, passionate software developer with a curious mind who
+          revels in solving complex and challenging real-world problems."
         </p>
       </div>
     </Section>
