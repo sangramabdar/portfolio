@@ -12,10 +12,10 @@ const NavBarProvider = ({ children }: React.PropsWithChildren<any>) => {
     setOpen(!open);
   };
 
+  const value = { open, toggleSideDrawer };
+
   return (
-    <NavBarContext.Provider value={{ open, toggleSideDrawer }}>
-      {children}
-    </NavBarContext.Provider>
+    <NavBarContext.Provider value={value}>{children}</NavBarContext.Provider>
   );
 };
 

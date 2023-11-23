@@ -79,7 +79,7 @@ function NavBar() {
   };
 
   return (
-    <nav className="bg-gray-900 top-0 right-0 left-0 fixed flex justify-between p-4 px-4 md:px-8 z-20 text-white items-center bg-primary-1">
+    <nav className="top-0 right-0 left-0 fixed flex justify-between p-4 px-4 md:px-8 z-20 text-white items-center bg-primary-1">
       <div className="md:hidden z-10" onClick={handleOnClick}>
         {open ? <RxCross2 size={"25px"} /> : <GiHamburgerMenu size={"25px"} />}
       </div>

@@ -8,7 +8,7 @@ const Section = Element;
 function Address() {
   return (
     <div className="flex gap-8 items-center">
-      <SlLocationPin className="min-w-[32px] min-h-[32px] object-cover animate-bounce" />
+      <SlLocationPin className="min-w-[32px] min-h-[32px] object-cover" />
       <div className="flex flex-col spcae-y-2">
         <span className="text-secondary-2/30">My Address</span>
         <span className="text-secondary-2">Pune</span>
@@ -20,7 +20,7 @@ function Address() {
 function PhoneNmber() {
   return (
     <div className="flex gap-8 items-center">
-      <SlPhone className="min-w-[32px] min-h-[32px] object-cover animate-bounce" />
+      <SlPhone className="min-w-[32px] min-h-[32px] object-cover" />
       <div className="flex flex-col space-y-2">
         <span className="text-secondary-2/30">Phone Number</span>
         <span className="text-secondary-2">+918600173694</span>
@@ -31,7 +31,7 @@ function PhoneNmber() {
 function SocailProfiles() {
   return (
     <div className="flex gap-8 items-center">
-      <SlShare className="min-w-[32px] min-h-[32px] object-cover animate-bounce" />
+      <SlShare className="min-w-[32px] min-h-[32px] object-cover" />
       <div className="flex flex-col space-y-2">
         <span className="text-secondary-2/30">Social Profiles</span>
         <div className="flex space-x-3 mt-2">
@@ -50,7 +50,7 @@ function SocailProfiles() {
 function Email() {
   return (
     <div className="flex gap-8 items-center">
-      <AiOutlineMail className="min-w-[32px] min-h-[32px] object-cover animate-bounce" />
+      <AiOutlineMail className="min-w-[32px] min-h-[32px] object-cover" />
       <div className="flex flex-col space-y-2">
         <span className="text-secondary-2/30">Email</span>
         <a
