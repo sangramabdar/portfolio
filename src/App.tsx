@@ -17,7 +17,7 @@ function App() {
   };
 
   return (
-    <div className="bg-gradient-to-b bg-primary-1 text-white">
+    <div className="bg-primary-1 text-white">
       <NavBar />
       <main onClick={handleOnClick}>
         <Home />

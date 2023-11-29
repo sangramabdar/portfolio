@@ -123,13 +123,13 @@ function Skill({ skill }: React.PropsWithChildren<TechnologyProps>) {
 function Skills() {
   return (
     <Section
-      className=" max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-center mt-40 items-center"
+      className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-center mt-40 items-center"
       name="skills"
     >
       <h1 className="text-tertiary font-bold text-2xl border-solid border-b-4 border-b-secondary-1">
         Skills
       </h1>
-      <p className="mt-4 text-secondary-2">
+      <p className="mt-4 text-tertiary/60 opacity-">
         // these are the technologies I have worked with
       </p>
 

@@ -10,8 +10,8 @@ function Address() {
     <div className="flex gap-8 items-center">
       <SlLocationPin className="min-w-[32px] min-h-[32px] object-cover" />
       <div className="flex flex-col spcae-y-2">
-        <span className="text-secondary-2/30">My Address</span>
-        <span className="text-secondary-2">Pune</span>
+        <span className="text-tertiary/60">My Address</span>
+        <span className="text-tertiary">Pune</span>
       </div>
     </div>
   );
@@ -22,8 +22,8 @@ function PhoneNmber() {
     <div className="flex gap-8 items-center">
       <SlPhone className="min-w-[32px] min-h-[32px] object-cover" />
       <div className="flex flex-col space-y-2">
-        <span className="text-secondary-2/30">Phone Number</span>
-        <span className="text-secondary-2">+918600173694</span>
+        <span className="text-tertiary/60">Phone Number</span>
+        <span className="text-tertiary">+918600173694</span>
       </div>
     </div>
   );
@@ -33,7 +33,7 @@ function SocailProfiles() {
     <div className="flex gap-8 items-center">
       <SlShare className="min-w-[32px] min-h-[32px] object-cover" />
       <div className="flex flex-col space-y-2">
-        <span className="text-secondary-2/30">Social Profiles</span>
+        <span className="text-tertiary/60">Social Profiles</span>
         <div className="flex space-x-3 mt-2">
           <a href="https://www.linkedin.com/in/sangram-abdar-522150117/">
             <SiLinkedin className="w-full h-full object-cover transition-all duration-100 hover:scale-110" />
@@ -52,11 +52,8 @@ function Email() {
     <div className="flex gap-8 items-center">
       <AiOutlineMail className="min-w-[32px] min-h-[32px] object-cover" />
       <div className="flex flex-col space-y-2">
-        <span className="text-secondary-2/30">Email</span>
-        <a
-          className="text-secondary-2"
-          href="mailto:abdarsangram2697@gmail.com"
-        >
+        <span className="text-tertiary/60">Email</span>
+        <a className="text-tertiary" href="mailto:abdarsangram2697@gmail.com">
           abdarsangram2697@gmail.com
         </a>
       </div>

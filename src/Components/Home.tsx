@@ -6,14 +6,14 @@ const Section = Element;
 const words = [
   "Software Developer.",
   "React Expert.",
-  "JavaScript enthusiast.",
+  "JavaScript Enthusiast.",
 ];
 
 let currentIndex = 0;
 let pointer = 0;
 let task = "add";
 
-const fn = (ref: any) => {
+const animation = (ref: any) => {
   if (task == "add") {
     if (pointer < words[currentIndex].length) {
       ref.current.innerHTML = words[currentIndex].substring(0, pointer);
@@ -41,7 +41,7 @@ function Home() {
   const ref = useRef(null);
 
   useEffect(() => {
-    const interval = setInterval(() => fn(ref), 150);
+    const interval = setInterval(() => animation(ref), 150);
 
     return () => {
       clearInterval(interval);
@@ -58,9 +58,9 @@ function Home() {
         <h1 className=" text-4xl font-medium md:text-6xl text-tertiary">
           Sangram Abdar
         </h1>
-        <div className="text-2xl pt-4 font-bold md:text-4xl mt-4 text-secondary-2 opacity-40">
+        <div className="text-2xl pt-4 font-bold md:text-4xl mt-4 text-tertiary opacity-40">
           <span className="m-2">A</span>
-          <span className="font-bold bg-secondary-1/30" ref={ref}></span>
+          <span className="font-bold bg-secondary-1/50" ref={ref}></span>
           <span className="animate-ping duration-100">|</span>
         </div>
 

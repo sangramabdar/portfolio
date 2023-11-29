@@ -55,10 +55,10 @@ function Project({
         alt=""
       />
       <div className="flex justify-evenly">
-        <a className="text-secondary-2 hover:text-white" href={githubLink}>
+        <a className="text-tertiary/60 hover:text-tertiary" href={githubLink}>
           Github
         </a>
-        <a className="text-secondary-2 hover:text-white" href={deployedLink}>
+        <a className="text-tertiary/60 hover:text-tertiary" href={deployedLink}>
           Demo
         </a>
       </div>
@@ -75,7 +75,7 @@ function Work() {
       <h1 className="font-bold text-2xl border-solid border-b-4 text-tertiary border-b-secondary-1">
         Work
       </h1>
-      <p className="mt-4 text-secondary-2">
+      <p className="mt-4 text-tertiary/60">
         // check out some of my recent work
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-6 mt-10">

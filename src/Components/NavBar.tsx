@@ -79,11 +79,11 @@ function NavBar() {
   };
 
   return (
-    <nav className="top-0 right-0 left-0 fixed flex justify-between p-4 px-4 md:px-8 z-20 text-white items-center bg-primary-1">
+    <nav className="top-0 right-0 left-0 fixed flex p-4 px-4 md:px-8 z-20 text-white bg-primary-1">
       <div className="md:hidden z-10" onClick={handleOnClick}>
         {open ? <RxCross2 size={"25px"} /> : <GiHamburgerMenu size={"25px"} />}
       </div>
-      <div className="hidden md:flex justify-evenly space-x-4">
+      <div className="hidden md:flex justify-evenly space-x-6 items-center max-w-lg mx-auto ">
         <NavBarItem to="home">Home</NavBarItem>
         <NavBarItem to="about">About Me</NavBarItem>
         <NavBarItem to="skills">Skills</NavBarItem>
