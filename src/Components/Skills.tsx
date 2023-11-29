@@ -1,13 +1,12 @@
-import React, { useRef } from "react";
+import React from "react";
 import Element from "react-scroll/modules/components/Element";
 import { AiFillHtml5 } from "react-icons/ai";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
-import { DiJavascript1 } from "react-icons/di";
 import { SiTypescript } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
-import { FaAngular, FaNodeJs } from "react-icons/fa";
+import { FaNodeJs } from "react-icons/fa";
 import { SiFirebase, SiMongodb, SiTailwindcss } from "react-icons/si";
 
 const Section = Element;

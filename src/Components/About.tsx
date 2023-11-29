@@ -14,7 +14,7 @@ function Information() {
       </h1>
 
       <div className="flex flex-wrap">
-        <p className="block w-full">I have worked on technologies like</p>
+        <span className="block w-full">I have worked on technologies like</span>
         <span className="text-center font-bold border-b-secondary-1 border-b-2 mr-2">
           React
         </span>
@@ -34,7 +34,7 @@ function Information() {
           HTML
         </span>
         <span className="text-center font-bold border-b-secondary-1 border-b-2 mr-2">
-          CSS
+          CSS .
         </span>
       </div>
 
@@ -63,9 +63,8 @@ function About() {
         About Me
       </h1>
 
-      <div className="flex flex-col justify-center items-center md:flex-row mt-10 gap-4">
+      <div className="max-w-xl mx-auto mt-10 gap-4">
         <Information />
-        <Logo className="object-conver w-full" />
       </div>
     </Section>
   );
