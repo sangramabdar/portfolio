@@ -10,7 +10,7 @@ import { NavBarProvider } from "./context/NavBarContext";
 function App() {
   return (
     <NavBarProvider>
-      <div className="bg-primary-1 text-white flex">
+      <div className="bg-primary-1 flex">
         <NavBar />
         <main>
           <Home />

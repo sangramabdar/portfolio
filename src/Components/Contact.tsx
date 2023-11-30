@@ -64,7 +64,7 @@ function Email() {
 function Contact() {
   return (
     <Section
-      className="max-w-7xl mx-auto flex flex-col justify-start items-center px-4 sm:px-8 mt-40 pb-40"
+      className="max-w-7xl mx-auto flex flex-col justify-start items-center px-4 sm:px-8 mt-40 pb-40 h-screen"
       name="contact"
     >
       <h1 className="font-bold text-2xl border-solid border-b-4 text-tertiary border-b-secondary-1">

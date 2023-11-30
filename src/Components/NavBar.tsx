@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { useNavBarContext } from "../context/NavBarContext";
+import cn from "../utils/cn";
 
 function SideNavBarItem({
   children,
@@ -12,8 +13,12 @@ function SideNavBarItem({
 
   return (
     <Link
+      spy={true}
+      activeClass="active"
       onClick={toggleSideDrawer}
-      className="text-tertiary font-bold w-fit text-xl border-solid border-b-4 border-b-secondary-1 "
+      className={cn(
+        "text-tertiary font-bold w-fit text-xl border-solid border-b-4 border-b-secondary-1 opacity-30"
+      )}
       to={to}
       smooth={true}
       offset={-50}
@@ -25,7 +30,6 @@ function SideNavBarItem({
 
 function SideDrawer() {
   const { toggleSideDrawer, open } = useNavBarContext();
-  const classes = open ? "translate-x-[0px]" : "translate-x-[100%]";
 
   const handleOnClick = (e: React.SyntheticEvent) => {
     e.stopPropagation();
@@ -34,10 +38,10 @@ function SideDrawer() {
 
   return (
     <ul
-      className={
-        "fixed bg-gray-900/20 backdrop-blur-lg h-screen w-full flex right-0 top-0 transition-all duration-900 flex-col justify-start pt-20 space-y-8 px-4 md:hidden " +
-        classes
-      }
+      className={cn(
+        "fixed bg-primary-2/20 backdrop-blur-lg h-screen w-full flex right-0 top-0 transition-all duration-900 flex-col justify-start pt-20 space-y-8 px-4 md:hidden ",
+        open ? "translate-x-[0px]" : "translate-x-[100%]"
+      )}
       onClick={handleOnClick}
     >
       <SideNavBarItem to="home">Home</SideNavBarItem>
@@ -52,7 +56,9 @@ function SideDrawer() {
 function NavBarItem({ to, children }: React.PropsWithChildren<{ to: string }>) {
   return (
     <Link
-      className="font-bold text-1xl border-solid border-b-4 text-tertiary border-b-secondary-1 cursor-pointer"
+      spy={true}
+      activeClass="active"
+      className="font-bold text-xl border-solid border-b-4 text-tertiary border-b-secondary-1 cursor-pointer opacity-30"
       to={to}
       smooth={true}
       offset={-100}
@@ -85,7 +91,7 @@ function NavBar() {
       </nav>
 
       {/* for large screen */}
-      <nav className="hidden md:flex fixed flex-col top-0 left-0 bottom-0 w-[160px] items-start space-y-4 p-4 bg-primary-1 border-tertiary border-[1px]">
+      <nav className="hidden md:flex fixed flex-col top-0 left-0 bottom-0 w-[180px] items-start space-y-4 p-8 py-16 bg-primary-2">
         <NavBarItem to="home">Home</NavBarItem>
         <NavBarItem to="about">About Me</NavBarItem>
         <NavBarItem to="skills">Skills</NavBarItem>
@@ -94,7 +100,7 @@ function NavBar() {
       </nav>
 
       {/* placeholder for sidenavbar */}
-      <div className="hidden md:flex flex-col top-0 left-0 bottom-0 w-[160px]"></div>
+      <div className="hidden md:flex flex-col top-0 left-0 bottom-0 w-[300px] items-start space-y-4 p-4 bg-primary-1"></div>
     </>
   );
 }
