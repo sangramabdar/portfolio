@@ -6,12 +6,13 @@ import { useNavBarContext } from "../context/NavBarContext";
 
 function SideNavBarItem({
   children,
-  onClick,
   to,
-}: React.PropsWithChildren<{ onClick: any; to: string }>) {
+}: React.PropsWithChildren<{ to: string }>) {
+  const { toggleSideDrawer } = useNavBarContext();
+
   return (
     <Link
-      onClick={onClick}
+      onClick={toggleSideDrawer}
       className="text-tertiary font-bold w-fit text-xl border-solid border-b-4 border-b-secondary-1 "
       to={to}
       smooth={true}
@@ -32,28 +33,19 @@ function SideDrawer() {
   };
 
   return (
-    <div
+    <ul
       className={
         "fixed bg-gray-900/20 backdrop-blur-lg h-screen w-full flex right-0 top-0 transition-all duration-900 flex-col justify-start pt-20 space-y-8 px-4 md:hidden " +
         classes
       }
+      onClick={handleOnClick}
     >
-      <SideNavBarItem to="home" onClick={handleOnClick}>
-        Home
-      </SideNavBarItem>
-      <SideNavBarItem to="about" onClick={handleOnClick}>
-        About Me
-      </SideNavBarItem>
-      <SideNavBarItem to="skills" onClick={handleOnClick}>
-        Skills
-      </SideNavBarItem>
-      <SideNavBarItem to="work" onClick={handleOnClick}>
-        Work
-      </SideNavBarItem>
-      <SideNavBarItem to="contact" onClick={handleOnClick}>
-        Contact
-      </SideNavBarItem>
-    </div>
+      <SideNavBarItem to="home">Home</SideNavBarItem>
+      <SideNavBarItem to="about">About Me</SideNavBarItem>
+      <SideNavBarItem to="skills">Skills</SideNavBarItem>
+      <SideNavBarItem to="work">Work</SideNavBarItem>
+      <SideNavBarItem to="contact">Contact</SideNavBarItem>
+    </ul>
   );
 }
 
@@ -79,19 +71,31 @@ function NavBar() {
   };
 
   return (
-    <nav className="top-0 right-0 left-0 fixed flex p-4 px-4 md:px-8 z-20 text-white bg-primary-1">
-      <div className="md:hidden z-10" onClick={handleOnClick}>
-        {open ? <RxCross2 size={"25px"} /> : <GiHamburgerMenu size={"25px"} />}
-      </div>
-      <div className="hidden md:flex justify-evenly space-x-6 items-center max-w-lg mx-auto ">
+    <>
+      {/* for small screen */}
+      <nav className="top-0 right-0 left-0 fixed flex p-4 px-4 md:px-8 z-20 text-white bg-primary-1 md:hidden">
+        <div className="md:hidden z-10" onClick={handleOnClick}>
+          {open ? (
+            <RxCross2 size={"25px"} />
+          ) : (
+            <GiHamburgerMenu size={"25px"} />
+          )}
+        </div>
+        <SideDrawer />
+      </nav>
+
+      {/* for large screen */}
+      <nav className="hidden md:flex fixed flex-col top-0 left-0 bottom-0 w-[160px] items-start space-y-4 p-4 bg-primary-1 border-tertiary border-[1px]">
         <NavBarItem to="home">Home</NavBarItem>
         <NavBarItem to="about">About Me</NavBarItem>
         <NavBarItem to="skills">Skills</NavBarItem>
         <NavBarItem to="work">Work</NavBarItem>
         <NavBarItem to="contact">Contact</NavBarItem>
-      </div>
-      <SideDrawer />
-    </nav>
+      </nav>
+
+      {/* placeholder for sidenavbar */}
+      <div className="hidden md:flex flex-col top-0 left-0 bottom-0 w-[160px]"></div>
+    </>
   );
 }
 
