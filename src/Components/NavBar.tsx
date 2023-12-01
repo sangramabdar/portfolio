@@ -17,7 +17,7 @@ function SideNavBarItem({
       activeClass="active"
       onClick={toggleSideDrawer}
       className={cn(
-        "text-tertiary font-bold w-fit text-xl border-solid border-b-4 border-b-secondary-1 opacity-30"
+        "text-tertiary font-bold w-fit text-xl border-solid border-b-4 border-b-secondary-1"
       )}
       to={to}
       smooth={true}
