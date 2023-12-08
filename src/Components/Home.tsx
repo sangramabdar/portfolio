@@ -58,13 +58,13 @@ function Home() {
         <h1 className=" text-4xl font-medium md:text-6xl text-tertiary">
           Sangram Abdar
         </h1>
-        <div className="text-2xl pt-4 font-bold md:text-4xl mt-4 text-tertiary opacity-40">
+        <div className="text-2xl pt-4 font-bold md:text-4xl mt-4 text-tertiary opacity-50">
           <span className="m-2">A</span>
-          <span className="font-bold bg-secondary-1/50" ref={ref}></span>
+          <span className="font-bold bg-secondary-1" ref={ref}></span>
           <span className="animate-ping duration-100">|</span>
         </div>
 
-        <p className="pt-8 text-lg text-tertiary/60">
+        <p className="pt-8 text-lg text-tertiary/80">
           "A self-driven, passionate software developer with a curious mind who
           revels in solving complex and challenging real-world problems."
         </p>

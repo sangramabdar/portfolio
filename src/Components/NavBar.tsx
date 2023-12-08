@@ -58,7 +58,7 @@ function NavBarItem({ to, children }: React.PropsWithChildren<{ to: string }>) {
     <Link
       spy={true}
       activeClass="active"
-      className="font-bold text-xl border-solid border-b-4 text-tertiary border-b-secondary-1 cursor-pointer opacity-30"
+      className="font-bold text-xl border-solid border-b-4 text-tertiary border-b-secondary-1 cursor-pointer opacity-50"
       to={to}
       smooth={true}
       offset={-100}
@@ -79,7 +79,7 @@ function NavBar() {
   return (
     <>
       {/* for small screen */}
-      <nav className="top-0 right-0 left-0 fixed flex p-4 px-4 md:px-8 z-20 text-white bg-primary-1 md:hidden">
+      <nav className="top-0 right-0 left-0 fixed flex p-4 px-4 md:px-8 z-20 text-black bg-primary-2 md:hidden">
         <div className="md:hidden z-10" onClick={handleOnClick}>
           {open ? (
             <RxCross2 size={"25px"} />
