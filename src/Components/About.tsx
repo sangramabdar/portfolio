@@ -8,13 +8,16 @@ function Information() {
   return (
     <div className="space-y-4 text-secondary-2">
       <h1>
-        I completed my post graduation in MCA (computer applications) and I
-        enjoy problem-solving and coding. I always strive to bring 100% to the
-        work I do.
+        I hold a postgraduate degree in MCA (Computer Applications) and find joy
+        in problem-solving through coding. I consistently aim to deliver my
+        best, giving 100% to every task."
       </h1>
 
       <div className="flex flex-wrap">
-        <span className="block w-full">I have worked on technologies like</span>
+        <span className="block w-full">
+          I possess a strong understanding of a diverse range of technologies
+          like
+        </span>
         <span className="text-center font-bold border-b-secondary-1 border-b-2 mr-2">
           React
         </span>
@@ -40,12 +43,12 @@ function Information() {
 
       <h1>Apart from coding, some other activities that I love to do!</h1>
       <ul className="space-y-2">
-        <li className="flex items-center">
-          <HiOutlineHandThumbUp />
+        <li className="flex items-center space-x-4">
+          <HiOutlineHandThumbUp className="text-secondary-1" />
           <span className="ml-2">Playing football</span>
         </li>
-        <li className="flex  items-center">
-          <HiOutlineHandThumbUp />
+        <li className="flex  items-center space-x-4">
+          <HiOutlineHandThumbUp className="text-secondary-1" />
           <span className="ml-2">Playing video games</span>
         </li>
       </ul>

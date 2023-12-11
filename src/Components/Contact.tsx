@@ -2,61 +2,69 @@ import Element from "react-scroll/modules/components/Element";
 import { SlLocationPin, SlPhone, SlShare } from "react-icons/sl";
 import { AiOutlineMail } from "react-icons/ai";
 import { SiLinkedin, SiGithub } from "react-icons/si";
+import React from "react";
+import { IconType } from "react-icons";
 
 const Section = Element;
 
-function Address() {
-  return (
-    <div className="flex gap-8 items-center">
-      <SlLocationPin className="min-w-[32px] min-h-[32px] object-cover" />
-      <div className="flex flex-col spcae-y-2">
-        <span className="text-tertiary/60">My Address</span>
-        <span className="text-tertiary">Pune</span>
-      </div>
-    </div>
-  );
-}
+const contactItems: {
+  Icon: IconType;
+  children: React.ReactNode;
+}[] = [
+  {
+    Icon: SlLocationPin,
+    children: <span className="text-tertiary break-all">Pune</span>,
+  },
+  {
+    Icon: SlPhone,
+    children: <span className="text-tertiary break-all">+918600173694</span>,
+  },
+  {
+    Icon: AiOutlineMail,
+    children: (
+      <a
+        className="text-tertiary break-all"
+        href="mailto:abdarsangram2697@gmail.com"
+      >
+        abdarsangram2697@gmail.com
+      </a>
+    ),
+  },
+  {
+    Icon: SiLinkedin,
+    children: (
+      <a
+        href="https://www.linkedin.com/in/sangram-abdar-522150117/"
+        className="text-tertiary break-all"
+      >
+        https://www.linkedin.com/in/sangram-abdar-522150117
+      </a>
+    ),
+  },
+  {
+    Icon: SiGithub,
+    children: (
+      <a
+        className="text-tertiary break-all"
+        href="https://github.com/sangramabdar"
+      >
+        https://github.com/sangramabdar
+      </a>
+    ),
+  },
+];
 
-function PhoneNmber() {
+function ContactItem({
+  Icon,
+  children,
+}: {
+  Icon: any;
+  children: React.ReactNode;
+}) {
   return (
-    <div className="flex gap-8 items-center">
-      <SlPhone className="min-w-[32px] min-h-[32px] object-cover" />
-      <div className="flex flex-col space-y-2">
-        <span className="text-tertiary/60">Phone Number</span>
-        <span className="text-tertiary">+918600173694</span>
-      </div>
-    </div>
-  );
-}
-function SocailProfiles() {
-  return (
-    <div className="flex gap-8 items-center">
-      <SlShare className="min-w-[32px] min-h-[32px] object-cover" />
-      <div className="flex flex-col space-y-2">
-        <span className="text-tertiary/60">Social Profiles</span>
-        <div className="flex space-x-3 mt-2">
-          <a href="https://www.linkedin.com/in/sangram-abdar-522150117/">
-            <SiLinkedin className="w-full h-full object-cover transition-all duration-100 hover:scale-110" />
-          </a>
-          <a href="https://github.com/sangramabdar">
-            <SiGithub className="w-full h-full object-cover transition-all duration-100 hover:scale-110" />
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Email() {
-  return (
-    <div className="flex gap-8 items-center">
-      <AiOutlineMail className="min-w-[32px] min-h-[32px] object-cover" />
-      <div className="flex flex-col space-y-2">
-        <span className="text-tertiary/60">Email</span>
-        <a className="text-tertiary" href="mailto:abdarsangram2697@gmail.com">
-          abdarsangram2697@gmail.com
-        </a>
-      </div>
+    <div className="flex gap-6 items-center">
+      <Icon className="min-w-[32px] min-h-[32px] object-cover text-secondary-1" />
+      {children}
     </div>
   );
 }
@@ -70,11 +78,10 @@ function Contact() {
       <h1 className="font-bold text-2xl border-solid border-b-4 text-tertiary border-b-secondary-1">
         Contact
       </h1>
-      <div className="grid overflow-hidden grid-cols-1 gap-12 sm:grid-cols-2 mt-10">
-        <Address />
-        <SocailProfiles />
-        <Email />
-        <PhoneNmber />
+      <div className="grid overflow-hidden grid-cols-1 gap-12 mt-10">
+        {contactItems.map((item: any, index: number) => {
+          return <ContactItem key={index} {...item} />;
+        })}
       </div>
     </Section>
   );

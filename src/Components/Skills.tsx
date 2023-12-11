@@ -88,15 +88,6 @@ const skills: Skill[] = [
     ),
   },
   {
-    name: "Firebase",
-    element: (
-      <SiFirebase
-        className="w-full h-full object-cover"
-        color="rgb(253,198,54)"
-      />
-    ),
-  },
-  {
     name: "React Native",
     element: (
       <FaReact className="w-full h-full object-cover" color="rgb(97,218,251)" />
@@ -132,7 +123,7 @@ function Skills() {
         // these are the technologies I have worked with
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-2 gap-4 sm:gap-8 mt-10">
+      <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-4 sm:gap-8 mt-10">
         {skills.map((skill: Skill, index: number) => {
           return <Skill skill={skill} key={index} />;
         })}
