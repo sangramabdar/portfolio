@@ -21,7 +21,7 @@ function SideNavBarItem({
       )}
       to={to}
       smooth={true}
-      offset={-50}
+      offset={-80}
     >
       {children}
     </Link>
