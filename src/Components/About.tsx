@@ -6,7 +6,7 @@ const Section = Element;
 
 function Information() {
   return (
-    <div className="space-y-4 text-secondary-2">
+    <div className="space-y-4 text-tertiary">
       <h1>
         I hold a postgraduate degree in MCA (Computer Applications) and find joy
         in problem-solving through coding. I consistently aim to deliver my

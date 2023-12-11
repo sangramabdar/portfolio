@@ -54,13 +54,13 @@ function Home() {
       className="max-w-4xl mx-auto px-4 h-screen sm:px-8 flex flex-col justify-center items-center text-center"
     >
       <div className="space-y-2 max-w-xl mx-auto">
-        <span className="mx-auto text-tertiary/60">Hi, I'm </span>
+        <span className="mx-auto text-tertiary/80">Hi, I'm </span>
         <h1 className=" text-4xl font-medium md:text-6xl text-tertiary">
           Sangram Abdar
         </h1>
-        <div className="text-2xl pt-4 font-bold md:text-4xl mt-4 text-tertiary opacity-50">
-          <span className="m-2">A</span>
-          <span className="font-bold bg-secondary-1" ref={ref}></span>
+        <div className="text-2xl pt-4 font-bold md:text-4xl mt-4 text-tertiary/70">
+          {/* <span className="m-2">A</span> */}
+          <span className="font-bold bg-secondary-1/80 p-1" ref={ref}></span>
           <span className="animate-ping duration-100">|</span>
         </div>
 

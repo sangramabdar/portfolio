@@ -62,7 +62,7 @@ function ContactItem({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex gap-6 items-center">
+    <div className="flex gap-6 items-center underline">
       <Icon className="min-w-[32px] min-h-[32px] object-cover text-secondary-1" />
       {children}
     </div>

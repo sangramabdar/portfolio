@@ -39,7 +39,7 @@ function SideDrawer() {
   return (
     <ul
       className={cn(
-        "fixed bg-primary-2/20 backdrop-blur-lg h-screen w-full flex right-0 top-0 transition-all duration-900 flex-col justify-start pt-20 space-y-8 px-4 md:hidden ",
+        "fixed bg-primary-2/10 backdrop-blur-lg h-screen w-full flex right-0 top-0 transition-all duration-900 flex-col justify-start pt-20 space-y-8 px-4 md:hidden ",
         open ? "translate-x-[0px]" : "translate-x-[100%]"
       )}
       onClick={handleOnClick}
