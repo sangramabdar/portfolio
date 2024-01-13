@@ -7,7 +7,7 @@ import { SiTypescript } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
-import { SiFirebase, SiMongodb, SiTailwindcss } from "react-icons/si";
+import { SiMongodb, SiTailwindcss } from "react-icons/si";
 
 const Section = Element;
 
@@ -87,12 +87,12 @@ const skills: Skill[] = [
       />
     ),
   },
-  {
-    name: "React Native",
-    element: (
-      <FaReact className="w-full h-full object-cover" color="rgb(97,218,251)" />
-    ),
-  },
+  // {
+  //   name: "React Native",
+  //   element: (
+  //     <FaReact className="w-full h-full object-cover" color="rgb(97,218,251)" />
+  //   ),
+  // },
 ];
 
 interface TechnologyProps {
