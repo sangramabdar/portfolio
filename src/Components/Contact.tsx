@@ -79,7 +79,7 @@ function Contact() {
   return (
     <Section
       className={cn(
-        "max-w-7xl mx-auto flex flex-col justify-start items-center px-4 sm:px-8 mt-40 pb-40 h-screen"
+        "max-w-7xl mx-auto flex flex-col justify-start items-center px-4 sm:px-8 mt-40 h-screen"
       )}
       name="contact"
     >
@@ -96,8 +96,8 @@ function Contact() {
       <div className={cn("grid overflow-hidden grid-cols-1 gap-12 mt-10")}>
         {contactItems.map((item: any, index: number) => {
           return (
-            <Reveal>
-              <ContactItem key={index} {...item} />
+            <Reveal key={index}>
+              <ContactItem {...item} />
             </Reveal>
           );
         })}

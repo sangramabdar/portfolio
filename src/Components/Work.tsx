@@ -108,9 +108,8 @@ function Work() {
       >
         {projects.map((project: ProjectProps) => {
           return (
-            <Reveal>
+            <Reveal key={project.name}>
               <Project
-                key={project.name}
                 name={project.name}
                 githubLink={project.githubLink}
                 deployedLink={project.deployedLink}

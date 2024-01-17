@@ -4,6 +4,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { useNavBarContext } from "../context/NavBarContext";
 import cn from "../utils/cn";
+import Reveal from "./Reveal";
+import { motion } from "framer-motion";
 
 function SideNavBarItem({
   children,
@@ -97,9 +99,19 @@ function NavBar() {
       </nav>
 
       {/* for large screen */}
-      <nav
+
+      <motion.nav
+        whileInView={{
+          opacity: 1,
+        }}
+        initial={{
+          opacity: 0,
+        }}
+        viewport={{
+          once: true,
+        }}
         className={cn(
-          "hidden md:flex fixed flex-col top-0 left-0 bottom-0 w-[180px] items-start space-y-4 p-8 py-16 bg-primary-2"
+          "hidden z-10 md:flex w-[550px] top-4 fixed left-[50%] translate-x-[-50%] justify-center space-x-8 bg-primary-2 py-2 px-4 rounded-full"
         )}
       >
         <NavBarItem to="home">Home</NavBarItem>
@@ -107,14 +119,16 @@ function NavBar() {
         <NavBarItem to="skills">Skills</NavBarItem>
         <NavBarItem to="work">Work</NavBarItem>
         <NavBarItem to="contact">Contact</NavBarItem>
-      </nav>
+      </motion.nav>
 
       {/* placeholder for sidenavbar */}
-      <div
+      {/* <div
         className={cn(
           "hidden md:flex flex-col top-0 left-0 bottom-0 w-[300px] items-start space-y-4 p-4 bg-primary-1"
         )}
-      ></div>
+      >
+        asasdad
+      </div> */}
     </>
   );
 }

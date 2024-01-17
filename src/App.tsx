@@ -11,16 +11,14 @@ import cn from "./utils/cn";
 function App() {
   return (
     <NavBarProvider>
-      <div className={cn("bg-primary-1 flex")}>
-        <NavBar />
-        <main>
-          <Home />
-          <About />
-          <Skills />
-          <Work />
-          <Contact />
-        </main>
-      </div>
+      <NavBar />
+      <main>
+        <Home />
+        <About />
+        <Skills />
+        <Work />
+        <Contact />
+      </main>
     </NavBarProvider>
   );
 }

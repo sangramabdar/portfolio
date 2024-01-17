@@ -142,8 +142,8 @@ function Skills() {
       >
         {skills.map((skill: Skill, index: number) => {
           return (
-            <Reveal>
-              <Skill skill={skill} key={index} />
+            <Reveal key={skill.name}>
+              <Skill skill={skill} />
             </Reveal>
           );
         })}
