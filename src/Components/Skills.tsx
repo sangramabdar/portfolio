@@ -116,7 +116,7 @@ function Skills() {
   return (
     <Section
       className={cn(
-        "max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-center mt-40 items-center"
+        "max-w-7xl mx-auto px-4 sm:px-8 flex flex-col mt-40 justify-center items-center"
       )}
       name="skills"
     >

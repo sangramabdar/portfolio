@@ -6,7 +6,6 @@ import Skills from "./Components/Skills";
 import Contact from "./Components/Contact";
 import "./App.css";
 import { NavBarProvider } from "./context/NavBarContext";
-import cn from "./utils/cn";
 
 function App() {
   return (
