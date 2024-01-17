@@ -11,7 +11,7 @@ function App() {
   return (
     <NavBarProvider>
       <NavBar />
-      <main>
+      <main className="bg-primary-1">
         <Home />
         <About />
         <Skills />

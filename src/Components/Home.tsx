@@ -4,6 +4,7 @@ import cn from "../utils/cn";
 import Typewriter from "typewriter-effect";
 
 import { Variants, motion } from "framer-motion";
+import Reveal from "./Reveal";
 
 const Section = Element;
 
@@ -32,7 +33,7 @@ function Home() {
         "max-w-4xl mx-auto px-4 h-screen sm:px-8 flex flex-col justify-center items-center text-center"
       )}
     >
-      <motion.div
+      {/* <motion.div
         variants={varaints}
         className={cn("space-y-2 max-w-xl mx-auto")}
       >
@@ -95,7 +96,45 @@ function Home() {
           "A self-driven, passionate software developer with a curious mind who
           revels in solving complex and challenging real-world problems."
         </motion.p>
-      </motion.div>
+      </motion.div> */}
+      <div className={cn("space-y-8 max-w-xl mx-auto")}>
+        <Reveal>
+          <h1 className={cn("text-4xl font-bold md:text-6xl text-tertiary")}>
+            Hey, I'm Sangram
+            <span className={cn("text-secondary-1")}>.</span>
+          </h1>
+        </Reveal>
+        {/* <Reveal>
+          <div
+            className={cn(
+              "text-2xl pt-4 font-bold md:text-4xl mt-4 text-tertiary/70"
+            )}
+          >
+            <Typewriter
+              options={{
+                strings: WORDS,
+                loop: true,
+                autoStart: true,
+                deleteSpeed: "natural",
+              }}
+            />
+          </div>
+        </Reveal> */}
+
+        <Reveal>
+          <h2 className={cn("text-2xl font-bold md:text-4xl text-tertiary")}>
+            I'm a{" "}
+            <span className={cn("text-secondary-1")}>Full Stack Developer</span>
+          </h2>
+        </Reveal>
+
+        <Reveal>
+          <p className={cn("text-lg text-tertiary/80")}>
+            A self-driven, passionate software developer with a curious mind who
+            revels in solving complex and challenging real-world problems
+          </p>
+        </Reveal>
+      </div>
     </Section>
   );
 }
