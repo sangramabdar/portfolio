@@ -120,15 +120,6 @@ function NavBar() {
         <NavBarItem to="work">Work</NavBarItem>
         <NavBarItem to="contact">Contact</NavBarItem>
       </motion.nav>
-
-      {/* placeholder for sidenavbar */}
-      {/* <div
-        className={cn(
-          "hidden md:flex flex-col top-0 left-0 bottom-0 w-[300px] items-start space-y-4 p-4 bg-primary-1"
-        )}
-      >
-        asasdad
-      </div> */}
     </>
   );
 }
