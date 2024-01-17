@@ -8,6 +8,7 @@ import { SiRedux } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { SiMongodb, SiTailwindcss } from "react-icons/si";
+import cn from "../utils/cn";
 
 const Section = Element;
 
@@ -87,12 +88,6 @@ const skills: Skill[] = [
       />
     ),
   },
-  // {
-  //   name: "React Native",
-  //   element: (
-  //     <FaReact className="w-full h-full object-cover" color="rgb(97,218,251)" />
-  //   ),
-  // },
 ];
 
 interface TechnologyProps {
@@ -101,11 +96,15 @@ interface TechnologyProps {
 
 function Skill({ skill }: React.PropsWithChildren<TechnologyProps>) {
   return (
-    <div className="sm:w-40 p-2 space-y-2 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-105 shadow-lg shadow-tertiary/20 group">
-      <div className="flex w-full h-full justify-center items-center">
+    <div
+      className={cn(
+        "sm:w-40 p-2 space-y-2 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-105 shadow-lg shadow-tertiary/20 group"
+      )}
+    >
+      <div className={cn("flex w-full h-full justify-center items-center")}>
         {skill.element}
       </div>
-      <p className="font-bold text-tertiary/80 group-hover:text-tertiary">
+      <p className={cn("font-bold text-tertiary/80 group-hover:text-tertiary")}>
         {skill.name}
       </p>
     </div>
@@ -115,17 +114,27 @@ function Skill({ skill }: React.PropsWithChildren<TechnologyProps>) {
 function Skills() {
   return (
     <Section
-      className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-center mt-40 items-center"
+      className={cn(
+        "max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-center mt-40 items-center"
+      )}
       name="skills"
     >
-      <h1 className="text-tertiary font-bold text-2xl border-solid border-b-4 border-b-secondary-1">
+      <h1
+        className={cn(
+          "text-tertiary font-bold text-2xl border-solid border-b-4 border-b-secondary-1"
+        )}
+      >
         Skills
       </h1>
-      <p className="mt-4 text-tertiary/80 opacity-">
+      <p className={cn("mt-4 text-tertiary/80 opacity-1")}>
         // these are the technologies I have worked with
       </p>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-4 sm:gap-8 mt-10">
+      <div
+        className={cn(
+          "grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-4 sm:gap-8 mt-10"
+        )}
+      >
         {skills.map((skill: Skill, index: number) => {
           return <Skill skill={skill} key={index} />;
         })}

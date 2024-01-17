@@ -6,11 +6,12 @@ import Skills from "./Components/Skills";
 import Contact from "./Components/Contact";
 import "./App.css";
 import { NavBarProvider } from "./context/NavBarContext";
+import cn from "./utils/cn";
 
 function App() {
   return (
     <NavBarProvider>
-      <div className="bg-primary-1 flex">
+      <div className={cn("bg-primary-1 flex")}>
         <NavBar />
         <main>
           <Home />

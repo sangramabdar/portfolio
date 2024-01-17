@@ -58,7 +58,9 @@ function NavBarItem({ to, children }: React.PropsWithChildren<{ to: string }>) {
     <Link
       spy={true}
       activeClass="active"
-      className="font-bold text-xl border-solid border-b-4 text-tertiary border-b-secondary-1 cursor-pointer opacity-50"
+      className={cn(
+        "font-bold text-xl border-solid border-b-4 text-tertiary border-b-secondary-1 cursor-pointer opacity-50"
+      )}
       to={to}
       smooth={true}
       offset={-100}
@@ -79,8 +81,12 @@ function NavBar() {
   return (
     <>
       {/* for small screen */}
-      <nav className="top-0 right-0 left-0 fixed flex p-4 px-4 md:px-8 z-20 text-black bg-primary-2 md:hidden">
-        <div className="md:hidden z-10" onClick={handleOnClick}>
+      <nav
+        className={cn(
+          "top-0 right-0 left-0 fixed flex p-4 px-4 md:px-8 z-20 text-black bg-primary-2 md:hidden"
+        )}
+      >
+        <div className={cn("md:hidden z-10")} onClick={handleOnClick}>
           {open ? (
             <RxCross2 size={"25px"} />
           ) : (
@@ -91,7 +97,11 @@ function NavBar() {
       </nav>
 
       {/* for large screen */}
-      <nav className="hidden md:flex fixed flex-col top-0 left-0 bottom-0 w-[180px] items-start space-y-4 p-8 py-16 bg-primary-2">
+      <nav
+        className={cn(
+          "hidden md:flex fixed flex-col top-0 left-0 bottom-0 w-[180px] items-start space-y-4 p-8 py-16 bg-primary-2"
+        )}
+      >
         <NavBarItem to="home">Home</NavBarItem>
         <NavBarItem to="about">About Me</NavBarItem>
         <NavBarItem to="skills">Skills</NavBarItem>
@@ -100,7 +110,11 @@ function NavBar() {
       </nav>
 
       {/* placeholder for sidenavbar */}
-      <div className="hidden md:flex flex-col top-0 left-0 bottom-0 w-[300px] items-start space-y-4 p-4 bg-primary-1"></div>
+      <div
+        className={cn(
+          "hidden md:flex flex-col top-0 left-0 bottom-0 w-[300px] items-start space-y-4 p-4 bg-primary-1"
+        )}
+      ></div>
     </>
   );
 }
