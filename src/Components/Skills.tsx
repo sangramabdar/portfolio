@@ -9,6 +9,7 @@ import { SiJavascript } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { SiMongodb, SiTailwindcss } from "react-icons/si";
 import cn from "../utils/cn";
+import Reveal from "./Reveal";
 
 const Section = Element;
 
@@ -119,16 +120,20 @@ function Skills() {
       )}
       name="skills"
     >
-      <h1
-        className={cn(
-          "text-tertiary font-bold text-2xl border-solid border-b-4 border-b-secondary-1"
-        )}
-      >
-        Skills
-      </h1>
-      <p className={cn("mt-4 text-tertiary/80 opacity-1")}>
-        // these are the technologies I have worked with
-      </p>
+      <Reveal>
+        <h1
+          className={cn(
+            "text-tertiary font-bold text-2xl border-solid border-b-4 border-b-secondary-1"
+          )}
+        >
+          Skills
+        </h1>
+      </Reveal>
+      <Reveal>
+        <p className={cn("mt-4 text-tertiary/80 opacity-1")}>
+          // these are the technologies I have worked with
+        </p>
+      </Reveal>
 
       <div
         className={cn(
@@ -136,7 +141,11 @@ function Skills() {
         )}
       >
         {skills.map((skill: Skill, index: number) => {
-          return <Skill skill={skill} key={index} />;
+          return (
+            <Reveal>
+              <Skill skill={skill} key={index} />
+            </Reveal>
+          );
         })}
       </div>
     </Section>

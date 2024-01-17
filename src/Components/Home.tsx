@@ -3,6 +3,8 @@ import cn from "../utils/cn";
 
 import Typewriter from "typewriter-effect";
 
+import { Variants, motion } from "framer-motion";
+
 const Section = Element;
 
 const WORDS = [
@@ -12,6 +14,17 @@ const WORDS = [
 ];
 
 function Home() {
+  const varaints: Variants = {
+    hidden: {
+      opacity: 0,
+      y: 100,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
   return (
     <Section
       name="home"
@@ -19,17 +32,42 @@ function Home() {
         "max-w-4xl mx-auto px-4 h-screen sm:px-8 flex flex-col justify-center items-center text-center"
       )}
     >
-      <div
-        className={cn(
-          "space-y-2 max-w-xl mx-auto",
-          "animate__animated animate__fadeInUp"
-        )}
+      <motion.div
+        variants={varaints}
+        className={cn("space-y-2 max-w-xl mx-auto")}
       >
-        <span className={cn("mx-auto text-tertiary/80")}>Hi, I'm </span>
-        <h1 className={cn("text-4xl font-medium md:text-6xl text-tertiary")}>
+        <motion.span
+          variants={varaints}
+          initial={"hidden"}
+          whileInView={"show"}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.2,
+          }}
+          className={cn("mx-auto text-tertiary/80")}
+        >
+          Hi, I'm{" "}
+        </motion.span>
+        <motion.h1
+          variants={varaints}
+          initial={"hidden"}
+          whileInView={"show"}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.4,
+          }}
+          className={cn("text-4xl font-medium md:text-6xl text-tertiary")}
+        >
           Sangram Abdar
-        </h1>
-        <div
+        </motion.h1>
+        <motion.div
+          variants={varaints}
+          initial={"hidden"}
+          whileInView={"show"}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.6,
+          }}
           className={cn(
             "text-2xl pt-4 font-bold md:text-4xl mt-4 text-tertiary/70"
           )}
@@ -37,17 +75,27 @@ function Home() {
           <Typewriter
             options={{
               strings: WORDS,
-              autoStart: true,
               loop: true,
+              autoStart: true,
+              deleteSpeed: "natural",
             }}
           />
-        </div>
+        </motion.div>
 
-        <p className={cn("pt-8 text-lg text-tertiary/80")}>
+        <motion.p
+          variants={varaints}
+          initial={"hidden"}
+          whileInView={"show"}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.8,
+          }}
+          className={cn("pt-8 text-lg text-tertiary/80")}
+        >
           "A self-driven, passionate software developer with a curious mind who
           revels in solving complex and challenging real-world problems."
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
     </Section>
   );
 }

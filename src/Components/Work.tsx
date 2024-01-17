@@ -5,6 +5,7 @@ import TodoWebApp from "../assets/todo_web_app.png";
 import WeatherWebApp from "../assets/weather_app.png";
 import EmployeeManagementSystem from "../assets/employee_management_system.png";
 import cn from "../utils/cn";
+import Reveal from "./Reveal";
 
 const Section = Element;
 
@@ -86,16 +87,20 @@ function Work() {
       )}
       name="work"
     >
-      <h1
-        className={cn(
-          "font-bold text-2xl border-solid border-b-4 text-tertiary border-b-secondary-1"
-        )}
-      >
-        Work
-      </h1>
-      <p className={cn("mt-4 text-tertiary/80")}>
-        // check out some of my recent work
-      </p>
+      <Reveal>
+        <h1
+          className={cn(
+            "font-bold text-2xl border-solid border-b-4 text-tertiary border-b-secondary-1"
+          )}
+        >
+          Work
+        </h1>
+      </Reveal>
+      <Reveal>
+        <p className={cn("mt-4 text-tertiary/80")}>
+          // check out some of my recent work
+        </p>
+      </Reveal>
       <div
         className={cn(
           "grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-6 mt-10"
@@ -103,13 +108,15 @@ function Work() {
       >
         {projects.map((project: ProjectProps) => {
           return (
-            <Project
-              key={project.name}
-              name={project.name}
-              githubLink={project.githubLink}
-              deployedLink={project.deployedLink}
-              image={project.image}
-            />
+            <Reveal>
+              <Project
+                key={project.name}
+                name={project.name}
+                githubLink={project.githubLink}
+                deployedLink={project.deployedLink}
+                image={project.image}
+              />
+            </Reveal>
           );
         })}
       </div>

@@ -5,6 +5,7 @@ import { SiLinkedin, SiGithub } from "react-icons/si";
 import React from "react";
 import { IconType } from "react-icons";
 import cn from "../utils/cn";
+import Reveal from "./Reveal";
 
 const Section = Element;
 
@@ -82,16 +83,23 @@ function Contact() {
       )}
       name="contact"
     >
-      <h1
-        className={cn(
-          "font-bold text-2xl border-solid border-b-4 text-tertiary border-b-secondary-1"
-        )}
-      >
-        Contact
-      </h1>
+      <Reveal>
+        <h1
+          className={cn(
+            "font-bold text-2xl border-solid border-b-4 text-tertiary border-b-secondary-1"
+          )}
+        >
+          Contact
+        </h1>
+      </Reveal>
+
       <div className={cn("grid overflow-hidden grid-cols-1 gap-12 mt-10")}>
         {contactItems.map((item: any, index: number) => {
-          return <ContactItem key={index} {...item} />;
+          return (
+            <Reveal>
+              <ContactItem key={index} {...item} />
+            </Reveal>
+          );
         })}
       </div>
     </Section>

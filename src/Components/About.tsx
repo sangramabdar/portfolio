@@ -1,6 +1,7 @@
 import Element from "react-scroll/modules/components/Element";
 import { HiOutlineHandThumbUp } from "react-icons/hi2";
 import cn from "../utils/cn";
+import Reveal from "./Reveal";
 
 const Section = Element;
 
@@ -90,13 +91,17 @@ function About() {
       className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-start items-center mt-40"
       name="about"
     >
-      <h1 className="font-bold text-2xl border-solid border-b-4 text-tertiary border-b-secondary-1 animate__animated animate__fadeInUp">
-        About Me
-      </h1>
+      <Reveal>
+        <h1 className="font-bold text-2xl border-solid border-b-4 text-tertiary border-b-secondary-1 animate__animated animate__fadeInUp">
+          About Me
+        </h1>
+      </Reveal>
 
-      <div className="max-w-xl mx-auto mt-10 gap-4">
-        <Information />
-      </div>
+      <Reveal>
+        <div className="max-w-xl mx-auto mt-10 gap-4">
+          <Information />
+        </div>
+      </Reveal>
     </Section>
   );
 }
