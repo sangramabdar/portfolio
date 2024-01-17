@@ -4,6 +4,8 @@ import { AiOutlineMail } from "react-icons/ai";
 import { SiLinkedin, SiGithub } from "react-icons/si";
 import React from "react";
 import { IconType } from "react-icons";
+import cn from "../utils/cn";
+import Reveal from "./Reveal";
 
 const Section = Element;
 
@@ -62,8 +64,12 @@ function ContactItem({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex gap-6 items-center underline">
-      <Icon className="min-w-[32px] min-h-[32px] object-cover text-secondary-1" />
+    <div className={cn("flex gap-6 items-center underline")}>
+      <Icon
+        className={cn(
+          "min-w-[32px] min-h-[32px] object-cover text-secondary-1"
+        )}
+      />
       {children}
     </div>
   );
@@ -72,15 +78,28 @@ function ContactItem({
 function Contact() {
   return (
     <Section
-      className="max-w-7xl mx-auto flex flex-col justify-start items-center px-4 sm:px-8 mt-40 pb-40 h-screen"
+      className={cn(
+        "max-w-7xl mx-auto flex flex-col justify-start items-center px-4 sm:px-8 mt-40 h-screen"
+      )}
       name="contact"
     >
-      <h1 className="font-bold text-2xl border-solid border-b-4 text-tertiary border-b-secondary-1">
-        Contact
-      </h1>
-      <div className="grid overflow-hidden grid-cols-1 gap-12 mt-10">
+      <Reveal>
+        <h1
+          className={cn(
+            "font-bold text-2xl border-solid border-b-4 text-tertiary border-b-secondary-1"
+          )}
+        >
+          Contact
+        </h1>
+      </Reveal>
+
+      <div className={cn("grid overflow-hidden grid-cols-1 gap-12 mt-10")}>
         {contactItems.map((item: any, index: number) => {
-          return <ContactItem key={index} {...item} />;
+          return (
+            <Reveal key={index}>
+              <ContactItem {...item} />
+            </Reveal>
+          );
         })}
       </div>
     </Section>
