@@ -91,10 +91,10 @@ const NAVBAR_OPTIONS = [
     to: "work",
     text: "Work",
   },
-  {
-    to: "contact",
-    text: "Contact",
-  },
+  // {
+  //   to: "contact",
+  //   text: "Contact",
+  // },
 ];
 
 function NavBar() {

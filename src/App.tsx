@@ -22,7 +22,7 @@ function App() {
           <About />
           <Skills />
           <Work />
-          <Contact />
+          {/* <Contact /> */}
         </div>
       </main>
     </NavBarProvider>

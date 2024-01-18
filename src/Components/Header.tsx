@@ -1,4 +1,4 @@
-import { SiGithub, SiLinkedin } from "react-icons/si";
+import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import cn from "../utils/cn";
 import { motion } from "framer-motion";
 
@@ -10,6 +10,10 @@ const ICONS = [
   {
     link: "https://www.linkedin.com/in/sangram-abdar-522150117/",
     icon: <SiLinkedin />,
+  },
+  {
+    link: "mailto:abdarsangram2697@gmail.com",
+    icon: <SiGmail />,
   },
 ];
 

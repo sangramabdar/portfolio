@@ -83,7 +83,7 @@ function Work() {
   return (
     <Section
       className={cn(
-        "max-w-4xl mx-auto flex flex-col items-center justify-center px-4 sm:px-8 mt-40"
+        "max-w-4xl mx-auto flex flex-col items-center justify-center px-4 sm:px-8 mt-40 pb-20"
       )}
       name="work"
     >
