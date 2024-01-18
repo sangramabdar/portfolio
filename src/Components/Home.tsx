@@ -1,9 +1,6 @@
 import Element from "react-scroll/modules/components/Element";
 import cn from "../utils/cn";
-
-import Typewriter from "typewriter-effect";
-
-import { Variants, motion } from "framer-motion";
+import Reveal from "./Reveal";
 
 const Section = Element;
 
@@ -14,88 +11,38 @@ const WORDS = [
 ];
 
 function Home() {
-  const varaints: Variants = {
-    hidden: {
-      opacity: 0,
-      y: 100,
-    },
-    show: {
-      opacity: 1,
-      y: 0,
-    },
-  };
-
   return (
     <Section
       name="home"
       className={cn(
-        "max-w-4xl mx-auto px-4 h-screen sm:px-8 flex flex-col justify-center items-center text-center"
+        "max-w-4xl mx-auto px-4 sm:px-8 flex flex-col justify-center items-center md:h-screen pt-20 md:pt-0"
       )}
     >
-      <motion.div
-        variants={varaints}
-        className={cn("space-y-2 max-w-xl mx-auto")}
-      >
-        <motion.span
-          variants={varaints}
-          initial={"hidden"}
-          whileInView={"show"}
-          viewport={{ once: true }}
-          transition={{
-            delay: 0.2,
-          }}
-          className={cn("mx-auto text-tertiary/80")}
-        >
-          Hi, I'm{" "}
-        </motion.span>
-        <motion.h1
-          variants={varaints}
-          initial={"hidden"}
-          whileInView={"show"}
-          viewport={{ once: true }}
-          transition={{
-            delay: 0.4,
-          }}
-          className={cn("text-4xl font-medium md:text-6xl text-tertiary")}
-        >
-          Sangram Abdar
-        </motion.h1>
-        <motion.div
-          variants={varaints}
-          initial={"hidden"}
-          whileInView={"show"}
-          viewport={{ once: true }}
-          transition={{
-            delay: 0.6,
-          }}
-          className={cn(
-            "text-2xl pt-4 font-bold md:text-4xl mt-4 text-tertiary/70"
-          )}
-        >
-          <Typewriter
-            options={{
-              strings: WORDS,
-              loop: true,
-              autoStart: true,
-              deleteSpeed: "natural",
-            }}
-          />
-        </motion.div>
+      <div className={cn("space-y-8 max-w-xl mx-auto")}>
+        <Reveal className={cn("w-fit")}>
+          <h1 className={cn("text-4xl  font-bold md:text-6xl text-tertiary")}>
+            Hey, I'm Sangram
+            <span className={cn("text-secondary-1")}>.</span>
+          </h1>
+        </Reveal>
 
-        <motion.p
-          variants={varaints}
-          initial={"hidden"}
-          whileInView={"show"}
-          viewport={{ once: true }}
-          transition={{
-            delay: 0.8,
-          }}
-          className={cn("pt-8 text-lg text-tertiary/80")}
-        >
-          "A self-driven, passionate software developer with a curious mind who
-          revels in solving complex and challenging real-world problems."
-        </motion.p>
-      </motion.div>
+        <Reveal className={cn("w-fit")}>
+          <h2 className={cn("text-2xl font-bold md:text-4xl text-tertiary")}>
+            I'm a{" "}
+            <span className={cn("text-secondary-1")}>
+              Full Stack Developer
+              <span className={cn("text-tertiary")}>.</span>
+            </span>
+          </h2>
+        </Reveal>
+
+        <Reveal className={cn("w-fit")}>
+          <p className={cn("text-2xl text-left text-tertiary/60")}>
+            A self-driven, passionate software developer with a curious mind who
+            revels in solving complex and challenging real-world problems
+          </p>
+        </Reveal>
+      </div>
     </Section>
   );
 }
