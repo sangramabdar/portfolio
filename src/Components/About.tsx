@@ -7,7 +7,7 @@ const Section = Element;
 
 function Information() {
   return (
-    <div className={cn("space-y-4 text-tertiary")}>
+    <div className={cn("space-y-4 text-tertiary/80")}>
       <h1>
         I hold a postgraduate degree in MCA (Computer Applications) and find joy
         in problem-solving through coding. I consistently aim to deliver my

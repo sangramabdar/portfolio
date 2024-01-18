@@ -4,7 +4,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { useNavBarContext } from "../context/NavBarContext";
 import cn from "../utils/cn";
-import Reveal from "./Reveal";
 import { motion } from "framer-motion";
 
 function SideNavBarItem({
@@ -16,10 +15,10 @@ function SideNavBarItem({
   return (
     <Link
       spy={true}
-      activeClass="active"
+      activeClass="opacity-100"
       onClick={toggleSideDrawer}
       className={cn(
-        "text-tertiary font-bold w-fit text-xl border-solid border-b-4 border-b-secondary-1"
+        "text-tertiary font-bold w-fit text-xl border-solid border-b-4 border-b-secondary-1 opacity-[0.5]"
       )}
       to={to}
       smooth={true}
@@ -85,14 +84,14 @@ function NavBar() {
       {/* for small screen */}
       <nav
         className={cn(
-          "top-0 right-0 left-0 fixed flex p-4 px-4 md:px-8 z-20 text-black bg-primary-2 md:hidden"
+          "top-0 right-0 left-0 fixed flex p-4 px-4 md:px-8 z-20 text-black bg-primary-2/40 md:hidden"
         )}
       >
         <div className={cn("md:hidden z-10")} onClick={handleOnClick}>
           {open ? (
-            <RxCross2 size={"25px"} />
+            <RxCross2 size={"25px"} className={cn("text-secondary-1")} />
           ) : (
-            <GiHamburgerMenu size={"25px"} />
+            <GiHamburgerMenu size={"25px"} className={cn("text-secondary-1")} />
           )}
         </div>
         <SideDrawer />
@@ -111,7 +110,7 @@ function NavBar() {
           once: true,
         }}
         className={cn(
-          "hidden z-10 md:flex w-[550px] top-4 fixed left-[50%] translate-x-[-50%] justify-center space-x-8 bg-primary-2 py-2 px-4 rounded-full"
+          "hidden z-10 md:flex flex-col w-32 top-0 bottom-0 fixed left-[0%] space-y-4 bg-primary-2 py-8 px-4"
         )}
       >
         <NavBarItem to="home">Home</NavBarItem>

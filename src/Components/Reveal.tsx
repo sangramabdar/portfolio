@@ -2,11 +2,16 @@ import { Variants, motion } from "framer-motion";
 import React from "react";
 import cn from "../utils/cn";
 
-export default function Reveal({ children }: { children: React.ReactElement }) {
+interface RevealProps {
+  children: React.ReactElement;
+  className?: string;
+}
+
+export default function Reveal({ children, className }: RevealProps) {
   const varaints: Variants = {
     hidden: {
       opacity: 0,
-      y: 75,
+      y: 50,
     },
     show: {
       opacity: 1,
@@ -19,14 +24,14 @@ export default function Reveal({ children }: { children: React.ReactElement }) {
       left: "100%",
     },
     show: {
-      left: "0",
+      left: "0%",
     },
   };
 
   return (
-    <div className={cn("relative w-fit")}>
+    <div id="reveal-container" className={cn("relative", className)}>
       <motion.div
-        id="reveal-container"
+        id="reveal"
         className={cn("h-full")}
         variants={varaints}
         initial={"hidden"}
