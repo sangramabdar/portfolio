@@ -14,7 +14,7 @@ function App() {
       <NavBar />
       <main className="bg-primary-1 flex justify-center items-center">
         {/* navbar placeholder */}
-        <div className={cn("hidden md:block sm:w-52 sm:bg-red-200")}></div>
+        <div className={cn("w-52 sm:w-20")}></div>
         <div>
           <Home />
           <About />
