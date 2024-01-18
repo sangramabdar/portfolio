@@ -7,15 +7,17 @@ import Contact from "./Components/Contact";
 import "./App.css";
 import { NavBarProvider } from "./context/NavBarContext";
 import cn from "./utils/cn";
+import Header from "./Components/Header";
 
 function App() {
   return (
     <NavBarProvider>
       <NavBar />
+      <Header />
       <main className="bg-primary-1 flex justify-center items-center">
         {/* navbar placeholder */}
-        <div className={cn("w-52 sm:w-20")}></div>
-        <div>
+        <div id="sidebar" className={cn("w-52 sm:w-20")}></div>
+        <div id="main">
           <Home />
           <About />
           <Skills />

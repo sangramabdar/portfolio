@@ -126,16 +126,11 @@ function NavBar() {
       {/* for large screen */}
 
       <motion.nav
-        whileInView={{
-          opacity: 1,
-          left: 0,
+        animate={{
+          x: 0,
         }}
         initial={{
-          opacity: 1,
-          left: -50,
-        }}
-        viewport={{
-          once: true,
+          x: -50,
         }}
         transition={{
           ease: "easeIn",
@@ -143,7 +138,7 @@ function NavBar() {
           when: "beforeChildren",
         }}
         className={cn(
-          "z-10 flex flex-col  top-0 bottom-0 fixed left-0 space-y-4 bg-primary-2 py-8 px-4 h-screen overflow-scroll"
+          "flex flex-col top-0 bottom-0 fixed left-0 space-y-4 bg-primary-2 py-8 px-4 h-screen z-20"
         )}
       >
         {NAVBAR_OPTIONS.map((option, i) => {
@@ -151,17 +146,14 @@ function NavBar() {
             <motion.div
               key={i}
               initial={{
-                x: -45,
+                x: -50,
               }}
-              whileInView={{
+              animate={{
                 x: 0,
               }}
               transition={{
                 ease: "easeIn",
                 delay: i * 0.1,
-              }}
-              viewport={{
-                once: true,
               }}
             >
               <NavBarItem to={option.to}>{option.text}</NavBarItem>
