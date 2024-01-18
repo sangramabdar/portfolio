@@ -15,7 +15,7 @@ function SideNavBarItem({
   return (
     <Link
       spy={true}
-      activeClass="opacity-100"
+      activeClass="active"
       onClick={toggleSideDrawer}
       className={cn(
         "text-tertiary font-bold w-fit text-xl border-solid border-b-4 border-b-secondary-1 opacity-[0.5]"
@@ -60,16 +60,42 @@ function NavBarItem({ to, children }: React.PropsWithChildren<{ to: string }>) {
       spy={true}
       activeClass="active"
       className={cn(
-        "font-bold text-xl border-solid border-b-4 text-tertiary border-b-secondary-1 cursor-pointer opacity-50"
+        "font-bold text-xl border-solid border-r-4 text-tertiary border-r-secondary-1 cursor-pointer opacity-50"
       )}
       to={to}
       smooth={true}
       offset={-100}
+      style={{
+        writingMode: "vertical-lr",
+      }}
     >
       {children}
     </Link>
   );
 }
+
+const NAVBAR_OPTIONS = [
+  {
+    to: "home",
+    text: "Home",
+  },
+  {
+    to: "about",
+    text: "About me",
+  },
+  {
+    to: "skills",
+    text: "Skills",
+  },
+  {
+    to: "work",
+    text: "Work",
+  },
+  // {
+  //   to: "contact",
+  //   text: "Contact",
+  // },
+];
 
 function NavBar() {
   const { toggleSideDrawer, open } = useNavBarContext();
@@ -84,7 +110,7 @@ function NavBar() {
       {/* for small screen */}
       <nav
         className={cn(
-          "top-0 right-0 left-0 fixed flex p-4 px-4 md:px-8 z-20 text-black bg-primary-2/40 md:hidden"
+          "top-0 right-0 left-0 fixed p-4 px-4 md:px-8 z-20 text-black bg-primary-2/40 hidden"
         )}
       >
         <div className={cn("md:hidden z-10")} onClick={handleOnClick}>
@@ -100,24 +126,40 @@ function NavBar() {
       {/* for large screen */}
 
       <motion.nav
-        whileInView={{
-          opacity: 1,
+        animate={{
+          x: 0,
         }}
         initial={{
-          opacity: 0,
+          x: -50,
         }}
-        viewport={{
-          once: true,
+        transition={{
+          ease: "easeIn",
+          duration: 0.25,
+          when: "beforeChildren",
         }}
         className={cn(
-          "hidden z-10 md:flex flex-col w-32 top-0 bottom-0 fixed left-[0%] space-y-4 bg-primary-2 py-8 px-4"
+          "flex flex-col top-0 bottom-0 fixed left-0 space-y-4 bg-primary-2 py-8 px-4 h-screen z-20"
         )}
       >
-        <NavBarItem to="home">Home</NavBarItem>
-        <NavBarItem to="about">About Me</NavBarItem>
-        <NavBarItem to="skills">Skills</NavBarItem>
-        <NavBarItem to="work">Work</NavBarItem>
-        <NavBarItem to="contact">Contact</NavBarItem>
+        {NAVBAR_OPTIONS.map((option, i) => {
+          return (
+            <motion.div
+              key={i}
+              initial={{
+                x: -50,
+              }}
+              animate={{
+                x: 0,
+              }}
+              transition={{
+                ease: "easeIn",
+                delay: i * 0.1,
+              }}
+            >
+              <NavBarItem to={option.to}>{option.text}</NavBarItem>
+            </motion.div>
+          );
+        })}
       </motion.nav>
     </>
   );
