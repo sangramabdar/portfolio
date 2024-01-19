@@ -24,62 +24,6 @@ function Information() {
         </span>
       </Reveal>
 
-      {/* <div className={cn("flex flex-wrap")}>
-        <span className={cn("block w-full")}>
-          I possess a strong understanding of a diverse range of technologies
-          like
-        </span>
-        <span
-          className={cn(
-            "text-center font-bold border-b-secondary-1 border-b-2 mr-2"
-          )}
-        >
-          React
-        </span>
-        <span
-          className={cn(
-            "text-center font-bold border-b-secondary-1 border-b-2 mr-2"
-          )}
-        >
-          Redux
-        </span>
-        <span
-          className={cn(
-            "text-center font-bold border-b-secondary-1 border-b-2 mr-2"
-          )}
-        >
-          TypeScript
-        </span>
-        <span
-          className={cn(
-            "text-center font-bold border-b-secondary-1 border-b-2 mr-2"
-          )}
-        >
-          JavaScript
-        </span>
-        <span
-          className={cn(
-            "text-center font-bold border-b-secondary-1 border-b-2 mr-2"
-          )}
-        >
-          Tailwind CSS
-        </span>
-        <span
-          className={cn(
-            "text-center font-bold border-b-secondary-1 border-b-2 mr-2"
-          )}
-        >
-          HTML
-        </span>
-        <span
-          className={cn(
-            "text-center font-bold border-b-secondary-1 border-b-2 mr-2"
-          )}
-        >
-          CSS .
-        </span>
-      </div> */}
-
       <Reveal>
         <h1>Apart from coding, some other activities that I love to do!</h1>
       </Reveal>
