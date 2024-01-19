@@ -4,8 +4,5 @@
 
 .active {
   opacity: 1;
-}
-
-span.Typewriter__wrapper {
-  @apply border-b-secondary-1 border-b-2;
+  @apply border-r-secondary-1 border-r-2;
 }

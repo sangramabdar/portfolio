@@ -7,7 +7,7 @@ interface RevealProps {
   className?: string;
 }
 
-export default function Reveal({ children, className }: RevealProps) {
+export default function Reveal({ children, className = "w-fit" }: RevealProps) {
   const varaints: Variants = {
     hidden: {
       opacity: 0,

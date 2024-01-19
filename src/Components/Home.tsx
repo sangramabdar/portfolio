@@ -29,17 +29,14 @@ function Home() {
         <Reveal className={cn("w-fit")}>
           <h2 className={cn("text-2xl font-bold md:text-4xl text-tertiary")}>
             I'm a{" "}
-            <span className={cn("text-secondary-1")}>
-              Full Stack Developer
-              <span className={cn("text-tertiary")}>.</span>
-            </span>
+            <span className={cn("text-secondary-1")}>Full Stack Developer</span>
           </h2>
         </Reveal>
 
         <Reveal className={cn("w-fit")}>
           <p className={cn("text-2xl text-left text-tertiary/60")}>
             A self-driven, passionate software developer with a curious mind who
-            revels in solving complex and challenging real-world problems
+            revels in solving complex and challenging real-world problems.
           </p>
         </Reveal>
       </div>

@@ -1,6 +1,7 @@
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import cn from "../utils/cn";
 import { motion } from "framer-motion";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const ICONS = [
   {
@@ -14,6 +15,10 @@ const ICONS = [
   {
     link: "mailto:abdarsangram2697@gmail.com",
     icon: <SiGmail />,
+  },
+  {
+    link: "tel:+918600173694",
+    icon: <FaPhoneAlt />,
   },
 ];
 
@@ -50,7 +55,7 @@ export default function Header() {
                 ease: "easeIn",
                 delay: i * 0.2,
               }}
-              className="text-tertiary/80"
+              className="text-tertiary/80 hover:text-secondary-1"
               href={icon.link}
             >
               {icon.icon}

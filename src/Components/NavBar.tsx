@@ -60,7 +60,7 @@ function NavBarItem({ to, children }: React.PropsWithChildren<{ to: string }>) {
       spy={true}
       activeClass="active"
       className={cn(
-        "font-bold text-xl border-solid border-r-4 text-tertiary border-r-secondary-1 cursor-pointer opacity-50"
+        "font-bold text-xl border-solid text-tertiary  cursor-pointer opacity-50"
       )}
       to={to}
       smooth={true}
