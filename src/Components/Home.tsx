@@ -4,12 +4,6 @@ import Reveal from "./Reveal";
 
 const Section = Element;
 
-const WORDS = [
-  "Software Developer.",
-  "React Expert.",
-  "JavaScript Enthusiast.",
-];
-
 function Home() {
   return (
     <Section

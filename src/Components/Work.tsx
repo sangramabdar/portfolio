@@ -63,13 +63,13 @@ function Project({
       />
       <div className={cn("flex justify-evenly")}>
         <a
-          className={cn("text-tertiary/80 font-bold hover:text-tertiary")}
+          className={cn("text-tertiary/80 font-bold hover:text-secondary-1")}
           href={githubLink}
         >
           Github
         </a>
         <a
-          className={cn("text-tertiary/80 font-bold hover:text-tertiary")}
+          className={cn("text-tertiary/80 font-bold hover:text-secondary-1")}
           href={deployedLink}
         >
           Demo
