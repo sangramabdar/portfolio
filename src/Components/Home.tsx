@@ -23,7 +23,7 @@ function Home() {
         <Reveal className={cn("w-fit")}>
           <h2 className={cn("text-2xl font-bold md:text-4xl text-tertiary")}>
             I'm a{" "}
-            <span className={cn("text-secondary-1")}>Full Stack Developer</span>
+            <span className={cn("text-secondary-1")}>Software Developer</span>
           </h2>
         </Reveal>
 

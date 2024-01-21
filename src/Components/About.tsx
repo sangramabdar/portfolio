@@ -20,7 +20,7 @@ function Information() {
       <Reveal>
         <span>
           I possess a strong understanding of a diverse range of technologies
-          related to full-stack development, from concept to implementation.
+          related to web development, from concept to implementation.
         </span>
       </Reveal>
 
