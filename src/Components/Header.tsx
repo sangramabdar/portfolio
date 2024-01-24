@@ -5,7 +5,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 const ICONS = [
   {
-    link: "https://github.com/sangramabdar/portfolio",
+    link: "https://github.com/sangramabdar",
     icon: <SiGithub />,
   },
   {
@@ -13,7 +13,7 @@ const ICONS = [
     icon: <SiLinkedin />,
   },
   {
-    link: "mailto:abdarsangram2697@gmail.com",
+    link: "mailto:abdarsangram1997@gmail.com",
     icon: <SiGmail />,
   },
   {
