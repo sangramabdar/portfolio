@@ -20,7 +20,7 @@ const projects: ProjectProps[] = [
   {
     name: "Ecommerce Store",
     githubLink: "https://github.com/sangramabdar/Ecommerce-store",
-    deployedLink: "https://ecommerce-store-two-opal.vercel.app/",
+    deployedLink: "https://ecommerce-store-five-pi.vercel.app/",
     image: EcommerceStore,
   },
   {
