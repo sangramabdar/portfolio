@@ -66,9 +66,7 @@ function ContactItem({
   return (
     <div className={cn("flex gap-6 items-center underline")}>
       <Icon
-        className={cn(
-          "min-w-[32px] min-h-[32px] object-cover text-secondary-1"
-        )}
+        className={cn("min-w-[32px] min-h-[32px] object-cover text-secondary")}
       />
       {children}
     </div>
@@ -90,7 +88,7 @@ function Contact() {
           )}
         >
           Contact
-          <span className={cn("text-secondary-1")}>.</span>
+          <span className={cn("text-secondary")}>.</span>
         </h4>
       </Reveal>
       <Reveal>
@@ -100,14 +98,14 @@ function Contact() {
           )}
         >
           Shoot me an email if you want to connect! You can also find me on
-          <a className={cn("text-secondary-1")}> Linkedin</a> if that's more
-          your speed.
+          <a className={cn("text-secondary")}> Linkedin</a> if that's more your
+          speed.
         </p>
       </Reveal>
       <Reveal>
         <a
           className={cn(
-            "flex items-center gap-2 text-secondary-1 sm:text-2xl text-xl font-semibold"
+            "flex items-center gap-2 text-secondary sm:text-2xl text-xl font-semibold"
           )}
           href="abdarsangram2697@gmail.com"
         >

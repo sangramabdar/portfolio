@@ -45,7 +45,7 @@ export default function Reveal({ children, className = "w-fit" }: RevealProps) {
         {children}
       </motion.div>
       <motion.div
-        className={cn("bg-secondary-1 absolute left-0 top-0 right-0 bottom-0")}
+        className={cn("bg-secondary absolute left-0 top-0 right-0 bottom-0")}
         variants={sliderVaraints}
         initial={"show"}
         whileInView={"hidden"}

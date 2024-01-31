@@ -55,7 +55,7 @@ export default function Header() {
                 ease: "easeIn",
                 delay: i * 0.2,
               }}
-              className="text-tertiary/80 hover:text-secondary-1"
+              className="text-tertiary/80 hover:text-secondary"
               href={icon.link}
             >
               {icon.icon}
