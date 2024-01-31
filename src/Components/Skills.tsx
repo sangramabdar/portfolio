@@ -11,6 +11,8 @@ import { FaNodeJs } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 
 import { SiMongodb, SiTailwindcss } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+
 import cn from "../utils/cn";
 import Reveal from "./Reveal";
 
@@ -50,6 +52,12 @@ const skills: Skill[] = [
         className="w-full h-full object-cover"
         color="rgb(247,223,30)"
       />
+    ),
+  },
+  {
+    name: "Next.js",
+    element: (
+      <TbBrandNextjs className="w-full h-full object-cover" color="white" />
     ),
   },
   {
@@ -127,17 +135,13 @@ function Skill({ skill }: React.PropsWithChildren<TechnologyProps>) {
   return (
     <div
       className={cn(
-        "sm:w-40 p-2 space-y-2 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-105 shadow-lg shadow-tertiary/20 group"
+        "sm:w-40 p-2 space-y-2 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-105 shadow-md shadow-tertiary/10 group"
       )}
     >
       <div className={cn("flex w-full h-full justify-center items-center")}>
         {skill.element}
       </div>
-      <p
-        className={cn(
-          "font-bold text-tertiary/80 group-hover:text-secondary-1"
-        )}
-      >
+      <p className={cn("font-bold text-tertiary group-hover:text-secondary")}>
         {skill.name}
       </p>
     </div>
@@ -155,7 +159,7 @@ function Skills() {
       <Reveal>
         <h1
           className={cn(
-            "text-tertiary font-bold text-2xl border-solid border-b-4 border-b-secondary-1"
+            "text-white font-bold text-2xl border-solid border-b-4 border-b-secondary"
           )}
         >
           Skills

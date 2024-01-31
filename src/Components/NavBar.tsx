@@ -18,7 +18,7 @@ function SideNavBarItem({
       activeClass="active"
       onClick={toggleSideDrawer}
       className={cn(
-        "text-tertiary font-bold w-fit text-xl border-solid border-b-4 border-b-secondary-1 opacity-[0.5]"
+        "text-tertiary font-bold w-fit text-xl border-solid border-b-4 border-b-secondary opacity-[0.5]"
       )}
       to={to}
       smooth={true}
@@ -60,7 +60,7 @@ function NavBarItem({ to, children }: React.PropsWithChildren<{ to: string }>) {
       spy={true}
       activeClass="active"
       className={cn(
-        "font-bold text-xl border-solid text-tertiary  cursor-pointer opacity-50"
+        "font-bold text-xl border-solid text-white cursor-pointer opacity-50"
       )}
       to={to}
       smooth={true}
@@ -115,9 +115,9 @@ function NavBar() {
       >
         <div className={cn("md:hidden z-10")} onClick={handleOnClick}>
           {open ? (
-            <RxCross2 size={"25px"} className={cn("text-secondary-1")} />
+            <RxCross2 size={"25px"} className={cn("text-secondary")} />
           ) : (
-            <GiHamburgerMenu size={"25px"} className={cn("text-secondary-1")} />
+            <GiHamburgerMenu size={"25px"} className={cn("text-secondary")} />
           )}
         </div>
         <SideDrawer />

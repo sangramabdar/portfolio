@@ -11,9 +11,9 @@ import Header from "./Components/Header";
 function App() {
   return (
     <NavBarProvider>
-      <NavBar />
       <Header />
-      <main className="bg-primary-1 flex justify-center items-center">
+      <NavBar />
+      <main className="bg-primary flex justify-center items-center">
         {/* navbar placeholder */}
         <div id="sidebar" className={cn("w-52 sm:w-20")}></div>
         <div id="main">

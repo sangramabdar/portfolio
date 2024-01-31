@@ -7,7 +7,7 @@ const Section = Element;
 
 function Information() {
   return (
-    <div className={cn("space-y-4 text-tertiary/80")}>
+    <div className={cn("space-y-4 text-tertiary/80 font-semibold text-lg")}>
       <Reveal>
         <span>
           Hello! I'm Sangram Abdar from Pune. I hold a postgraduate degree in
@@ -20,7 +20,7 @@ function Information() {
       <Reveal>
         <span>
           I possess a strong understanding of a diverse range of technologies
-          related to web development, from concept to implementation.
+          related to software development, from concept to implementation.
         </span>
       </Reveal>
 
@@ -31,13 +31,13 @@ function Information() {
       <ul className={cn("space-y-2")}>
         <Reveal>
           <li className={cn("flex items-center space-x-4")}>
-            <HiOutlineHandThumbUp className={cn("text-secondary-1")} />
+            <HiOutlineHandThumbUp className={cn("text-secondary")} />
             <span className={cn("ml-2")}>Playing football</span>
           </li>
         </Reveal>
         <Reveal>
           <li className={cn("flex items-center space-x-4")}>
-            <HiOutlineHandThumbUp className={cn("text-secondary-1")} />
+            <HiOutlineHandThumbUp className={cn("text-secondary")} />
             <span className={cn("ml-2")}>Playing video games</span>
           </li>
         </Reveal>
@@ -53,7 +53,7 @@ function About() {
       name="about"
     >
       <Reveal>
-        <h1 className="font-bold text-2xl border-solid text-tertiary border-b-4 border-b-secondary-1">
+        <h1 className="font-bold text-2xl border-solid text-white border-b-4 border-b-secondary">
           About Me
         </h1>
       </Reveal>

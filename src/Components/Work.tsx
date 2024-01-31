@@ -52,10 +52,10 @@ function Project({
   return (
     <div
       className={cn(
-        "flex flex-col px-4 py-2 space-y-4 w-full h-full justify-evenly object-cover shadow-lg shadow-tertiary/20 rounded-md transition-all duration-200 hover:scale-105"
+        "flex flex-col px-4 py-4 space-y-4 w-full h-full justify-evenly object-cover shadow-tertiary/10 shadow-md rounded-md transition-all duration-200 hover:scale-105 border-secondary"
       )}
     >
-      <h1 className={cn("text-tertiary/80 font-bold")}>{name}</h1>
+      <h1 className={cn("text-white font-bold")}>{name}</h1>
       <img
         className={cn("w-full h-full object-cover rounded-md")}
         src={image}
@@ -63,14 +63,18 @@ function Project({
       />
       <div className={cn("flex justify-evenly")}>
         <a
-          className={cn("text-tertiary/80 font-bold hover:text-secondary-1")}
+          className={cn(
+            "font-bold bg-secondary p-1 rounded-md px-2 text-black/80 hover:bg-secondary/80 hover:text-white"
+          )}
           href={githubLink}
         >
           Github
         </a>
         <a
-          className={cn("text-tertiary/80 font-bold hover:text-secondary-1")}
           href={deployedLink}
+          className={cn(
+            "font-bold bg-secondary p-1 rounded-md px-2 text-black/80 hover:bg-secondary/80 hover:text-tertiary"
+          )}
         >
           Demo
         </a>
@@ -90,7 +94,7 @@ function Work() {
       <Reveal>
         <h1
           className={cn(
-            "font-bold text-2xl border-solid border-b-4 text-tertiary border-b-secondary-1"
+            "font-bold text-2xl border-solid border-b-4 text-white border-b-secondary"
           )}
         >
           Work
@@ -103,7 +107,7 @@ function Work() {
       </Reveal>
       <div
         className={cn(
-          "grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-6 mt-10"
+          "grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-8 mt-10"
         )}
       >
         {projects.map((project: ProjectProps) => {
