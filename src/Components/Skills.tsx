@@ -11,8 +11,6 @@ import { FaNodeJs } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 
 import { SiMongodb, SiTailwindcss } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
-
 import cn from "../utils/cn";
 import Reveal from "./Reveal";
 
@@ -42,7 +40,7 @@ const skills: Skill[] = [
   {
     name: "Next.js",
     element: (
-      <TbBrandNextjs className="w-full h-full object-cover" color="black" />
+      <TbBrandNextjs className="w-full h-full object-cover" color="white" />
     ),
   },
   {
