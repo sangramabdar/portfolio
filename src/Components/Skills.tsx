@@ -8,6 +8,8 @@ import { SiDocker, SiLinux, SiTypescript } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
+import { TbBrandNextjs } from "react-icons/tb";
+
 import { SiMongodb, SiTailwindcss } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 
@@ -35,6 +37,12 @@ const skills: Skill[] = [
     name: "React",
     element: (
       <FaReact className="w-full h-full object-cover" color="rgb(97,218,251)" />
+    ),
+  },
+  {
+    name: "Next.js",
+    element: (
+      <TbBrandNextjs className="w-full h-full object-cover" color="black" />
     ),
   },
   {
