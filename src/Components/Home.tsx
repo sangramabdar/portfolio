@@ -14,7 +14,7 @@ function Home() {
     >
       <div className={cn("space-y-8 max-w-xl mx-auto")}>
         <Reveal className={cn("w-fit")}>
-          <h1 className={cn("text-4xl  font-bold md:text-6xl text-white")}>
+          <h1 className={cn("text-4xl font-bold md:text-6xl text-white")}>
             Hey, I'm Sangram
             <span className={cn("text-secondary")}>.</span>
           </h1>
@@ -28,7 +28,9 @@ function Home() {
         </Reveal>
 
         <Reveal className={cn("w-fit")}>
-          <p className={cn("text-2xl text-left text-tertiary/80")}>
+          <p
+            className={cn("text-2xl text-left text-tertiary/80 font-semibold")}
+          >
             A self-driven, passionate software developer with a curious mind who
             enjoys solving a complex and challenging real-world problems.
           </p>

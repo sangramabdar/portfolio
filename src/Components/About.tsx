@@ -53,9 +53,9 @@ function About() {
       name="about"
     >
       <Reveal>
-        <h1 className="font-bold text-2xl border-solid text-white border-b-4 border-b-secondary">
+        <h2 className="font-bold text-2xl border-solid text-white border-b-4 border-b-secondary">
           About Me
-        </h1>
+        </h2>
       </Reveal>
 
       <div className="max-w-xl mx-auto mt-10 gap-4">
