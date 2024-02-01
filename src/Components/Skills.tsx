@@ -53,12 +53,6 @@ const skills: Skill[] = [
     ),
   },
   {
-    name: "Next.js",
-    element: (
-      <TbBrandNextjs className="w-full h-full object-cover" color="white" />
-    ),
-  },
-  {
     name: "Node.js",
     element: (
       <FaNodeJs className="w-full h-full object-cover" color="rgb(84,162,69)" />
