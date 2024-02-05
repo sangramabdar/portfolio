@@ -29,7 +29,9 @@ function Home() {
 
         <Reveal className={cn("w-fit")}>
           <p
-            className={cn("text-2xl text-left text-tertiary/80 font-semibold")}
+            className={cn(
+              "text-2xl md:text-3xl text-left text-tertiary font-semibold"
+            )}
           >
             A self-driven, passionate software developer with a curious mind who
             enjoys solving a complex and challenging real-world problems.

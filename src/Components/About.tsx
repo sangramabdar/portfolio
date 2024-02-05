@@ -7,7 +7,11 @@ const Section = Element;
 
 function Information() {
   return (
-    <div className={cn("space-y-4 text-tertiary/80 font-semibold text-lg")}>
+    <div
+      className={cn(
+        "space-y-4 text-tertiary font-semibold text-lg md:text-2xl"
+      )}
+    >
       <Reveal>
         <span>
           Hello! I'm Sangram Abdar from Pune. I hold a postgraduate degree in
@@ -53,7 +57,7 @@ function About() {
       name="about"
     >
       <Reveal>
-        <h2 className="font-bold text-2xl border-solid text-white border-b-4 border-b-secondary">
+        <h2 className="font-bold text-2xl md:text-3xl border-solid text-white border-b-4 border-b-secondary">
           About Me
         </h2>
       </Reveal>

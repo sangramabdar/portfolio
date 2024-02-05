@@ -52,7 +52,7 @@ function Project({
   return (
     <div
       className={cn(
-        "flex flex-col px-4 py-4 space-y-4 w-full h-full justify-evenly object-cover shadow-tertiary/10 shadow-md rounded-md transition-all duration-200 hover:scale-105 border-secondary"
+        "flex flex-col px-4 py-4 space-y-4 w-full h-full justify-evenly object-cover shadow-tertiary/10 shadow-md rounded-lg transition-all duration-200 hover:scale-105 ring-tertiary/20 ring-1 hover:ring-secondary/80"
       )}
     >
       <h1 className={cn("text-white font-bold")}>{name}</h1>
@@ -64,7 +64,7 @@ function Project({
       <div className={cn("flex justify-evenly")}>
         <a
           className={cn(
-            "font-bold bg-secondary p-1 rounded-md px-2 text-black/80 hover:bg-secondary/80 hover:text-white"
+            "font-bold text-secondary ring-1 ring-secondary/80 p-1 rounded-md px-2  hover:bg-secondary/80 hover:text-tertiary"
           )}
           href={githubLink}
         >
@@ -94,17 +94,17 @@ function Work() {
       <Reveal>
         <h1
           className={cn(
-            "font-bold text-2xl border-solid border-b-4 text-white border-b-secondary"
+            "font-bold text-2xl md:text-3xl border-solid border-b-4 text-white border-b-secondary"
           )}
         >
           Work
         </h1>
       </Reveal>
-      <Reveal>
-        <p className={cn("mt-4 text-tertiary/80")}>
+      {/* <Reveal>
+        <p className={cn("mt-4 text-tertiary")}>
           // check out some of my recent work
         </p>
-      </Reveal>
+      </Reveal> */}
       <div
         className={cn(
           "grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-8 mt-10"

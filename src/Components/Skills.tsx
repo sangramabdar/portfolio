@@ -127,7 +127,7 @@ function Skill({ skill }: React.PropsWithChildren<TechnologyProps>) {
   return (
     <div
       className={cn(
-        "sm:w-40 p-2 space-y-2 text-center rounded-md flex flex-col justify-between items-center transition-all duration-200 hover:scale-105 shadow-md shadow-tertiary/10 group"
+        "sm:w-40 p-2 space-y-2 text-center rounded-lg flex flex-col justify-between items-center transition-all duration-200 hover:scale-105 shadow-md shadow-tertiary/10 group ring-tertiary/20 ring-1 hover:ring-secondary/80"
       )}
     >
       <div className={cn("flex w-full h-full justify-center items-center")}>
@@ -151,17 +151,17 @@ function Skills() {
       <Reveal>
         <h1
           className={cn(
-            "text-white font-bold text-2xl border-solid border-b-4 border-b-secondary"
+            "text-white font-bold text-2xl md:text-3xl border-solid border-b-4 border-b-secondary"
           )}
         >
           Skills
         </h1>
       </Reveal>
-      <Reveal>
+      {/* <Reveal>
         <p className={cn("mt-4 text-tertiary/80 opacity-1")}>
           // these are the technologies I have worked with
         </p>
-      </Reveal>
+      </Reveal> */}
 
       <div
         className={cn(
