@@ -57,7 +57,7 @@ function Project({
     >
       <h1 className={cn("text-white font-semibold")}>{name}</h1>
       <img
-        className={cn("w-full h-full object-cover rounded-md")}
+        className={cn("w-full h-full object-cover object-center rounded-md")}
         src={image}
         alt=""
       />

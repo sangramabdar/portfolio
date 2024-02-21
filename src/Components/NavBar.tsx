@@ -9,7 +9,7 @@ function NavBarItem({ to, children }: React.PropsWithChildren<{ to: string }>) {
       spy={true}
       activeClass="active"
       className={cn(
-        "font-semibold text-xl border-solid text-white cursor-pointer opacity-50 p-2 rounded-md"
+        "font-semibold border-solid text-white cursor-pointer opacity-50 py-2 px-1 rounded-md md:text-xl"
       )}
       to={to}
       smooth={true}
@@ -58,7 +58,7 @@ function SideNavBar() {
         when: "beforeChildren",
       }}
       className={cn(
-        "flex flex-col top-0 bottom-0 fixed left-0 space-y-4 bg-primary-2 py-16 px-2 h-screen z-20"
+        "flex flex-col top-0 bottom-0 fixed left-0 space-y-2 md:space-y-4 bg-primary-2 py-16 px-2 h-screen z-20"
       )}
     >
       {NAVBAR_OPTIONS.map((option, i) => {
