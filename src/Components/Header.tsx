@@ -37,10 +37,10 @@ export default function Header() {
         when: "beforeChildren",
       }}
       className={cn(
-        "fixed w-full z-10 flex justify-between items-center px-8 h-10 sm:h-14 top-0 bg-primary-1/50 backdrop-blur-lg"
+        "fixed w-full z-30 flex justify-between items-center px-4 h-10 sm:h-14 top-0 bg-primary-1/50 backdrop-blur-lg "
       )}
     >
-      <motion.div className={cn("flex space-x-3 pl-20 gap-2")}>
+      <motion.div className={cn("flex gap-6")}>
         {ICONS.map((icon, i) => {
           return (
             <motion.a
@@ -63,7 +63,13 @@ export default function Header() {
           );
         })}
       </motion.div>
-      {/* <div>resume</div> */}
+      <a
+        className=" rounded-md font-semibold text-sm md:text-base px-4 py-1 border border-secondary text-secondary"
+        href="/Sangram's_Resume.pdf"
+        download="Sangram's_resume"
+      >
+        Resume
+      </a>
     </motion.header>
   );
 }

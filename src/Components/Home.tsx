@@ -12,7 +12,7 @@ function Home() {
         "max-w-4xl mx-auto px-4 sm:px-8 flex flex-col justify-center items-center md:h-screen pt-20 md:pt-0"
       )}
     >
-      <div className={cn("space-y-8 max-w-xl mx-auto")}>
+      <div className={cn("space-y-6 md:space-y-8 max-w-xl mx-auto")}>
         <Reveal className={cn("w-fit")}>
           <h1 className={cn("text-4xl font-bold md:text-6xl text-white")}>
             Hey, I'm Sangram
@@ -21,16 +21,16 @@ function Home() {
         </Reveal>
 
         <Reveal className={cn("w-fit")}>
-          <h2 className={cn("text-2xl font-bold md:text-4xl text-white")}>
+          <h2 className={cn("text-2xl font-semibold md:text-4xl text-white")}>
             I'm a{" "}
-            <span className={cn("text-secondary")}>Software Developer</span>
+            <span className={cn("text-secondary")}>Software Developer.</span>
           </h2>
         </Reveal>
 
         <Reveal className={cn("w-fit")}>
           <p
             className={cn(
-              "text-2xl md:text-3xl text-left text-tertiary font-semibold"
+              "text-xl md:text-3xl text-left text-tertiary font-thin"
             )}
           >
             A self-driven, passionate software developer with a curious mind who

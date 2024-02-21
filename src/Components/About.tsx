@@ -8,9 +8,7 @@ const Section = Element;
 function Information() {
   return (
     <div
-      className={cn(
-        "space-y-4 text-tertiary font-semibold text-lg md:text-2xl"
-      )}
+      className={cn("space-y-4 text-tertiary font-thin text-lg md:text-2xl")}
     >
       <Reveal>
         <span>
@@ -62,7 +60,7 @@ function About() {
         </h2>
       </Reveal>
 
-      <div className="max-w-xl mx-auto mt-10 gap-4">
+      <div className="max-w-xl mx-auto mt-10">
         <Information />
       </div>
     </Section>

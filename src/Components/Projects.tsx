@@ -55,7 +55,7 @@ function Project({
         "flex flex-col px-4 py-4 space-y-4 w-full h-full justify-evenly object-cover shadow-tertiary/10 shadow-md rounded-lg transition-all duration-200 hover:scale-105 ring-tertiary/20 ring-1 hover:ring-secondary/80"
       )}
     >
-      <h1 className={cn("text-white font-bold")}>{name}</h1>
+      <h1 className={cn("text-white font-semibold")}>{name}</h1>
       <img
         className={cn("w-full h-full object-cover rounded-md")}
         src={image}
@@ -64,7 +64,7 @@ function Project({
       <div className={cn("flex justify-evenly")}>
         <a
           className={cn(
-            "font-bold text-secondary ring-1 ring-secondary/80 p-1 rounded-md px-2  hover:bg-secondary/80 hover:text-tertiary"
+            "font-semibold text-secondary ring-1 ring-secondary/80 p-1 rounded-md px-2  hover:bg-secondary/80 hover:text-tertiary"
           )}
           href={githubLink}
         >
@@ -73,7 +73,7 @@ function Project({
         <a
           href={deployedLink}
           className={cn(
-            "font-bold bg-secondary p-1 rounded-md px-2 text-black/80 hover:bg-secondary/80 hover:text-tertiary"
+            "font-semibold bg-secondary p-1 rounded-md px-2 text-black/80 hover:bg-secondary/80 hover:text-tertiary"
           )}
         >
           Demo
@@ -83,13 +83,13 @@ function Project({
   );
 }
 
-function Work() {
+function Projects() {
   return (
     <Section
       className={cn(
         "max-w-4xl mx-auto flex flex-col items-center justify-center px-4 sm:px-8 mt-40 pb-20"
       )}
-      name="work"
+      name="projects"
     >
       <Reveal>
         <h1
@@ -97,7 +97,7 @@ function Work() {
             "font-bold text-2xl md:text-3xl border-solid border-b-4 text-white border-b-secondary"
           )}
         >
-          Work
+          Projects
         </h1>
       </Reveal>
       {/* <Reveal>
@@ -127,4 +127,4 @@ function Work() {
   );
 }
 
-export default Work;
+export default Projects;

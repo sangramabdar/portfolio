@@ -9,7 +9,7 @@ function NavBarItem({ to, children }: React.PropsWithChildren<{ to: string }>) {
       spy={true}
       activeClass="active"
       className={cn(
-        "font-bold text-xl border-solid text-white cursor-pointer opacity-50"
+        "font-semibold text-xl border-solid text-white cursor-pointer opacity-50 p-2 rounded-md"
       )}
       to={to}
       smooth={true}
@@ -37,51 +37,50 @@ const NAVBAR_OPTIONS = [
     text: "Skills",
   },
   {
-    to: "work",
-    text: "Work",
+    to: "projects",
+    text: "Projects",
   },
 ];
 
 function SideNavBar() {
   return (
-    <>
-      <motion.nav
-        animate={{
-          x: 0,
-        }}
-        initial={{
-          x: -50,
-        }}
-        transition={{
-          ease: "easeIn",
-          duration: 0.25,
-          when: "beforeChildren",
-        }}
-        className={cn(
-          "flex flex-col top-0 bottom-0 fixed left-0 space-y-4 bg-primary-2 py-8 px-4 h-screen z-20"
-        )}
-      >
-        {NAVBAR_OPTIONS.map((option, i) => {
-          return (
-            <motion.div
-              key={i}
-              initial={{
-                x: -50,
-              }}
-              animate={{
-                x: 0,
-              }}
-              transition={{
-                ease: "easeIn",
-                delay: i * 0.1,
-              }}
-            >
-              <NavBarItem to={option.to}>{option.text}</NavBarItem>
-            </motion.div>
-          );
-        })}
-      </motion.nav>
-    </>
+    <motion.nav
+      layout
+      animate={{
+        x: 0,
+      }}
+      initial={{
+        x: -50,
+      }}
+      transition={{
+        ease: "easeIn",
+        duration: 0.25,
+        when: "beforeChildren",
+      }}
+      className={cn(
+        "flex flex-col top-0 bottom-0 fixed left-0 space-y-4 bg-primary-2 py-16 px-2 h-screen z-20"
+      )}
+    >
+      {NAVBAR_OPTIONS.map((option, i) => {
+        return (
+          <motion.div
+            key={i}
+            initial={{
+              x: -50,
+            }}
+            animate={{
+              x: 0,
+            }}
+            transition={{
+              ease: "easeIn",
+              delay: i * 0.1,
+            }}
+          >
+            <NavBarItem to={option.to}>{option.text}</NavBarItem>
+          </motion.div>
+        );
+      })}
+    </motion.nav>
   );
 }
 

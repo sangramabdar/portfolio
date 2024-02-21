@@ -133,7 +133,9 @@ function Skill({ skill }: React.PropsWithChildren<TechnologyProps>) {
       <div className={cn("flex w-full h-full justify-center items-center")}>
         {skill.element}
       </div>
-      <p className={cn("font-bold text-tertiary group-hover:text-secondary")}>
+      <p
+        className={cn("font-semibold text-tertiary group-hover:text-secondary")}
+      >
         {skill.name}
       </p>
     </div>

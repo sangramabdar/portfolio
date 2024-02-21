@@ -4,5 +4,5 @@
 
 .active {
   opacity: 1;
-  @apply border-r-secondary border-r-2;
+  @apply bg-primary text-secondary border-secondary border;
 }
