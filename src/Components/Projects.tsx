@@ -2,13 +2,8 @@
 
 import React from "react";
 import Element from "react-scroll/modules/components/Element";
-import EcommerceStore from "../assets/Ecommerce_store.png";
-import TodoWebApp from "../assets/todo_web_app.png";
-import WeatherWebApp from "../assets/weather_app.png";
-import EmployeeManagementSystem from "../assets/employee_management_system.png";
 import Reveal from "./Reveal";
 import cn from "@/utils/cn";
-import Image from "next/image";
 
 const Section = Element;
 
@@ -16,7 +11,8 @@ interface ProjectProps {
   name: string;
   githubLink: string;
   deployedLink: string;
-  // image: string;
+  description: string;
+  techonogies: string;
 }
 
 const projects: ProjectProps[] = [
@@ -24,25 +20,32 @@ const projects: ProjectProps[] = [
     name: "Ecommerce Store",
     githubLink: "https://github.com/sangramabdar/Ecommerce-store",
     deployedLink: "https://ecommerce-store-five-pi.vercel.app/",
-    // image: EcommerceStore,
+    description: `Includes features such as displaying detailed product information, facilitating the addition of
+products to the cart, and enabling secure order placement.`,
+    techonogies: "React - Nodejs - ReactQuery - MongoDB - Express",
   },
   {
     name: "Real-Time weather app",
     githubLink: "https://github.com/sangramabdar/weather-app",
     deployedLink: "https://sangramabdar.github.io/weathe-app-deploy/",
-    // image: WeatherWebApp,
+    description: `Provides real-time updates for cities worldwide. Key functionalities include the flexibility to
+customize the view of weather data in various units.`,
+    techonogies: "React - TailwinCSS - HTML - CSS",
   },
   {
     name: "Todo Web Application",
     githubLink: "https://github.com/sangramabdar/todo-application",
     deployedLink: "https://todo-application-omega.vercel.app/",
-    // image: TodoWebApp,
+    description: `Serves as a comprehensive solution for organizing tasks with a strong emphasis on data
+protection through the use of JSON Web Tokens (JWT) for security.`,
+    techonogies: "React - Nodejs - MongoDB - Express",
   },
   {
     name: "Employee Management System",
     githubLink: "https://github.com/sangramabdar/employee_management_system",
     deployedLink: "https://employee-management-system-mpgi.vercel.app/",
-    // image: EmployeeManagementSystem,
+    description: `Provides a comprehensive solution for organizing employee information with a strong emphasis on data protection, utilizing JSON Web Tokens (JWT) for enhanced security measures.`,
+    techonogies: "React - Nodejs - MongoDB - Express",
   },
 ];
 
@@ -50,11 +53,13 @@ function Project({
   name,
   githubLink,
   deployedLink,
+  description,
+  techonogies,
 }: React.PropsWithChildren<ProjectProps>) {
   return (
     <div
       className={cn(
-        "flex flex-col space-y-2 w-full h-full justify-start object-cover rounded-lg transition-all duration-200 group hover:scale-105 hover:ring-secondary/80"
+        "flex flex-col w-full h-full justify-between object-cover rounded-lg transition-all duration-200 group hover:scale-105 hover:ring-secondary/80"
       )}
     >
       <div className="bg-[#232323] px-8 pt-12 rounded-md overflow-hidden">
@@ -68,31 +73,28 @@ function Project({
       </div>
       <div className="flex flex-col gap-2">
         <h1 className={cn("text-t-primary text-xl font-bold")}>{name}</h1>
-        <div className="text-secondary font-normal">React - Node.js</div>
+        <div className="text-secondary font-normal">{techonogies}</div>
         <p className="text-t-secondary text-lg font-extralight">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
-          assumenda officia voluptatem in repellendus ut velit molestiae esse,
-          harum quia accusantium mollitia et ad ipsa libero perferendis quidem
-          omnis modi.
+          {description}
         </p>
-        <div className={cn("flex gap-4 mt-2")}>
-          <a
-            className={cn(
-              "font-normal text-secondary ring-1 ring-secondary/80 p-1 rounded-md px-4 py-2 hover:bg-secondary/80 hover:text-tertiary"
-            )}
-            href={githubLink}
-          >
-            Github
-          </a>
-          <a
-            href={deployedLink}
-            className={cn(
-              "font-normal bg-secondary p-1 rounded-md px-4 py-2 text-black/80 hover:bg-secondary/80 hover:text-tertiary"
-            )}
-          >
-            Demo
-          </a>
-        </div>
+      </div>
+      <div className={cn("flex gap-4 mt-2")}>
+        <a
+          className={cn(
+            "font-normal text-secondary ring-1 ring-secondary/80 p-1 rounded-md px-4 py-2 hover:bg-secondary/80 hover:text-tertiary"
+          )}
+          href={githubLink}
+        >
+          Github
+        </a>
+        <a
+          href={deployedLink}
+          className={cn(
+            "font-normal bg-secondary p-1 rounded-md px-4 py-2 text-black/80 hover:bg-secondary/80 hover:text-tertiary"
+          )}
+        >
+          Demo
+        </a>
       </div>
     </div>
   );
@@ -119,12 +121,7 @@ function Projects() {
         {projects.map((project: ProjectProps) => {
           return (
             <Reveal key={project.name}>
-              <Project
-                name={project.name}
-                githubLink={project.githubLink}
-                deployedLink={project.deployedLink}
-                // image={project.image}
-              />
+              <Project {...project} />
             </Reveal>
           );
         })}

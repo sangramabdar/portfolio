@@ -39,7 +39,7 @@ export default function Header() {
         when: "beforeChildren",
       }}
       className={cn(
-        "fixed w-full z-30 flex justify-between items-center px-4 h-10 sm:h-14 top-0 bg-primary-1/50 backdrop-blur-lg bg-red-200 "
+        "fixed w-full z-30 flex justify-between items-center px-4 sm:h-14 top-0 bg-primary-1/50 backdrop-blur-lg py-2"
       )}
     >
       <motion.div className={cn("flex gap-6")}>

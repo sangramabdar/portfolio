@@ -25,7 +25,7 @@ function Contact() {
         <Reveal className={cn("w-fit")}>
           <h1
             className={cn(
-              "text-5xl font-black md:text-7xl text-t-primary relative z-10"
+              "text-4xl font-black md:text-7xl text-t-primary relative z-10"
             )}
           >
             Contact
@@ -33,7 +33,7 @@ function Contact() {
           </h1>
         </Reveal>
         <Reveal>
-          <p className="font-extralight text-lg md:text-xl text-t-primary">
+          <p className="font-extralight text-normal md:text-xl text-t-primary">
             Shoot me an email if you want to connect!
           </p>
         </Reveal>
@@ -44,7 +44,7 @@ function Contact() {
             className="flex gap-2 justify-center items-center text-t-primary"
           >
             <SiGmail />
-            <span className="font-normal break-words text-t-primary">
+            <span className="font-normal text-xs sm:text-lg break-words text-t-primary">
               abdarsangram2697@gmail.com
             </span>
           </a>
