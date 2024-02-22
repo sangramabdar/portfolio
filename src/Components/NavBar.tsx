@@ -81,7 +81,7 @@ function SideNavBar() {
         when: "beforeChildren",
       }}
       className={cn(
-        "flex flex-col top-0 bottom-0 fixed left-0 space-y-2 md:space-y-4 bg-black py-16 h-screen z-20"
+        "flex flex-col top-0 bottom-0 fixed left-0 space-y-2 md:space-y-4 bg-gray-950/10 py-16 h-screen z-20"
       )}
     >
       {NAVBAR_OPTIONS.map((option, i) => {
