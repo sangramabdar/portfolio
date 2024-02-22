@@ -1,6 +1,6 @@
 import Element from "react-scroll/modules/components/Element";
 import { HiOutlineHandThumbUp } from "react-icons/hi2";
-import cn from "../utils/cn";
+import cn from "@/utils/cn";
 import Reveal from "./Reveal";
 
 const Section = Element;
@@ -8,7 +8,9 @@ const Section = Element;
 function Information() {
   return (
     <div
-      className={cn("space-y-4 text-tertiary font-thin text-lg md:text-2xl")}
+      className={cn(
+        "space-y-4 text-tertiary font-extralight text-lg md:text-2xl"
+      )}
     >
       <Reveal>
         <span>
@@ -50,17 +52,15 @@ function Information() {
 
 function About() {
   return (
-    <Section
-      className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col justify-start items-center mt-40"
-      name="about"
-    >
+    <Section className="flex flex-col py-[72px] md:p-24" name="about">
       <Reveal>
-        <h2 className="font-bold text-2xl md:text-3xl border-solid text-white border-b-4 border-b-secondary">
-          About Me
-        </h2>
+        <h1 className={cn("font-black text-3xl md:text-4xl text-t-primary")}>
+          About me
+          <span className="text-secondary">.</span>
+        </h1>
       </Reveal>
 
-      <div className="max-w-xl mx-auto mt-10">
+      <div className="mt-10">
         <Information />
       </div>
     </Section>

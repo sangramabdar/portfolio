@@ -1,19 +1,30 @@
-import React from "react";
-import { Link } from "react-scroll";
-import cn from "../utils/cn";
-import { motion } from "framer-motion";
+"use client";
 
-function NavBarItem({ to, children }: React.PropsWithChildren<{ to: string }>) {
+import React, { useEffect, useState } from "react";
+import { Events, Link } from "react-scroll";
+
+import { motion } from "framer-motion";
+import cn from "@/utils/cn";
+
+function NavBarItem({
+  to,
+  children,
+  activeLink,
+}: React.PropsWithChildren<{
+  to: string;
+
+  activeLink: string;
+}>) {
   return (
     <Link
       spy={true}
-      activeClass="active"
       className={cn(
-        "font-semibold border-solid text-white cursor-pointer opacity-50 py-2 px-1 rounded-md md:text-xl"
+        "font-extralight text-white cursor-pointer opacity-50 py-2 px-4 md:text-xl",
+        activeLink === to && "border-r w-full border-secondary opacity-100"
       )}
       to={to}
       smooth={true}
-      offset={-100}
+      offset={0}
       style={{
         writingMode: "vertical-lr",
       }}
@@ -40,9 +51,21 @@ const NAVBAR_OPTIONS = [
     to: "projects",
     text: "Projects",
   },
+  {
+    to: "contact",
+    text: "Contact",
+  },
 ];
 
 function SideNavBar() {
+  const [activeLink, setActiveLink] = useState("home");
+
+  useEffect(() => {
+    Events.scrollEvent.register("end", (to, element) => {
+      setActiveLink(to);
+    });
+  }, []);
+
   return (
     <motion.nav
       layout
@@ -58,7 +81,7 @@ function SideNavBar() {
         when: "beforeChildren",
       }}
       className={cn(
-        "flex flex-col top-0 bottom-0 fixed left-0 space-y-2 md:space-y-4 bg-primary-2 py-16 px-2 h-screen z-20"
+        "flex flex-col top-0 bottom-0 fixed left-0 space-y-2 md:space-y-4 bg-black py-16 h-screen z-20"
       )}
     >
       {NAVBAR_OPTIONS.map((option, i) => {
@@ -76,7 +99,9 @@ function SideNavBar() {
               delay: i * 0.1,
             }}
           >
-            <NavBarItem to={option.to}>{option.text}</NavBarItem>
+            <NavBarItem activeLink={activeLink} to={option.to}>
+              {option.text}
+            </NavBarItem>
           </motion.div>
         );
       })}

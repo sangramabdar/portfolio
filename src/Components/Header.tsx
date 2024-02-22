@@ -1,7 +1,8 @@
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
-import cn from "../utils/cn";
 import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
+import cn from "@/utils/cn";
+import Reveal from "./Reveal";
 
 const ICONS = [
   {
@@ -63,13 +64,23 @@ export default function Header() {
           );
         })}
       </motion.div>
-      <a
-        className=" rounded-md font-semibold text-sm md:text-base px-4 py-1 border border-secondary text-secondary"
+
+      <motion.a
+        initial={{
+          y: -50,
+        }}
+        animate={{
+          y: 0,
+        }}
+        transition={{
+          ease: "easeIn",
+        }}
+        className=" rounded-md font-normal text-sm md:text-base px-4 py-2 border border-secondary text-secondary"
         href="/Sangram's_Resume.pdf"
         download="Sangram's_resume"
       >
         Resume
-      </a>
+      </motion.a>
     </motion.header>
   );
 }

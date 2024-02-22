@@ -4,8 +4,9 @@ import EcommerceStore from "../assets/Ecommerce_store.png";
 import TodoWebApp from "../assets/todo_web_app.png";
 import WeatherWebApp from "../assets/weather_app.png";
 import EmployeeManagementSystem from "../assets/employee_management_system.png";
-import cn from "../utils/cn";
 import Reveal from "./Reveal";
+import cn from "@/utils/cn";
+import Image from "next/image";
 
 const Section = Element;
 
@@ -13,7 +14,7 @@ interface ProjectProps {
   name: string;
   githubLink: string;
   deployedLink: string;
-  image: string;
+  // image: string;
 }
 
 const projects: ProjectProps[] = [
@@ -21,25 +22,25 @@ const projects: ProjectProps[] = [
     name: "Ecommerce Store",
     githubLink: "https://github.com/sangramabdar/Ecommerce-store",
     deployedLink: "https://ecommerce-store-five-pi.vercel.app/",
-    image: EcommerceStore,
+    // image: EcommerceStore,
   },
   {
     name: "Real-Time weather app",
     githubLink: "https://github.com/sangramabdar/weather-app",
     deployedLink: "https://sangramabdar.github.io/weathe-app-deploy/",
-    image: WeatherWebApp,
+    // image: WeatherWebApp,
   },
   {
     name: "Todo Web Application",
     githubLink: "https://github.com/sangramabdar/todo-application",
     deployedLink: "https://todo-application-omega.vercel.app/",
-    image: TodoWebApp,
+    // image: TodoWebApp,
   },
   {
     name: "Employee Management System",
     githubLink: "https://github.com/sangramabdar/employee_management_system",
     deployedLink: "https://employee-management-system-mpgi.vercel.app/",
-    image: EmployeeManagementSystem,
+    // image: EmployeeManagementSystem,
   },
 ];
 
@@ -47,37 +48,49 @@ function Project({
   name,
   githubLink,
   deployedLink,
-  image,
 }: React.PropsWithChildren<ProjectProps>) {
   return (
     <div
       className={cn(
-        "flex flex-col px-4 py-4 space-y-4 w-full h-full justify-evenly object-cover shadow-tertiary/10 shadow-md rounded-lg transition-all duration-200 hover:scale-105 ring-tertiary/20 ring-1 hover:ring-secondary/80"
+        "flex flex-col space-y-2 w-full h-full justify-start object-cover rounded-lg transition-all duration-200 group hover:scale-105 hover:ring-secondary/80"
       )}
     >
-      <h1 className={cn("text-white font-semibold")}>{name}</h1>
-      <img
-        className={cn("w-full h-full object-cover object-center rounded-md")}
-        src={image}
-        alt=""
-      />
-      <div className={cn("flex justify-evenly")}>
-        <a
+      <div className="bg-[#232323] px-8 pt-12 rounded-md overflow-hidden">
+        <img
           className={cn(
-            "font-semibold text-secondary ring-1 ring-secondary/80 p-1 rounded-md px-2  hover:bg-secondary/80 hover:text-tertiary"
+            "w-full h-full object-cover object-center rounded-md translate-y-3 group-hover:rotate-3 transition-all"
           )}
-          href={githubLink}
-        >
-          Github
-        </a>
-        <a
-          href={deployedLink}
-          className={cn(
-            "font-semibold bg-secondary p-1 rounded-md px-2 text-black/80 hover:bg-secondary/80 hover:text-tertiary"
-          )}
-        >
-          Demo
-        </a>
+          src={"/example-project.jpg"}
+          alt=""
+        />
+      </div>
+      <div className="flex flex-col gap-2">
+        <h1 className={cn("text-t-primary text-xl font-bold")}>{name}</h1>
+        <div className="text-secondary font-normal">React - Node.js</div>
+        <p className="text-t-secondary text-lg font-extralight">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
+          assumenda officia voluptatem in repellendus ut velit molestiae esse,
+          harum quia accusantium mollitia et ad ipsa libero perferendis quidem
+          omnis modi.
+        </p>
+        <div className={cn("flex gap-4 mt-2")}>
+          <a
+            className={cn(
+              "font-normal text-secondary ring-1 ring-secondary/80 p-1 rounded-md px-4 py-2 hover:bg-secondary/80 hover:text-tertiary"
+            )}
+            href={githubLink}
+          >
+            Github
+          </a>
+          <a
+            href={deployedLink}
+            className={cn(
+              "font-normal bg-secondary p-1 rounded-md px-4 py-2 text-black/80 hover:bg-secondary/80 hover:text-tertiary"
+            )}
+          >
+            Demo
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -86,28 +99,19 @@ function Project({
 function Projects() {
   return (
     <Section
-      className={cn(
-        "max-w-4xl mx-auto flex flex-col items-center justify-center px-4 sm:px-8 mt-40 pb-20"
-      )}
+      className={cn("flex flex-col py-[72px] pb-20 md:p-24")}
       name="projects"
     >
       <Reveal>
-        <h1
-          className={cn(
-            "font-bold text-2xl md:text-3xl border-solid border-b-4 text-white border-b-secondary"
-          )}
-        >
+        <h1 className={cn("font-black text-3xl md:text-4xl text-t-primary")}>
           Projects
+          <span className="text-secondary">.</span>
         </h1>
       </Reveal>
-      {/* <Reveal>
-        <p className={cn("mt-4 text-tertiary")}>
-          // check out some of my recent work
-        </p>
-      </Reveal> */}
+
       <div
         className={cn(
-          "grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-8 mt-10"
+          "grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-8 mt-10"
         )}
       >
         {projects.map((project: ProjectProps) => {
@@ -117,7 +121,7 @@ function Projects() {
                 name={project.name}
                 githubLink={project.githubLink}
                 deployedLink={project.deployedLink}
-                image={project.image}
+                // image={project.image}
               />
             </Reveal>
           );

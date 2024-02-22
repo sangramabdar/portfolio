@@ -1,6 +1,6 @@
+import cn from "@/utils/cn";
 import { Variants, motion } from "framer-motion";
 import React from "react";
-import cn from "../utils/cn";
 
 interface RevealProps {
   children: React.ReactElement;

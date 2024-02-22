@@ -11,8 +11,8 @@ import { FaNodeJs } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 
 import { SiMongodb, SiTailwindcss } from "react-icons/si";
-import cn from "../utils/cn";
 import Reveal from "./Reveal";
+import cn from "@/utils/cn";
 
 const Section = Element;
 
@@ -134,7 +134,9 @@ function Skill({ skill }: React.PropsWithChildren<TechnologyProps>) {
         {skill.element}
       </div>
       <p
-        className={cn("font-semibold text-tertiary group-hover:text-secondary")}
+        className={cn(
+          "font-normal text-t-secondary group-hover:text-secondary"
+        )}
       >
         {skill.name}
       </p>
@@ -145,29 +147,19 @@ function Skill({ skill }: React.PropsWithChildren<TechnologyProps>) {
 function Skills() {
   return (
     <Section
-      className={cn(
-        "max-w-7xl mx-auto px-4 sm:px-8 flex flex-col mt-40 justify-center items-center"
-      )}
+      className={cn("flex flex-col w-full py-[72px] md:p-24")}
       name="skills"
     >
       <Reveal>
-        <h1
-          className={cn(
-            "text-white font-bold text-2xl md:text-3xl border-solid border-b-4 border-b-secondary"
-          )}
-        >
+        <h1 className={cn("font-black text-3xl md:text-4xl text-t-primary")}>
           Skills
+          <span className="text-secondary">.</span>
         </h1>
       </Reveal>
-      {/* <Reveal>
-        <p className={cn("mt-4 text-tertiary/80 opacity-1")}>
-          // these are the technologies I have worked with
-        </p>
-      </Reveal> */}
 
       <div
         className={cn(
-          "grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-4 sm:gap-8 mt-10"
+          "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 grid-rows-2 gap-8 sm:gap-8 mt-10 w-fit"
         )}
       >
         {skills.map((skill: Skill, index: number) => {
