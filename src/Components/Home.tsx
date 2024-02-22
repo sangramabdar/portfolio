@@ -1,3 +1,5 @@
+"use client";
+
 import Element from "react-scroll/modules/components/Element";
 import Reveal from "./Reveal";
 import cn from "@/utils/cn";

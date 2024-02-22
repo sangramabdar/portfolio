@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Element from "react-scroll/modules/components/Element";
 import { AiFillHtml5 } from "react-icons/ai";

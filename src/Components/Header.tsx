@@ -1,8 +1,9 @@
+"use client";
+
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
 import cn from "@/utils/cn";
-import Reveal from "./Reveal";
 
 const ICONS = [
   {

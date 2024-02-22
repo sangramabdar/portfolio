@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Element from "react-scroll/modules/components/Element";
 import EcommerceStore from "../assets/Ecommerce_store.png";

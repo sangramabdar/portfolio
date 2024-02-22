@@ -1,3 +1,5 @@
+"use client";
+
 import Element from "react-scroll/modules/components/Element";
 import { HiOutlineHandThumbUp } from "react-icons/hi2";
 import cn from "@/utils/cn";

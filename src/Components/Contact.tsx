@@ -1,3 +1,5 @@
+"use client";
+
 import cn from "@/utils/cn";
 import React from "react";
 import Element from "react-scroll/modules/components/Element";
