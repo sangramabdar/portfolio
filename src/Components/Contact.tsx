@@ -31,7 +31,7 @@ function Contact() {
           </h1>
         </Reveal>
         <Reveal>
-          <p className="font-extralight text-lg md:text-xl">
+          <p className="font-extralight text-lg md:text-xl text-t-primary">
             Shoot me an email if you want to connect!
           </p>
         </Reveal>
@@ -39,10 +39,10 @@ function Contact() {
         <Reveal>
           <a
             href="mailto:abdarsangram2697@gmail.com"
-            className="flex gap-2 justify-center items-center"
+            className="flex gap-2 justify-center items-center text-t-primary"
           >
             <SiGmail />
-            <span className="font-normal break-words">
+            <span className="font-normal break-words text-t-primary">
               abdarsangram2697@gmail.com
             </span>
           </a>
