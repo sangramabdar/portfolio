@@ -76,7 +76,7 @@ export default function Header() {
         transition={{
           ease: "easeIn",
         }}
-        className=" rounded-md font-normal text-sm md:text-base px-4 py-2 border border-secondary text-secondary"
+        className=" rounded-md font-normal text-sm md:text-base px-4 py-2 border border-secondary text-secondary hover:bg-secondary hover:text-primary active:ring-white active:ring-offset-gray-200"
         href="/Sangram's_Resume.pdf"
         download="Sangram's_resume"
       >

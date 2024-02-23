@@ -129,7 +129,7 @@ function Skill({ skill }: React.PropsWithChildren<TechnologyProps>) {
   return (
     <div
       className={cn(
-        "sm:w-40 p-2 space-y-2 text-center rounded-lg flex flex-col justify-between items-center transition-all duration-200 hover:scale-105 shadow-md shadow-tertiary/10 group ring-tertiary/20 ring-1 hover:ring-secondary/80"
+        "sm:w-40 p-2 space-y-2 text-center rounded-lg flex flex-col justify-between items-center transition-all duration-200 hover:scale-105 shadow-md shadow-tertiary/10 group ring-tertiary/10 ring-1 hover:ring-secondary/80"
       )}
     >
       <div className={cn("flex w-full h-full justify-center items-center")}>

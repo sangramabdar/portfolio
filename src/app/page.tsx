@@ -14,7 +14,7 @@ export default function Page() {
     <>
       <Header />
       <SideNavBar />
-      <main className="max-w-7xl mx-auto flex flex-col justify-center items-center px-4 pl-20">
+      <main className="max-w-7xl mx-auto flex flex-col justify-center items-center px-8 pl-20">
         {/* <WaterDropGrid /> */}
         <Home />
         <About />

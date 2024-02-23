@@ -5,6 +5,7 @@ import Reveal from "./Reveal";
 import cn from "@/utils/cn";
 
 import { Link } from "react-scroll";
+import Button from "./Button";
 
 const Section = Element;
 
@@ -51,16 +52,10 @@ function Home() {
         </Reveal>
 
         <Reveal>
-          <Link
-            spy={true}
-            className={cn(
-              "font-normal text-primary cursor-pointer py-2 px-4 md:text-xl bg-secondary rounded-md"
-            )}
-            to={"contact"}
-            smooth={true}
-            offset={0}
-          >
-            Contact me
+          <Link spy={true} to={"contact"} smooth={true} offset={0}>
+            <Button className="hover:scale-105 transition-all">
+              Contact me
+            </Button>
           </Link>
         </Reveal>
       </div>

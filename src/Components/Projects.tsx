@@ -81,7 +81,7 @@ function Project({
       <div className={cn("flex gap-4 mt-2")}>
         <a
           className={cn(
-            "font-normal text-secondary ring-1 ring-secondary/80 p-1 rounded-md px-4 py-2 hover:bg-secondary/80 hover:text-tertiary"
+            "font-normal text-secondary ring-1 ring-secondary/80 p-1 rounded-md px-4 py-2 hover:bg-secondary hover:text-primary"
           )}
           href={githubLink}
         >
@@ -90,7 +90,7 @@ function Project({
         <a
           href={deployedLink}
           className={cn(
-            "font-normal bg-secondary p-1 rounded-md px-4 py-2 text-black/80 hover:bg-secondary/80 hover:text-tertiary"
+            "font-normal bg-secondary p-1 rounded-md px-4 py-2 text-black/80 hover:bg-primary hover:text-secondary hover:ring-1 hover:ring-secondary"
           )}
         >
           Demo
@@ -115,7 +115,7 @@ function Projects() {
 
       <div
         className={cn(
-          "grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-8 mt-10"
+          "grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-16 md:gap-12 mt-10"
         )}
       >
         {projects.map((project: ProjectProps) => {
