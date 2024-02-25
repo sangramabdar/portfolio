@@ -47,7 +47,7 @@ function Home() {
             )}
           >
             A self-driven, passionate software developer with a curious mind who
-            enjoys solving a complex and challenging real-world problems.
+            enjoys solving complex and challenging real-world problems.
           </p>
         </Reveal>
 

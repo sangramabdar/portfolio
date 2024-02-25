@@ -59,7 +59,7 @@ function Project({
   return (
     <div
       className={cn(
-        "flex flex-col w-full h-full justify-between object-cover rounded-lg transition-all duration-200 group hover:scale-105 hover:ring-secondary/80"
+        "flex flex-col w-full h-full object-cover rounded-lg transition-all duration-200 group hover:scale-105 hover:ring-secondary/80 space-y-4"
       )}
     >
       <div className="bg-[#232323] px-8 pt-12 rounded-md overflow-hidden">
@@ -78,7 +78,7 @@ function Project({
           {description}
         </p>
       </div>
-      <div className={cn("flex gap-4 mt-2")}>
+      <div className={cn("flex flex-1 items-end gap-4 mt-2")}>
         <a
           className={cn(
             "font-normal text-secondary ring-1 ring-secondary/80 p-1 rounded-md px-4 py-2 hover:bg-secondary hover:text-primary"
