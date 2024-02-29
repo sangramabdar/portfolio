@@ -19,7 +19,7 @@ function Information() {
           Hello! I'm Sangram Abdar from Pune. I hold a postgraduate degree in
           MCA (Computer Applications) and find joy in problem-solving through
           coding. I consistently aim to deliver my best, giving 100% to every
-          task."
+          task.
         </span>
       </Reveal>
 

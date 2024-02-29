@@ -31,7 +31,7 @@ function Hero() {
         <Reveal className={cn("w-fit")}>
           <h1
             className={cn(
-              "text-5xl font-black md:text-6xl text-t-primary relative z-10 leading-[68px] md:leading-[80px]"
+              "text-5xl font-black md:text-6xl text-t-primary relative z-10 leading-[60px] md:leading-[80px]"
             )}
           >
             {/* Hey, I'm Sangram */}
@@ -60,8 +60,8 @@ function Hero() {
               "text-xl md:text-3xl text-left text-t-secondary font-extralight relative z-10"
             )}
           >
-            A self-driven, passionate software engineer with a curious mind who
-            enjoys solving complex and challenging real-world problems.
+            A passionate software engineer with a curious mind who enjoys
+            solving complex and challenging real-world problems.
           </p>
         </Reveal>
 
