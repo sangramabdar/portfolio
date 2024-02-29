@@ -80,7 +80,7 @@ export default function Header() {
         href="/Sangram's_Resume.pdf"
         download="Sangram's_resume"
       >
-        Resume
+        Download CV
       </motion.a>
     </motion.header>
   );

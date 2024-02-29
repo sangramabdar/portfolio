@@ -57,7 +57,7 @@ function About() {
     <Section className="flex flex-col py-[72px] md:p-24" name="about">
       <Reveal>
         <h1 className={cn("font-black text-3xl md:text-4xl text-t-primary")}>
-          About me
+          About
           <span className="text-secondary">.</span>
         </h1>
       </Reveal>

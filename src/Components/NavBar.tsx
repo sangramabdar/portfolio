@@ -41,7 +41,7 @@ const NAVBAR_OPTIONS = [
   },
   {
     to: "about",
-    text: "About me",
+    text: "About",
   },
   {
     to: "skills",
