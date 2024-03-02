@@ -17,7 +17,7 @@ interface ProjectProps {
 
 const projects: ProjectProps[] = [
   {
-    name: "Ecommerce Store",
+    name: "E-commerce Store",
     githubLink: "https://github.com/sangramabdar/Ecommerce-store",
     deployedLink: "https://ecommerce-store-five-pi.vercel.app/",
     description: `Includes features such as displaying detailed product information, facilitating the addition of
