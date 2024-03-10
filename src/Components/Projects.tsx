@@ -17,7 +17,7 @@ interface ProjectProps {
 
 const projects: ProjectProps[] = [
   {
-    name: "Ecommerce Store",
+    name: "E-commerce Store",
     githubLink: "https://github.com/sangramabdar/Ecommerce-store",
     deployedLink: "https://ecommerce-store-five-pi.vercel.app/",
     description: `Includes features such as displaying detailed product information, facilitating the addition of
@@ -25,28 +25,28 @@ products to the cart, and enabling secure order placement.`,
     techonogies: "React - Nodejs - ReactQuery - MongoDB - Express",
   },
   {
-    name: "Real-Time weather app",
+    name: "Weather app",
     githubLink: "https://github.com/sangramabdar/weather-app",
     deployedLink: "https://sangramabdar.github.io/weathe-app-deploy/",
     description: `Provides real-time updates for cities worldwide. Key functionalities include the flexibility to
 customize the view of weather data in various units.`,
     techonogies: "React - TailwinCSS - HTML - CSS",
   },
-  {
-    name: "Todo Web Application",
-    githubLink: "https://github.com/sangramabdar/todo-application",
-    deployedLink: "https://todo-application-omega.vercel.app/",
-    description: `Serves as a comprehensive solution for organizing tasks with a strong emphasis on data
-protection through the use of JSON Web Tokens (JWT) for security.`,
-    techonogies: "React - Nodejs - MongoDB - Express",
-  },
-  {
-    name: "Employee Management System",
-    githubLink: "https://github.com/sangramabdar/employee_management_system",
-    deployedLink: "https://employee-management-system-mpgi.vercel.app/",
-    description: `Provides a comprehensive solution for organizing employee information with a strong emphasis on data protection, utilizing JSON Web Tokens (JWT) for enhanced security measures.`,
-    techonogies: "React - Nodejs - MongoDB - Express",
-  },
+  //   {
+  //     name: "Todo Web Application",
+  //     githubLink: "https://github.com/sangramabdar/todo-application",
+  //     deployedLink: "https://todo-application-omega.vercel.app/",
+  //     description: `Serves as a comprehensive solution for organizing tasks with a strong emphasis on data
+  // protection through the use of JSON Web Tokens (JWT) for security.`,
+  //     techonogies: "React - Nodejs - MongoDB - Express",
+  //   },
+  //   {
+  //     name: "Employee Management System",
+  //     githubLink: "https://github.com/sangramabdar/employee_management_system",
+  //     deployedLink: "https://employee-management-system-mpgi.vercel.app/",
+  //     description: `Provides a comprehensive solution for organizing employee information with a strong emphasis on data protection, utilizing JSON Web Tokens (JWT) for enhanced security measures.`,
+  //     techonogies: "React - Nodejs - MongoDB - Express",
+  //   },
 ];
 
 function Project({
@@ -114,9 +114,7 @@ function Projects() {
       </Reveal>
 
       <div
-        className={cn(
-          "grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-16 md:gap-12 mt-10"
-        )}
+        className={cn("grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-12 mt-10")}
       >
         {projects.map((project: ProjectProps) => {
           return (
