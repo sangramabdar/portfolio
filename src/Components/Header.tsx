@@ -15,7 +15,7 @@ const ICONS = [
     icon: <SiLinkedin />,
   },
   {
-    link: "mailto:abdarsangram2697@gmail.com",
+    link: "mailto:sangramabdar10@gmail.com",
     icon: <SiGmail />,
   },
   {
