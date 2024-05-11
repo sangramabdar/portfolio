@@ -15,7 +15,7 @@ const ICONS = [
     icon: <SiLinkedin />,
   },
   {
-    link: "mailto:sangramabdar10@gmail.com",
+    link: "mailto:abdarsangram2697@gmail.com",
     icon: <SiGmail />,
   },
   {
@@ -66,7 +66,7 @@ export default function Header() {
         })}
       </motion.div>
 
-      <motion.a
+      {/* <motion.a
         initial={{
           y: -50,
         }}
@@ -81,7 +81,7 @@ export default function Header() {
         download="Sangram's_resume"
       >
         Download CV
-      </motion.a>
+      </motion.a> */}
     </motion.header>
   );
 }
