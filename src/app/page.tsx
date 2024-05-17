@@ -14,13 +14,16 @@ export default function Page() {
     <>
       <Header />
       <SideNavBar />
-      <main className="max-w-7xl mx-auto flex flex-col justify-center items-center px-8 pl-20">
+      <main className="max-w-7xl mx-auto flex">
         {/* <WaterDropGrid /> */}
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <div className="min-w-[65px] md:hidden"></div>
+        <div className="flex flex-col flex-1 justify-center items-center p-4 overflow-x-hidden">
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </div>
       </main>
     </>
   );
