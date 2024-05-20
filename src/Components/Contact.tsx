@@ -40,12 +40,12 @@ function Contact() {
 
         <Reveal>
           <a
-            href="mailto:abdarsangram2697@gmail.com"
+            href="mailto:sangramabdar10@gmail.com"
             className="flex gap-2 justify-center items-center text-t-primary"
           >
             <SiGmail />
             <span className="font-normal text-xs sm:text-lg break-words text-t-primary">
-              abdarsangram2697@gmail.com
+              sangramabdar10@gmail.com
             </span>
           </a>
         </Reveal>
